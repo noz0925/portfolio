@@ -1,0 +1,37 @@
+//フォント設定 --------------------------------
+$font-Montserrat: 'Montserrat', sans-serif;
+$font-NotoSansJP: 'Noto Sans JP', sans-serif;
+$font-YuGoshic: '游ゴシック', 'Yu Gothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+//body フォント ------------------------------
+$f-body-font: $font-YuGoshic;
+
+//l-header --------------------------------
+$f-l-header-btn: $font-Montserrat;
+$f-p-nav__item: $font-Montserrat;
+
+//l-footer --------------------------------
+$f-l-footer-text: $font-Montserrat;
+
+//c-btn -----------------------------------
+$f-c-btn__text: $font-Montserrat;
+
+//c-contents ------------------------------
+$f-c-contents__title: $font-Montserrat;
+
+//c-visual --------------------------------
+$f-c-visual__main: $font-Montserrat;
+$f-c-visual__sub: $font-NotoSansJP;
+
+//c-contact -------------------------------
+$f-c-contact__title: $font-NotoSansJP;
+$f-c-contact__policy: $font-Montserrat;
+
+//p-top-visual ----------------------------
+$f-p-top-visual__text: $font-Montserrat;
+
+//p-top-about -----------------------------
+$f-p-top-about__text: $font-NotoSansJP;
+
+//p-topic ---------------------------------
+$f-p-topic-date: $font-Montserrat;

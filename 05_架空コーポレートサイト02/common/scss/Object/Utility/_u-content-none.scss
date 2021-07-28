@@ -1,0 +1,5 @@
+.u-content-none{
+    &::after{
+        content: none;
+    }
+}

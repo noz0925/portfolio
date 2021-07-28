@@ -1,0 +1,123 @@
+@use "../../setting/import" as i;
+
+.c-contact{
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px;
+
+    &__top{
+        margin-top: 120px;
+    }
+
+    &__main{
+        margin-top: 55px;
+    }
+
+    &__form{
+        >:first-child{
+            margin-top: 0;
+        }
+    }
+
+    &__item{
+        margin-top: 45px;
+    }
+
+    &__title{
+        font-family: i.$f-c-contact__title;
+        font-weight: bold;
+        letter-spacing: 0.004em;
+
+        &::after{
+            content: '必須';
+            font-size: 1.2rem;
+            color: i.$c-radio-btn__item-text;
+            background-color: i.$c-radio-btn__item-bg;
+            padding: 3px 5px;
+            margin-left: 10px;
+        }
+    }
+
+    &__radio-btn{
+        margin-top: 20px;
+    }
+
+    &__radio-btn--item{
+        margin-right: 50px;
+    }
+
+    &__input--radio{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    &__text{
+        margin-top: 12px;
+    }
+
+    &__input--text{
+        width: 100%;
+        line-height: 2;
+        font-size: 1.6rem;
+    }
+
+    &__policy{
+        margin-top: 40px;
+    }
+
+    &__policy--title{
+        font-family: i.$f-c-contact__policy;
+        letter-spacing: 0.004em;
+        font-weight: bold;
+    }
+
+    &__policy--wrap{
+        width: 100%;
+        height: 252px;
+        border: 1px solid i.$c-radio-btn__border;
+    }
+
+    &__policy--text{
+        box-sizing: border-box;
+        padding: 10px;
+        overflow: scroll;
+        height: 252px;
+    }
+
+    &__policy--check{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    &__input--check{
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__btn{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+    }
+
+    @include i.mq(max,540px){
+        padding: 0 15px;
+
+        &__top{
+            margin-top: 80px;
+        }
+
+        &__radio-btn--item{
+            display: block;
+            margin-right: 0;
+            margin-top: 15px;
+        }
+
+        &__radio-btn--item{
+            margin-right: 50px;
+        }
+    }
+}

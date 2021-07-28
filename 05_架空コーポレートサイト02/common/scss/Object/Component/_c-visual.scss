@@ -1,0 +1,133 @@
+@use "../../setting/import" as i;
+
+.c-visual{
+    width: 100vw;
+    height: 51.555vh;
+    min-height: 464px;
+    position: relative;
+
+    &__bg--img{
+        display: block;
+        width: 76.388%;
+        height: 83.405%;
+        min-height: 387px;
+        background-image: url(../img/about-heading-img@2x.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        width: 54.166%;
+        height: 51.555vh;
+        min-height: 464px;
+        background-color: i.$c-p-top-visual__bg;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -2;
+    }
+
+    &__text{
+        z-index: 1;
+        position: absolute;
+        top: 33.620%;
+        right: 11.805%;
+        color: i.$c-p-top-visual__text;
+    }
+
+    &__sub{
+        font-family: i.$f-c-visual__sub;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 0.85;
+        letter-spacing: 0.005em;
+    }
+
+    &__sub--en{
+        font-family: i.$f-c-visual__main;
+        font-size: 2rem;
+        line-height: 0.85;
+    }
+
+    &__main{
+        font-family: i.$f-c-visual__main;
+        font-size: 7.2rem;
+        font-weight: bold;
+        line-height: 1.19444;
+        letter-spacing: 0.063em;
+        display: block;
+    }
+
+    @include i.mq(max,768px){
+        height: 60.058vh;
+        min-height: 615px;
+
+        &__bg--img{
+            width: 76.432%;
+            height: 86.016%;
+            min-height: 529px;
+        }
+
+        &::after{
+            width: 52.864%;
+            height: 60.058vh;
+            min-height: 615px;
+        }
+
+        &__text{
+            top: 35.772%;
+            right: 12.760%;
+        }
+
+        &__sub{
+            font-size: 1.6rem;
+            line-height: 0.5625;
+        }
+    
+        &__sub--en{
+            font-size: 1.6rem;
+            line-height: 0.5625;
+        }
+
+        &__main{
+            font-size: 5.2rem;
+        }
+    }
+
+    @include i.mq(max,375px){
+        height: 67.316vh;
+        min-height: 449px;
+
+        &__bg--img{
+            width: 76.533%;
+            height: 86.191%;
+            min-height: 387px;
+        }
+
+        &::after{
+            width: 52.8%;
+            height: 67.316vh;
+            min-height: 449px;
+        }
+
+        &__text{
+            top: 33.184%;
+            right: 7.733%;
+        }
+
+        &__sub{
+            letter-spacing: 0;
+        }
+
+        &__main{
+            letter-spacing: 0;
+        }
+    }
+}
