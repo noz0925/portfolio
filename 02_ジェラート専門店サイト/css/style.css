@@ -1,0 +1,1433 @@
+/*======================================
+ 色設定
+ ======================================*/
+/*======================================
+ アニメーション設定
+ ======================================*/
+@-webkit-keyframes f_i {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-moz-keyframes f_i {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes f_i {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes a_circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes a_circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes a_circle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes loop1 {
+  0% {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-moz-keyframes loop1 {
+  0% {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes loop1 {
+  0% {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes loop2 {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@-moz-keyframes loop2 {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+@-webkit-keyframes loop3 {
+  0% {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+@-moz-keyframes loop3 {
+  0% {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+@keyframes loop3 {
+  0% {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+@-webkit-keyframes arrow {
+  0% {
+    bottom: 8%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 8%;
+  }
+}
+@-moz-keyframes arrow {
+  0% {
+    bottom: 8%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 8%;
+  }
+}
+@keyframes arrow {
+  0% {
+    bottom: 8%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 8%;
+  }
+}
+@-webkit-keyframes bg01 {
+  0% {
+    background-positiony: 100px;
+    opacity: 0;
+  }
+  100% {
+    background-positiony: 0px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes bg01 {
+  0% {
+    background-positiony: 100px;
+    opacity: 0;
+  }
+  100% {
+    background-positiony: 0px;
+    opacity: 1;
+  }
+}
+@keyframes bg01 {
+  0% {
+    background-positiony: 100px;
+    opacity: 0;
+  }
+  100% {
+    background-positiony: 0px;
+    opacity: 1;
+  }
+}
+/*======================================
+ メディアクエリ設定
+ ======================================*/
+/* @docs
+ label: Core Remedies
+ version: 0.1.0-beta.2
+ note: |
+ These remedies are recommended
+ as a starter for any project.
+ category: file
+ */
+/* @docs
+ label: Box Sizing
+ note: |
+ Use border-box by default, globally.
+ category: global
+ */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+/* @docs
+ label: Line Sizing
+ note: |
+ Consistent line-spacing,
+ even when inline elements have different line-heights.
+ links:
+ - https://drafts.csswg.org/css-inline-3/#line-sizing-property
+ category: global
+ */
+html {
+  line-sizing: normal;
+}
+/* @docs
+ label: Body Margins
+ note: |
+ Remove the tiny space around the edge of the page.
+ category: global
+ */
+body {
+  margin: 0;
+}
+/* @docs
+ label: Hidden Attribute
+ note: |
+ Maintain `hidden` behaviour when overriding `display` values.
+ category: global
+ */
+[hidden] {
+  display: none;
+}
+/* @docs
+ label: Heading Sizes
+ note: |
+ Switch to rem units for headings
+ category: typography
+ */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.17rem;
+}
+h4 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 0.83rem;
+}
+h6 {
+  font-size: 0.67rem;
+}
+/* @docs
+ label: H1 Margins
+ note: |
+ Keep h1 margins consistent, even when nested.
+ category: typography
+ */
+h1 {
+  margin: 0;
+}
+/* @docs
+ label: Pre Wrapping
+ note: |
+ Overflow by default is bad...
+ category: typography
+ */
+pre {
+  white-space: pre-wrap;
+}
+/* @docs
+ label: Horizontal Rule
+ note: |
+ 1. Solid, thin horizontal rules
+ 2. Remove Firefox `color: gray`
+ 3. Remove default `1px` height, and common `overflow: hidden`
+ category: typography
+ */
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+/* @docs
+ label: Responsive Embeds
+ note: |
+ 1. Block display is usually what we want
+ 2. The `vertical-align` removes strange space-below in case authors overwrite the display value
+ 3. Responsive by default
+ 4. Audio without `[controls]` remains hidden by default
+ category: embedded elements
+ */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+audio:not([controls]) {
+  display: none;
+}
+/* @docs
+ label: Responsive Images
+ note: |
+ These new elements display inline by default,
+ but that's not the expected behavior for either one.
+ This can interfere with proper layout and aspect-ratio handling.
+ 1. Remove the unnecessary wrapping `picture`, while maintaining contents
+ 2. Source elements have nothing to display, so we hide them entirely
+ category: embedded elements
+ */
+picture {
+  display: contents;
+}
+source {
+  display: none;
+}
+/* @docs
+ label: Aspect Ratios
+ note: |
+ Maintain intrinsic aspect ratios when `max-width` is applied.
+ `iframe`, `embed`, and `object` are also embedded,
+ but have no intrinsic ratio,
+ so their `height` needs to be set explicitly.
+ category: embedded elements
+ */
+img, svg, video, canvas {
+  height: auto;
+}
+/* @docs
+ label: Audio Width
+ note: |
+ There is no good reason elements default to 300px,
+ and audio files are unlikely to come with a width attribute.
+ category: embedded elements
+ */
+audio {
+  width: 100%;
+}
+/* @docs
+ label: Image Borders
+ note: |
+ Remove the border on images inside links in IE 10 and earlier.
+ category: legacy browsers
+ */
+img {
+  border-style: none;
+}
+/* @docs
+ label: SVG Overflow
+ note: |
+ Hide the overflow in IE 10 and earlier.
+ category: legacy browsers
+ */
+svg {
+  overflow: hidden;
+}
+/* @docs
+ label: HTML5 Elements
+ note: |
+ Default block display on HTML5 elements.
+ For oldIE to apply this styling one needs to add some JS as well (i.e. `document.createElement("main")`)
+ links:
+ - https://www.sitepoint.com/html5-older-browsers-and-the-shiv/
+ category: legacy browsers
+ */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+/* @docs
+ label: Checkbox & Radio Inputs
+ note: |
+ 1. Add the correct box sizing in IE 10
+ 2. Remove the padding in IE 10
+ category: legacy browsers
+ */
+[type='checkbox'], [type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+ul, p, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+/*======================================
+ 全体設定　＆　汎用クラス
+ ======================================*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #000;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #fff8de;
+  overflow-x: hidden;
+}
+.inner {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  opacity: 0.5;
+}
+.t_font {
+  font-family: 'Kiwi Maru', serif;
+}
+.title_2 {
+  font-size: 2.6rem;
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title_2::before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background-color: #f54545;
+}
+.title_2 span {
+  display: block;
+}
+.title_3 {
+  font-size: 2.6rem;
+  border-bottom: 1px solid #f54545;
+}
+.btn {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.btn a {
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  padding: 15px 0;
+  background-color: #000;
+  border: 2px solid #000;
+  border-radius: 50px;
+  text-align: center;
+}
+.t_wrap {
+  display: inline-block;
+}
+/*======================================
+ ナビゲーションメニュー
+ ======================================*/
+header .nav_btn {
+  width: 70px;
+  height: 50px;
+  position: fixed;
+  top: 40px;
+  right: 20px;
+  z-index: 101;
+}
+header .nav_btn:hover {
+  cursor: pointer;
+}
+header .nav_btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+header .nav_btn span:last-child {
+  transform: translateY(10px);
+}
+header .nav_btn.t_o span {
+  background-color: #000;
+}
+header .nav_body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  padding-top: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+header .nav_body p {
+  max-width: 261px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header .nav_body > ul {
+  list-style: none;
+  margin-top: 50px;
+}
+header .nav_body > ul > li {
+  margin-bottom: 20px;
+}
+header .nav_body > ul > li:last-child {
+  margin-bottom: 0;
+}
+header .nav_body > ul > li a {
+  display: block;
+  font-size: 2.6rem;
+  line-height: 1.5;
+  text-align: center;
+}
+header .nav_body > ul > li a:hover {
+  background-color: #fff8de;
+  transition: 0.5s;
+}
+header .nav_body > ul > li ul {
+  list-style: none;
+}
+header .nav_body > ul > li ul li a {
+  display: block;
+  font-size: 4rem;
+}
+header .circle-bg {
+  position: fixed;
+  z-index: 3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  /*丸のスタート位置と形状*/
+  transform: scale(0);
+  right: -50px;
+  top: -50px;
+  transition: all 0.6s;
+}
+header.on .nav_btn span {
+  background-color: #000;
+}
+header.on .nav_btn span:first-child {
+  transform: translateY(10px) rotate(15deg);
+}
+header.on .nav_btn span:last-child {
+  transform: translateY(8px) rotate(-15deg);
+}
+header.on .nav_body {
+  opacity: 0;
+  visibility: visible;
+  animation: a_circle 1.2s 0.3s forwards;
+}
+header.on .circle-bg {
+  transform: scale(50);
+}
+/*======================================
+ footer
+ ======================================*/
+footer p {
+  color: #fff;
+  font-weight: bold;
+  background-color: #000;
+  padding: 10px 0;
+  text-align: center;
+}
+/*======================================
+ to top
+ ======================================*/
+.t_t {
+  position: fixed;
+  bottom: -200px;
+  right: 10px;
+  transition: 1s;
+}
+.t_t a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+.t_t a span {
+  margin: 0;
+}
+.t_t.on {
+  bottom: 20px;
+}
+/*======================================
+ 店名
+ ======================================*/
+.store_name {
+  width: 100%;
+  position: relative;
+}
+.store_name p {
+  z-index: -1;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 11.2vw;
+  line-height: 1;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+/*======================================
+ パンくず
+ ======================================*/
+.bread {
+  padding-top: 150px;
+}
+.bread .inner ul {
+  display: flex;
+  list-style: none;
+}
+.bread .inner ul li a {
+  font-size: 1.2rem;
+}
+.bread .inner ul li:not(:last-child)::after {
+  content: '>';
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*======================================
+ 2カラム
+ ======================================*/
+.cal2 {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.cal2 main {
+  width: 70%;
+}
+.cal2 .side {
+  width: 25%;
+  margin-top: 50px;
+}
+.cal2 .side .sidebar {
+  position: sticky;
+  margin-bottom: 0;
+  top: 10px;
+}
+.cal2 .side .sidebar ul li {
+  list-style: none;
+  text-align: center;
+}
+.cal2 .side .sidebar ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.cal2 .side .sidebar ul li a {
+  color: #fff;
+  font-weight: bold;
+  background-color: #000;
+  display: block;
+  padding: 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .cal2 {
+    flex-direction: column-reverse;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .cal2 main {
+    width: 100%;
+  }
+  .cal2 .side {
+    width: 100%;
+  }
+  .cal2 .side .sidebar ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cal2 .side .sidebar ul li {
+    width: 32%;
+  }
+}
+/*======================================
+ ローディングアニメーション
+ ======================================*/
+#la {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #fff8de;
+  text-align: center;
+  color: #000;
+}
+#la .la_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.1rem;
+}
+#la .la_text > span:not(:last-child) {
+  opacity: 0;
+}
+#la .la_text > span:first-child {
+  animation: f_i 0.5s 0.5s forwards;
+}
+#la .la_text > span:nth-child(2) {
+  animation: f_i 0.5s 0.6s forwards;
+}
+#la .la_text > span:nth-child(3) {
+  animation: f_i 0.5s 0.7s forwards;
+}
+#la .la_text > span:nth-child(4) {
+  animation: f_i 0.5s 0.8s forwards;
+}
+#la .la_text > span:nth-child(5) {
+  animation: f_i 0.5s 0.9s forwards;
+}
+#la .la_text > span:last-child span {
+  opacity: 0;
+}
+#la .la_text > span:last-child span:first-child {
+  animation: f_i 0.5s 1s forwards;
+}
+#la .la_text > span:last-child span:nth-child(2) {
+  animation: f_i 0.5s 1.1s forwards;
+}
+#la .la_text > span:last-child span:nth-child(3) {
+  animation: f_i 0.5s 1.2s forwards;
+}
+#la .la_text > span:last-child span:nth-child(4) {
+  animation: f_i 0.5s 1.3s forwards;
+}
+#la .la_text > span:last-child span:nth-child(5) {
+  animation: f_i 0.5s 1.4s forwards;
+}
+#la .la_text > span:last-child span:last-child {
+  animation: f_i 0.5s 1.5s forwards;
+}
+@media screen and (max-width: 768px) {
+  #la .la_text {
+    font-size: 2.6rem;
+    letter-spacing: -0.2rem;
+    top: 40%;
+  }
+}
+/*======================================
+ キービジュアル
+ ======================================*/
+.key {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.key h1 {
+  z-index: -1;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  font-size: 11.2vw;
+  line-height: 1;
+  text-align: center;
+  overflow: hidden;
+}
+.key div {
+  overflow: hidden;
+}
+.key div .gelato_slider {
+  display: flex;
+}
+.key div .gelato_slider ul {
+  display: flex;
+  list-style: none;
+  padding-top: 80px;
+}
+.key div .gelato_slider ul:first-child {
+  animation: loop1 120s linear infinite;
+}
+.key div .gelato_slider ul:nth-child(2) {
+  animation: loop2 120s -80s linear infinite;
+}
+.key div .gelato_slider ul:last-child {
+  animation: loop3 120s -40s linear infinite;
+}
+.key div .gelato_slider ul li {
+  width: 200px;
+  transition: 0.5s;
+}
+.key div .gelato_slider ul li:hover {
+  transform: scale(1.1, 1.1) translateY(-40px);
+}
+/*======================================
+ スクロール
+ ======================================*/
+.scroll {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  right: 5%;
+  animation: arrow 1.5s ease-in-out infinite;
+}
+.scroll span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  font-weight: bold;
+}
+.scroll span::before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  transform: skewX(-31deg);
+}
+.scroll span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 100px;
+  background: #000;
+}
+@media screen and (max-width: 600px) {
+  .scroll span::before {
+    top: 25px;
+  }
+}
+/*======================================
+ about
+ ======================================*/
+.top_about {
+  opacity: 0;
+}
+.top_about.on {
+  animation: f_i 0.5s 0.5s forwards;
+}
+.top_about .a_cont {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.top_about .a_cont section {
+  max-width: 600px;
+}
+.top_about .a_cont section p {
+  text-align: center;
+}
+.top_about .a_features {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.top_about .a_features section h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.top_about .a_features section .a_f_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.top_about .a_features section .a_f_wrap figure {
+  width: 30%;
+}
+.top_about .a_features section .a_f_wrap figure.f_i {
+  opacity: 0;
+}
+.top_about .a_features section .a_f_wrap figure.f_i.on:first-child {
+  animation: f_i 0.5s forwards;
+}
+.top_about .a_features section .a_f_wrap figure.f_i.on:nth-child(2) {
+  animation: f_i 0.5s 0.2s forwards;
+}
+.top_about .a_features section .a_f_wrap figure.f_i.on:last-child {
+  animation: f_i 0.5s 0.4s forwards;
+}
+.top_about .a_features section .a_f_wrap figure figcaption span {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .top_about .a_features section > div.a_f_wrap {
+    flex-direction: column;
+  }
+  .top_about .a_features section > div.a_f_wrap figure {
+    width: 100%;
+    margin: 0;
+  }
+  .top_about .a_features section > div.a_f_wrap figure:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .top_about .a_features section > div.a_f_wrap figure img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 515px) {
+  .top_about .a_features section > div:first-child h3 {
+    padding: 0 30px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .top_about .a_features section > div:first-child h3::before, .top_about .a_features section > div:first-child h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+  }
+}
+@media screen and (max-width: 365px) {
+  .top_about .a_features section > div:first-child h3 {
+    padding: 0 30px;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .top_about .a_features section > div:first-child h3::before, .top_about .a_features section > div:first-child h3::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+  }
+  .top_about .a_features section > div:first-child h3::before {
+    left: 0;
+  }
+  .top_about .a_features section > div:first-child h3::after {
+    right: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .top_about .a_features section > div:first-child h3 {
+    padding: 0;
+  }
+  .top_about .a_features section > div:first-child h3::before, .top_about .a_features section > div:first-child h3::after {
+    content: none;
+  }
+}
+/*======================================
+ キービジュアル2
+ ======================================*/
+.key_02 {
+  width: 100%;
+  background-image: url(../img/key02.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-bottom: calc(100%*914/1855);
+}
+/*======================================
+ menu
+ ======================================*/
+.top_menu {
+  padding: 100px 0;
+  position: relative;
+}
+.top_menu section {
+  opacity: 0;
+}
+.top_menu section.on {
+  animation: f_i 0.5s forwards;
+}
+.top_menu section > div {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.top_menu section > div p:first-child {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .top_menu section > div p.btn {
+    width: 150px;
+  }
+}
+/*======================================
+ shop info
+ ======================================*/
+.si .si_key {
+  width: 100%;
+  background-image: url(../img/info_01.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-bottom: calc(100%*914/1855);
+}
+.si .si_cont {
+  padding: 100px 0;
+  background-color: #fff;
+}
+.si .si_cont .inner h2 {
+  opacity: 0;
+}
+.si .si_cont .inner h2.on {
+  animation: f_i 0.5s forwards;
+}
+.si .si_cont .inner > div {
+  display: flex;
+  justify-content: space-between;
+}
+.si .si_cont .inner > div div:first-child {
+  width: 45%;
+  opacity: 0;
+}
+.si .si_cont .inner > div div:first-child.on {
+  animation: f_i 0.5s forwards;
+}
+.si .si_cont .inner > div div:first-child > p {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.si .si_cont .inner > div div:first-child > p img {
+  width: 100%;
+}
+.si .si_cont .inner > div div:last-child {
+  width: 45%;
+  opacity: 0;
+}
+.si .si_cont .inner > div div:last-child.on {
+  animation: f_i 0.5s 0.2s forwards;
+}
+.si .si_cont .inner > div div:last-child p {
+  margin: 0;
+  text-align: center;
+  font-size: 2.6rem;
+}
+.si .si_cont .inner > div div:last-child table {
+  width: 100%;
+  margin-top: 20px;
+}
+.si .si_cont .inner > div div:last-child table tr th {
+  width: 25%;
+}
+.si .si_cont .inner > div div:last-child table tr td {
+  width: 75%;
+}
+@media screen and (max-width: 768px) {
+  .si .si_cont .inner > div {
+    flex-direction: column;
+  }
+  .si .si_cont .inner > div div:first-child {
+    width: 100%;
+  }
+  .si .si_cont .inner > div div:first-child > p {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .si .si_cont .inner > div div:first-child > p img {
+    width: 100%;
+  }
+  .si .si_cont .inner > div div:last-child {
+    width: 100%;
+  }
+  .si .si_cont .inner > div div:last-child p {
+    margin-top: 20px;
+  }
+  .si .si_cont .inner > div div:last-child table {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .si .si_cont .inner > div div:last-child table tr th {
+    width: 30%;
+  }
+  .si .si_cont .inner > div div:last-child table tr td {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 455px) {
+  .si .si_cont .inner > div div:last-child table tr:not(:last-child) td {
+    margin-bottom: 20px;
+  }
+  .si .si_cont .inner > div div:last-child table tr th {
+    display: block;
+    width: 100%;
+  }
+  .si .si_cont .inner > div div:last-child table tr td {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*======================================
+ menu_title
+ ======================================*/
+.menu_title .inner h1 {
+  font-size: 4.6rem;
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+}
+.menu_title .inner h1::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #f54545;
+}
+.menu_title .inner h1 span {
+  display: block;
+}
+/*======================================
+ set_price
+ ======================================*/
+.set_price {
+  margin-top: 50px;
+  background-color: #fff;
+}
+.set_price .inner {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+}
+.set_price .inner > div > p {
+  text-align: center;
+  margin-top: 30px;
+}
+.set_price .inner > div h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 30px;
+}
+.set_price .inner > div .set_waffle, .set_price .inner > div .set_cup {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.set_price .inner > div .set_waffle > div, .set_price .inner > div .set_cup > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 48%;
+  background-color: #fff;
+}
+.set_price .inner > div .set_waffle > div p img, .set_price .inner > div .set_cup > div p img {
+  width: 100px;
+  height: auto;
+}
+.set_price .inner > div .set_waffle > div dl, .set_price .inner > div .set_cup > div dl {
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
+  background-color: #f54545;
+}
+.set_price .inner > div .set_waffle > div dl dd, .set_price .inner > div .set_cup > div dl dd {
+  margin: 0;
+}
+@media screen and (max-width: 600px) {
+  .set_price {
+    margin-top: 100px;
+  }
+  .set_price .inner > div .set_waffle, .set_price .inner > div .set_cup {
+    flex-direction: column;
+  }
+  .set_price .inner > div .set_waffle > div, .set_price .inner > div .set_cup > div {
+    width: 100%;
+  }
+  .set_price .inner > div .set_waffle > div:not(:last-child), .set_price .inner > div .set_cup > div:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+/*======================================
+ flavor
+ ======================================*/
+.flavor {
+  margin-top: 200px;
+  background-color: #fff;
+}
+.flavor .inner {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+}
+.flavor .inner > p {
+  margin-top: 30px;
+  text-align: center;
+}
+.flavor .inner ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.flavor .inner ul li {
+  list-style: none;
+  width: 22%;
+  padding-bottom: 30px;
+}
+.flavor .inner ul li a {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+.flavor .inner ul li a span {
+  display: block;
+  line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  .flavor .inner ul li {
+    width: 48%;
+  }
+}
+/*======================================
+ topping
+ ======================================*/
+.topping {
+  margin: 200px 0;
+  background-color: #fff;
+}
+.topping .inner {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+}
+.topping .inner p {
+  margin: 30px 0;
+  text-align: center;
+}
+.topping .inner div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.topping .inner div dl {
+  width: 48%;
+  background-color: #fff;
+  padding-bottom: 30px;
+}
+.topping .inner div dl dt {
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+}
+.topping .inner div dl dd {
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+.topping .inner div dl:first-child dt::after {
+  content: 'ピスタチオ';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+.topping .inner div dl:nth-child(2) dt::after {
+  content: 'ラズベリークリスプ';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+.topping .inner div dl:nth-child(3) dt::after {
+  content: 'スプリンクル';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+.topping .inner div dl:nth-child(4) dt::after {
+  content: 'チョコソース';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+.topping .inner div dl:nth-child(5) dt::after {
+  content: 'オレオ';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 600px) {
+  .topping .inner div {
+    flex-direction: column;
+  }
+  .topping .inner div dl {
+    width: 100%;
+  }
+}
+/*======================================
+ フレーバー詳細部分
+ ======================================*/
+.f_area {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.f_area p {
+  width: 30%;
+}
+.f_area p img {
+  transform: rotate(-10deg);
+}
+.f_area .f_detail {
+  width: 60%;
+  background-color: #fff;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+}
+.f_area .f_detail h1, .f_area .f_detail dl {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.f_area .f_detail h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.f_area .f_detail dl {
+  margin-top: 20px;
+}
+.f_area .f_detail dl dd {
+  line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  .f_area {
+    flex-direction: column;
+  }
+  .f_area p {
+    margin: 0 auto;
+  }
+  .f_area .f_detail {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+/*======================================
+ フレーバー
+ ======================================*/
+.c_flavor {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+}
+.c_flavor > p {
+  margin-top: 30px;
+  text-align: center;
+}
+.c_flavor ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+.c_flavor ul li {
+  list-style: none;
+  width: 22%;
+  padding-bottom: 30px;
+}
+.c_flavor ul li a {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+.c_flavor ul li a span {
+  display: block;
+  line-height: 1.5;
+}
+@media screen and (max-width: 600px) {
+  .c_flavor ul li {
+    width: 48%;
+  }
+}

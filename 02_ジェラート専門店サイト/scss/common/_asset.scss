@@ -1,0 +1,121 @@
+/*======================================
+色設定
+======================================*/
+$mc : #fff8de;
+$bc : #fff;
+$ac : #000;
+$cc : #f54545;
+
+/*======================================
+アニメーション設定
+======================================*/
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    } 
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+  @mixin animation($animation-name) {
+    -webkit-animation: $animation-name;
+    -moz-animation: $animation-name;
+    animation: $animation-name;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  //フェードイン
+  @include keyframes(f_i){
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//ナビゲーションアニメ
+@include keyframes(a_circle){
+    0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+}
+
+//スライダーアニメ
+@include keyframes(loop1){
+  0% {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@include keyframes(loop2){
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-200%);
+  }
+}
+
+@include keyframes(loop3){
+  0% {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-300%);
+  }
+}
+
+//スクロールアニメ
+@include keyframes(arrow){
+  0%{
+      bottom:8%;
+  }
+  50%{
+      bottom:10%;
+  }
+  100%{
+      bottom:8%;
+  }
+}
+
+//aboutアニメ
+@include keyframes(bg01){
+  0%{
+    background-positiony: 100px;
+    opacity: 0;
+  }
+  100%{
+    background-positiony: 0px;
+    opacity: 1;
+  }
+}
+
+/*======================================
+メディアクエリ設定
+======================================*/
+@mixin mq($size,$direction:max){
+  $a : '';
+  @if $direction == 'max'{
+      $a : max-width;
+  }@else{
+      $a : min-width;
+  }
+  @media screen and ($a:$size){
+      @content;
+  }
+}

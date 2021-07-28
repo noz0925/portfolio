@@ -1,0 +1,251 @@
+/*======================================
+全体設定　＆　汎用クラス
+======================================*/
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 2;
+    color: $ac;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;;
+    background-color: $mc;
+    overflow-x: hidden;
+}
+
+.inner{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(768px){
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+a{
+    color: $ac;
+    text-decoration: none;
+    transition: .2s;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+.t_font{
+    font-family: 'Kiwi Maru', serif;
+}
+
+// .font_ja{
+//     font-family: 'Kosugi', sans-serif;
+// }
+
+.title_2{
+    font-size: 2.6rem;
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    &::before{
+        position: absolute;
+        bottom: -10px;
+        left: calc(50% - 30px);
+        width: 60px;
+        height: 5px;
+        content: '';
+        border-radius: 3px;
+        background-color: $cc;
+    }
+    span{
+        display: block;
+    }
+}
+
+.title_3{
+    font-size: 2.6rem;
+    border-bottom: 1px solid $cc;
+}
+
+.btn{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    a{
+        color: $bc;
+        font-weight: bold;
+        display: block;
+        padding: 15px 0;
+        background-color: $ac;
+        border: 2px solid $ac;
+        border-radius: 50px;
+        text-align: center;
+    }
+}
+
+.t_wrap{
+    display: inline-block;
+}
+
+
+/*======================================
+ナビゲーションメニュー
+======================================*/
+header{
+    .nav_btn{
+        width: 70px;
+        height: 50px;
+        position: fixed;
+        top: 40px;
+        right: 20px;
+        z-index: 101;
+        &:hover{
+            cursor: pointer;
+        }
+        span{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $bc;
+            transition: .5s;
+            &:last-child{
+                transform: translateY(10px);
+            }
+        }
+        &.t_o{
+            span{
+                background-color: $ac;
+            }
+        }
+    }
+    .nav_body{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $bc;
+        width: 100%;
+        height: 100vh;
+        z-index: 100;
+        padding-top: 80px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        p{
+            max-width: 261px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        >ul{
+            list-style: none;
+            margin-top: 50px;
+            >li{
+                margin-bottom: 20px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: block;
+                    font-size: 2.6rem;
+                    line-height: 1.5;
+                    text-align: center;
+                    &:hover{
+                        background-color: $mc;
+                        transition: .5s;
+                    }
+                }
+                ul{
+                    list-style: none;
+                    li{
+                        a{
+                            display: block;
+                            font-size: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .circle-bg{
+        position: fixed;
+        z-index: 3;
+        /*丸の形*/
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: $bc;
+        /*丸のスタート位置と形状*/
+        transform: scale(0);
+        right:-50px;
+        top:-50px;
+        transition: all .6s;
+    }
+    &.on{
+        .nav_btn{
+            span{
+                background-color: $ac;
+                &:first-child{
+                    transform: translateY(10px) rotate(15deg);
+                }
+                &:last-child{
+                    transform: translateY(8px) rotate(-15deg);
+                }
+            }
+        }
+        .nav_body{
+            opacity: 0;
+            visibility: visible;
+            animation: a_circle 1.2s .3s forwards;
+        }
+        .circle-bg{
+            transform: scale(50);
+        }
+    }
+}
+
+/*======================================
+footer
+======================================*/
+footer{
+    p{
+        color: $bc;
+        font-weight: bold;
+        background-color: $ac;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+/*======================================
+to top
+======================================*/
+.t_t{
+    position: fixed;
+    bottom: -200px;
+    right: 10px;
+    transition: 1s;
+    a{
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        span{
+            margin: 0;
+        }
+    }
+    &.on{
+        bottom: 20px;
+    }
+    // @include mq(768px){
+    //     a{
+    //         span{
+    //             &:first-child{
+    //                 width: 50%;
+    //                 img{
+    //                     width: 100%;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,106 @@
+/*======================================
+店名
+======================================*/
+.store_name{
+    width: 100%;
+    position: relative;
+        p{
+            z-index: -1;
+            white-space: nowrap;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 11.2vw;
+            line-height: 1;
+            text-align: center;
+            font-weight: bold;
+            overflow: hidden;
+        }
+}
+
+/*======================================
+パンくず
+======================================*/
+.bread{
+    padding-top: 150px;
+    .inner{
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                a{
+                    font-size: 1.2rem;
+                }
+                &:not(:last-child)::after{
+                    content: '>';
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+/*======================================
+2カラム
+======================================*/
+.cal2{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    main{
+        width: 70%;
+    }
+    .side{
+        width: 25%;
+        margin-top: 50px;
+        .sidebar{
+            position: sticky;
+            margin-bottom: 0;
+            top: 10px;
+            // z-index: -1;
+            ul{
+                li{
+                    list-style: none;
+                    text-align: center;
+                    &:not(:last-child){
+                        margin-bottom: 5px;
+                    }
+                    a{
+                        color: $bc;
+                        font-weight: bold;
+                        background-color: $ac;
+                        display: block;
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    @include mq(768px){
+        flex-direction: column-reverse;
+        padding-left: 5%;
+        padding-right: 5%;
+        main{
+            width: 100%;
+        }
+        .side{
+            width: 100%;
+            .sidebar{
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                        width: 32%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

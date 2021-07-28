@@ -1,0 +1,496 @@
+/*======================================
+ローディングアニメーション
+======================================*/
+#la{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: $mc;
+    text-align: center;
+    color: $ac;
+    .la_text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4.1rem;
+        >span{
+            &:not(:last-child){
+                opacity: 0;
+            }
+            &:first-child{
+                animation: f_i .5s .5s forwards;
+            }
+            &:nth-child(2){
+                animation: f_i .5s .6s forwards;
+            }
+            &:nth-child(3){
+                animation: f_i .5s .7s forwards;
+            }
+            &:nth-child(4){
+                animation: f_i .5s .8s forwards;
+            }
+            &:nth-child(5){
+                animation: f_i .5s .9s forwards;
+            }
+            &:last-child{
+                span{
+                    opacity: 0;
+                    &:first-child{
+                        animation: f_i .5s 1s forwards;
+                    }
+                    &:nth-child(2){
+                        animation: f_i .5s 1.1s forwards;
+                    }
+                    &:nth-child(3){
+                        animation: f_i .5s 1.2s forwards;
+                    }
+                    &:nth-child(4){
+                        animation: f_i .5s 1.3s forwards;
+                    }
+                    &:nth-child(5){
+                        animation: f_i .5s 1.4s forwards;
+                    }
+                    &:last-child{
+                        animation: f_i .5s 1.5s forwards;
+                    }
+                }
+            }
+        }
+    }
+    @include mq(768px){
+        .la_text{
+            font-size: 2.6rem;
+            letter-spacing: -0.2rem;
+            top: 40%;
+        }
+    }
+}
+
+
+/*======================================
+キービジュアル
+======================================*/
+    .key{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        h1{
+            z-index: -1;
+            white-space: nowrap;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+            font-size: 11.2vw;
+            line-height: 1;
+            text-align: center;
+            overflow: hidden;
+        }
+        div{
+            overflow: hidden;
+            .gelato_slider{
+                display: flex;
+                ul{
+                    display: flex;
+                    list-style: none;
+                    padding-top: 80px;
+                    &:first-child{
+                        animation: loop1 120s linear infinite;
+                    }
+                    &:nth-child(2){
+                        animation: loop2 120s -80s linear infinite;
+                    }
+                    &:last-child{
+                        animation: loop3 120s -40s linear infinite;
+                    }
+                    li{
+                        width: 200px;
+                        transition: .5s;
+                        &:hover{
+                            transform: scale(1.1,1.1) translateY(-40px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+/*======================================
+スクロール
+======================================*/
+.scroll{
+        width: 100%;
+        position: absolute;
+        bottom: 0%;
+        right: 5%;
+        animation: arrow 1.5s ease-in-out infinite;
+        span{
+            position: absolute;
+            top: 0;
+            right: 0;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            font-weight: bold;
+            //矢印のはね
+            &::before{
+                content: '';
+                position: absolute;
+                top: 23px;
+                right: -6px;
+                width: 1px;
+                height: 20px;
+                background-color: $ac;
+                transform: skewX(-31deg);
+            }
+            //矢印の棒
+            &::after{
+                content:"";
+              position: absolute;
+              bottom:0;
+              right:0;
+              width:1px;
+              height: 100px;
+              background:$ac;
+            }
+        }
+        @include mq(600px){
+            span{
+                &::before{
+                    top: 25px;
+                }
+            }
+        }
+    }
+
+
+/*======================================
+about
+======================================*/
+.top_about{
+    opacity: 0;
+    &.on{
+        animation: f_i .5s .5s forwards;
+    }
+    .a_cont{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        section{
+            max-width: 600px;
+            p{
+                text-align: center;
+            }
+        }
+    }
+    .a_features{
+        background-color: $bc;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        section{
+            h3{
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .a_f_wrap{
+                display: flex;
+                justify-content: space-between;
+                figure{
+                    width: 30%;
+                    &.f_i{
+                        opacity: 0;
+                        &.on{
+                            &:first-child{
+                                animation: f_i .5s forwards;
+                            }
+                            &:nth-child(2){
+                                animation: f_i .5s .2s forwards;
+                            }
+                            &:last-child{
+                                animation: f_i .5s .4s forwards;
+                            }
+                        }
+                    }
+                    figcaption{
+                        span{
+                            display: block;
+                            text-align: center;
+                            font-weight: bold;
+                            padding: 10px 0;
+                        }
+                     }
+                  }
+            }
+            @include mq(768px){
+                >div{
+                    &.a_f_wrap{
+                        flex-direction: column;
+                        figure{
+                            width: 100%;
+                            margin: 0;
+                            &:not(:last-child){
+                                margin-bottom: 30px;
+                            }
+                            img{
+                                width: 60%;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mq(515px){
+                >div{
+                    &:first-child{
+                        h3{
+                            padding: 0 30px;
+                        margin: 0;
+                        margin-bottom: 30px;
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            display: inline-block;
+                            width: 30px;
+                            height: 1px;
+                            background-color: $ac;
+                        }
+                        }
+                    }
+                }
+            }
+            @include mq(365px){
+                >div{
+                    &:first-child{
+                        h3{
+                        padding: 0 30px;
+                        margin: 0;
+                        margin-bottom: 30px;
+                        &::before,
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            display: inline-block;
+                            width: 30px;
+                            height: 1px;
+                            background-color: $ac;
+                        }
+                        &::before{
+                            left: 0;
+                        }
+                        &::after{
+                            right: 0;
+                        }
+                        }
+                    }
+                }
+            }
+            @include mq(320px){
+                >div{
+                    &:first-child{
+                        h3{
+                            padding: 0;
+                            &::before,
+                            &::after{
+                            content: none;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*======================================
+キービジュアル2
+======================================*/
+.key_02{
+    width: 100%;
+    background-image: url(../img/key02.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-bottom: calc(100%*914/1855);
+}
+
+/*======================================
+menu
+======================================*/
+.top_menu{
+    padding: 100px 0;
+    position: relative;
+    section{
+        opacity: 0;
+        &.on{
+            animation: f_i .5s forwards;
+        }
+        >div{
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                p{
+                    &:first-child{
+                        text-align: center;
+                    }
+            }
+        }
+        @include mq(768px){
+            >div{
+                p{
+                    &.btn{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*======================================
+shop info
+======================================*/
+.si{
+    .si_key{
+        width: 100%;
+        background-image: url(../img/info_01.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-bottom: calc(100%*914/1855);
+    }
+    .si_cont{
+        padding: 100px 0;
+        background-color: $bc;
+        .inner{
+            h2{
+                opacity: 0;
+                &.on{
+                    animation: f_i .5s forwards;
+                }
+            }
+            >div{
+                display: flex;
+                justify-content: space-between;
+                div{
+                    &:first-child{
+                        width: 45%;
+                        opacity: 0;
+                        &.on{
+                            animation: f_i .5s  forwards;
+                        }
+                        >p{
+                            width: 50%;
+                            margin-left: auto;
+                            margin-right: auto;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        width: 45%;
+                        opacity: 0;
+                        &.on{
+                            animation: f_i .5s .2s forwards;
+                        }
+                        p{
+                            margin: 0;
+                            text-align: center;
+                            font-size: 2.6rem;
+                        }
+                        table{
+                            width: 100%;
+                            margin-top: 20px;
+                            tr{
+                                th{
+                                    width: 25%;
+                                }
+                                td{
+                                    width: 75%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include mq(768px){
+                >div{
+                    flex-direction: column;
+                    div{
+                        &:first-child{
+                            width: 100%;
+                            >p{
+                                width: 45%;
+                                margin-left: auto;
+                                margin-right: auto;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        &:last-child{
+                            width: 100%;
+                            p{
+                                margin-top: 20px;
+                            }
+                            table{
+                                max-width: 320px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                tr{
+                                    th{
+                                        width: 30%;
+                                    }
+                                    td{
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq(455px){
+        .si_cont{
+            .inner{
+                // h2{
+                //     opacity: 0;
+                // }
+                >div{
+                    div{
+                        &:last-child{
+                            table{
+                                tr{
+                                    &:not(:last-child){
+                                        td{
+                                            margin-bottom: 20px;
+                                        }
+                                    }
+                                    th{
+                                        display: block;
+                                        width: 100%;
+                                    }
+                                    td{
+                                        display: block;
+                                        width: 100%;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

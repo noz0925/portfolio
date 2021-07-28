@@ -1,0 +1,257 @@
+/*======================================
+menu_title
+======================================*/
+.menu_title{
+    .inner{
+        h1{
+            font-size: 4.6rem;
+            position: relative;
+            padding: 1.5rem;
+            text-align: center;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: calc(50% - 30px);
+                width: 60px;
+                height: 5px;
+                border-radius: 3px;
+                background-color: $cc;
+            }
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+/*======================================
+set_price
+======================================*/
+.set_price{
+    margin-top: 50px;
+    background-color: $bc;
+    .inner{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 0;
+        >div{
+            >p{
+                text-align: center;
+                margin-top: 30px;
+            }
+            h3{
+                font-size: 1.6rem;
+                text-align: center;
+                margin-top: 30px;
+            }
+            .set_waffle,
+            .set_cup{
+                padding-top: 30px;
+                display: flex;
+                justify-content: space-evenly;
+                >div{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 48%;
+                    background-color: $bc;
+                    p{
+                        img{
+                            width: 100px;
+                            height: auto;
+                        }
+                    }
+                    dl{
+                        width: 50%;
+                        text-align: center;
+                        font-weight: bold;
+                        padding: 10px 0;
+                        background-color: $cc;
+                        dd{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq(600px){
+        margin-top: 100px;
+        .inner{
+            >div{
+                .set_waffle,
+                .set_cup{
+                    flex-direction: column;
+                    >div{
+                        width: 100%;
+                        &:not(:last-child){
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*======================================
+flavor
+======================================*/
+.flavor{
+    margin-top: 200px;
+    background-color: $bc;
+    .inner{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 0;
+        >p{
+            margin-top: 30px;
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 30px;
+            li{
+                list-style: none;
+                width: 22%;
+                padding-bottom: 30px;
+                a{
+                    display: block;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    text-align: center;
+                    span{
+                        display: block;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+    @include mq(600px){
+        .inner{
+            ul{
+                li{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+
+/*======================================
+topping
+======================================*/
+.topping{
+    margin: 200px 0;
+    background-color: $bc;
+    .inner{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 50px 0;
+        p{
+            margin: 30px 0;
+            text-align: center;
+        }
+        div{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            dl{
+                width: 48%;
+                background-color: $bc;
+                padding-bottom: 30px;
+                dt{
+                    font-weight: bold;
+                    position: relative;
+                    text-align: center;
+                }
+                dd{
+                    font-size: 1.4rem;
+                    margin-top:10px;
+                }
+                &:first-child{
+                    dt{
+                        &::after{
+                            content: 'ピスタチオ';
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    dt{
+                        &::after{
+                            content: 'ラズベリークリスプ';
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    dt{
+                        &::after{
+                            content: 'スプリンクル';
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    dt{
+                        &::after{
+                            content: 'チョコソース';
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                &:nth-child(5){
+                    dt{
+                        &::after{
+                            content: 'オレオ';
+                            display: block;
+                            position: absolute;
+                            top: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mq(600px){
+        .inner{
+            div{
+                flex-direction: column;
+                dl{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
