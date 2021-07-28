@@ -1,0 +1,50 @@
+@use "../../setting/import" as import;
+
+.c-contact{
+    &:first-child{
+        margin: 0;
+    }
+
+    &__item{
+        margin-top: 25px;
+    }
+
+    &__title{
+        font-family: import.$noto-serif;
+    }
+
+    &__check-box{
+        display: block;
+    }
+
+    &__block{
+        display: block;
+    }
+
+    &__check-box--input{
+        width: 10px;
+        height: 10px;
+    }
+
+    &__text--input{
+        height: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__textarea--input{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__btn{
+        margin-top: 80px;
+    }
+
+    @include import.mq(min,769px){
+        &__block{
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}

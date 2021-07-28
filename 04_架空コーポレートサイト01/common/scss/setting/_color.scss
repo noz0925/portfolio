@@ -1,0 +1,29 @@
+//色設定------------------------------
+$palette-black-01 : #282F35;
+$palette-black-02 : #171717;
+$palette-black-03 : #141414;
+$palette-black-04 : #000000;
+$palette-black-05 : #1B1310;
+$palette-white : #ffffff;
+$palette-yellow : #F7D43F;
+
+//ヘッダー　文字　色---------------------
+$header-logo-color : $palette-white;
+$header-nav-color : $palette-white;
+
+//ヘッダー　背景　色---------------------
+$header-bg : $palette-black-01;
+$header-hm-bg : $palette-black-01;
+$header-hm-line : $palette-white;
+
+//キービジュアル　文字 色-----------------
+$key-visual-font-color : $palette-white;
+
+//c-contents　色------------------
+$contents-color-b--01 : $palette-black-01;
+$contents-color-b--02 : $palette-black-02;
+$contents-color-w : $palette-white;
+
+//c-btn 色---------------------------
+$btn-color : $palette-yellow;
+$btn-font-color : $palette-black-02;

@@ -1,0 +1,19 @@
+@use "../../setting/import" as import;
+
+.c-flex{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include import.mq(min,769px){
+            flex-direction: row;
+
+            &__box2{
+                width: 44%;
+            }
+    
+            &__box3{
+                width: 33.333333%;
+            }
+        }
+}

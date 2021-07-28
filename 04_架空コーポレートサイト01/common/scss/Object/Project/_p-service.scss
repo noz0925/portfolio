@@ -1,0 +1,110 @@
+@use "../../setting/import" as import;
+
+.p-service{
+    background-color: import.$contents-color-w;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+
+    &__inner{
+        padding: 0;
+    }
+
+    &__top{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    &__title{
+        padding-right: 120px;
+        &::after{
+            width: 90px;
+            background-color: import.$contents-color-b--01;
+        }
+    }
+
+    &__item{
+        margin-top: 30px;
+        list-style: none;
+        position: relative;
+    }
+
+    &__item--text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: import.$contents-color-w;
+        font-family: import.$noto-serif;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__bottom{
+        padding-left: 4%;
+        padding-right: 4%;
+        text-align: right;
+        color: rgba(23,23,23,0.05);
+    }
+    
+
+    @include import.mq(min,769px){
+        &__inner{
+            padding: 0;
+            margin: 0;
+            max-width: initial;
+        }
+
+        &__top{
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__item{
+            margin-top: 0;
+            height: auto;
+        }
+
+        &__item--text{
+            font-size: 4rem;
+        }
+
+        &__musk{
+            position: relative;
+            display: block;
+            line-height: 0;
+            overflow: hidden;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(40, 47, 53, .7);
+                opacity: 0;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        &__bottom{
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__musk{
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

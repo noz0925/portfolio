@@ -1,0 +1,16 @@
+@use "../../setting/import" as import;
+
+.p-bottom-contact{
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    &__main{
+        padding: 0;
+    }
+
+    @include import.mq(min,769px){
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

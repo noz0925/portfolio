@@ -1,0 +1,10 @@
+@use "../setting/import" as import;
+
+.l-footer{
+    background-color: import.$contents-color-w;
+    font-family: import.$noto-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 79px;
+    text-align: center;
+}

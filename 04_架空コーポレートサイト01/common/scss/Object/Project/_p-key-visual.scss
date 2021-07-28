@@ -1,0 +1,101 @@
+@use "../../setting/import" as import;
+
+.p-key-visual{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &__slider{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    &__slide-item--1,
+    &__slide-item--2,
+    &__slide-item--3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    &__slide-item--1{
+        background-image: url(../img/fv-bgi_01@2x.jpg);
+        opacity: 1;
+    }
+
+    &__slide-item--2{
+        background-image: url(../img/fv-bgi_02@2x.jpg);
+        opacity: 0;
+    }
+
+    &__slide-item--3{
+        background-image: url(../img/fv-bgi_03@2x.jpg);
+        opacity: 0;
+    }
+
+    &__inner--pc{
+        display: none;
+    }
+
+    &__inner--sp{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        color: import.$key-visual-font-color;
+        text-align: center;
+        z-index: 1;
+    }
+
+    &__text--sp-01{
+        font-family: import.$noto-serif;
+        font-size: 9.867vw;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    &__text--sp-02{
+        font-size: 8vw;
+        font-weight: bold;
+        line-height: 1.666;
+        margin-top: 59px;
+    }
+
+    @include import.mq(min,769px){
+        &__inner--pc{
+            display: inline-block;
+            position: absolute;
+            top: 409px;
+            left: 8.333%;
+            color: import.$key-visual-font-color;
+            z-index: 1;
+        }
+    
+        &__inner--sp{
+            display: none;
+        }
+
+        &__text--pc-01{
+            font-family: import.$noto-serif;
+            font-size: 7rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        &__text--pc-02{
+            font-size: 4rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            line-height: 1.25;
+        }
+    }
+}

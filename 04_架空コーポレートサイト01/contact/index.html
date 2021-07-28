@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cresta Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif:ital,wght@0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../common/css/style.css">
+</head>
+
+<body class="contact">
+
+    <!-- ヘッダー -->
+    <header class="l-header js-header-trigger">
+        <div class="l-header__inner">
+
+            <!-- ヘッダー　ロゴ -->
+            <p class="l-header__logo">
+                <a href="../">
+                    Cresta Design
+                </a>
+            </p>
+
+            <!-- ヘッダー　ハンバーガーメニューボタン -->
+            <div class="l-header__button js-btn-trigger">
+                <span class="l-header__line">
+                    <span></span>
+                </span>
+            </div>
+
+            <!-- ヘッダー　ナビゲーション -->
+            <nav class="l-header__nav js-btn-trigger">
+                <div class="l-header__nav-body">
+                    <ul class="l-header__list">
+                        <li class="l-header__item">
+                            <a href="#">Concept</a>
+                        </li>
+                        <li class="l-header__item">
+                            <a href="#">Service</a>
+                        </li>
+                        <li class="l-header__item">
+                            <a href="#">Works</a>
+                        </li>
+                        <li class="l-header__item">
+                            <a href="./">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- メイン -->
+    <main class="l-main-container">
+
+        <!-- 下層ページ　キービジュアル -->
+        <div class="p-bottom-visual">
+            <div class="p-bottom-visual__inner">
+                <div class="p-bottom-visual__table">
+                    <div class="p-bottom-visual__table-cell">
+                        <p class="p-bottom-visual__text">
+                            Contact
+                        </p>
+                    </div>
+                </div>
+                <div class="p-bottom-visual__bottom">
+                    <p class="p-bottom-visual__text--bottom">
+                        Contact us
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- コンタクト -->
+        <section class="c-contents p-bottom-contact">
+            <div class="c-contents__inner">
+                <div class="c-contents__main p-bottom-contact__main">
+                    <form action="#" class="c-contact">
+                        <dl class="c-contact__item">
+                            <label for="type">
+                                <dt class="c-contact__title">
+                                    問い合わせ内容
+                                </dt>
+                                <dd class="c-contact__check-box">
+                                    <label for="document" class="c-contact__block">
+                                        <input type="checkbox" name="inquiry-type" id="document"
+                                            class="c-contact__check-box--input" required>
+                                        資料請求
+                                    </label>
+                                    <label for="call-request" class="c-contact__block">
+                                        <input type="checkbox" name="inquiry-type" id="call-request"
+                                            class="c-contact__check-box--input" required>
+                                        お電話でのご相談を希望
+                                    </label>
+                                    <label for="application" class="c-contact__block">
+                                        <input type="checkbox" name="inquiry-type" id="application"
+                                            class="c-contact__check-box--input" required>
+                                        申し込み
+                                    </label>
+                                </dd>
+                            </label>
+                        </dl>
+                        <dl class="c-contact__item">
+                            <label for="name">
+                                <dt class="c-contact__title">
+                                    担当者名
+                                </dt>
+                                <dd class="c-contact__text">
+                                    <input type="text" name="name" id="name" class="c-contact__text--input" required>
+                                </dd>
+                            </label>
+                        </dl>
+                        <dl class="c-contact__item">
+                            <label for="tel">
+                                <dt class="c-contact__title">
+                                    電話番号
+                                </dt>
+                                <dd class="c-contact__text">
+                                    <input type="tel" name="tel" id="tel" class="c-contact__text--input" required>
+                                </dd>
+                            </label>
+                        </dl>
+                        <dl class="c-contact__item">
+                            <label for="email">
+                                <dt class="c-contact__title">
+                                    メールアドレス
+                                </dt>
+                                <dd class="c-contact__text">
+                                    <input type="text" name="email" id="email" class="c-contact__text--input" required>
+                                </dd>
+                            </label>
+                        </dl>
+                        <dl class="c-contact__item">
+                            <label for="qa">
+                                <dt class="c-contact__title">
+                                    その他
+                                </dt>
+                                <dd class="c-contact__text">
+                                    <textarea name="qa" id="qa" rows="9" class="c-contact__textarea--input"></textarea>
+                                </dd>
+                            </label>
+                        </dl>
+                        <p class="c-btn c-contact__btn">
+                            <a href="#">
+                                Submit
+                            </a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+        <small>&copycresta.design all rights reserved</small>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../common/js/main.js"></script>
+
+</body>
+
+</html>

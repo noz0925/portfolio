@@ -1,0 +1,13 @@
+//メディアクエリ ---------------------------
+@mixin mq($direction,$size){
+    $a: '';
+    @if $direction == 'min'{
+        $a: min-width;
+    } @else if $direction == 'max'{
+        $a: max-width;
+    }
+
+    @media screen and ($a:$size){
+        @content;
+    }
+}

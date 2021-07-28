@@ -1,0 +1,66 @@
+@use "../../setting/import" as import;
+
+.p-works{
+    background-image: url(../img/works-bgi@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    img{
+        width: 100%;
+    }
+
+    &__top{
+        text-align: right;
+    }
+
+    &__title{
+        color: import.$contents-color-w;
+        padding-right: 130px;
+        &::after{
+            background-color: import.$contents-color-w;
+        }
+    }
+
+    &__flex{
+        >:first-child{
+            padding-top: 0;
+        }
+    }
+
+    &__item{
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+    }
+
+    &__item-inner{
+        display: block;
+        box-shadow: 0 0 6px import.$palette-black-04;
+        color: import.$palette-black-03;
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__text{
+        background-color: import.$contents-color-w;
+        padding: 25px 20px;
+    }
+
+    &__btn{
+        margin-top: 80px;
+    }
+
+    &__bottom{
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    @include import.mq(min,769px){
+        &__item{
+            padding-top: 0;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@use "../setting/import" as import;
+
+.js-btn-trigger{
+    &.active{
+        .l-header__line{
+            &::before{
+                transform: translateY(10px) rotate(45deg);
+            }
+
+            span{
+                transform: rotate(45deg);
+            }
+
+            &::after{
+                transform: translateY(-10px) rotate(-45deg);
+            }
+        }
+
+        .l-header__nav-body{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.js-header-trigger{
+    transition: .5s;
+    &.active{
+        background-color: import.$header-bg;
+    }
+}

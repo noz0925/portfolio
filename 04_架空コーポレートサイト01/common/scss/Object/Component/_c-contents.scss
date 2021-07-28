@@ -1,0 +1,95 @@
+@use "../../setting/import" as import;
+
+.c-contents{
+    background-color: import.$contents-color-w;
+    font-family: import.$noto-serif-jp;
+
+    &__inner{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    &__top{
+        padding-top: 100px;
+        text-align: left;
+    }
+
+    &__main{
+        padding-top: 55px;
+    }
+
+    &__bottom{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    &__title{
+        position: relative;
+        font-family: import.$noto-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 0.4;
+        letter-spacing: 0.05em;
+        display: inline-block;
+        &::after{
+            content: '';
+            width: 100px;
+            height: 5px;
+            position: absolute;
+            top: calc(50% - 2.5px);
+            right: 0;
+        }
+    }
+
+    &__text--large{
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.666;
+        text-align: center;
+    }
+
+    &__text--bold{
+        font-weight: bold;
+    }
+
+    &__text--bottom{
+        font-weight: bold;
+        font-size: 4rem;
+        line-height: 1.675;
+        font-family: import.$noto-serif;
+    }
+
+    @include import.mq(min,769px){
+        &__inner{
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__main{
+            padding-top: 80px;
+        }
+
+        &__bottom{
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        &__title{
+            font-size: 6rem;
+        }
+
+        &__text--large{
+            font-size: 3rem;
+        }
+
+        &__text--bottom{
+            font-size: 9rem;
+            line-height: 1;
+        }
+    }
+}

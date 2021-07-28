@@ -1,0 +1,23 @@
+@use "../setting/import" as import;
+
+html{
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: import.$noto-serif-jp;
+    line-height: 2;
+    letter-spacing: 0.05em;
+
+    a{
+        display: block;
+    }
+}

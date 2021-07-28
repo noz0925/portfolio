@@ -1,0 +1,10 @@
+@use "../../setting/import" as import;
+
+.c-grid{
+
+    @include import.mq(min,769px){
+        display: grid;
+        grid-template-columns: 32% 32% 32%;
+        column-gap: 20px;
+    }
+}

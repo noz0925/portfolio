@@ -1,0 +1,16 @@
+@use "../../setting/import" as import;
+
+.c-btn{
+    width: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    background-color: import.$btn-color;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0 0 6px import.$palette-black-05;
+    >a{
+        color: import.$btn-font-color;
+        font-weight: bold;
+    }
+}

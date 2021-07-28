@@ -1,0 +1,38 @@
+@use "../../setting/import" as import;
+
+.p-contact{
+    background-image: url(../img/contact-bgi@2x.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: import.$contents-color-w;
+
+    &__top{
+        text-align: right;
+    }
+
+    &__title{
+        padding-right: 130px;
+        &::after{
+            background-color: import.$contents-color-w;
+        }
+    }
+
+    &__text{
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__btn{
+        margin-top: 30px;
+    }
+
+    &__bottom{
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    @include import.mq(min,769px){
+
+    }
+}
