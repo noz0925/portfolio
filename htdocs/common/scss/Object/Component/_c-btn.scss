@@ -1,0 +1,17 @@
+@use "../../setting/import" as i;
+
+.c-btn{
+    width: 160px;
+    line-height: 36px;
+    font-family: i.$f-c-btn__text;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.015em;
+    background-color: i.$c-c-btn-bg;
+    text-align: center;
+    
+    >a{
+        display: block;
+        color: i.$c-c-btn-text;
+    }
+}

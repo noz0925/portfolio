@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT|DIGSMILE inc.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../common/css/style.css">
+</head>
+
+<body id="top">
+
+    <!-- ヘッダー -->
+    <header class="l-header">
+        <div class="l-header__inner">
+            <div class="l-header__logo js-bg-trigger-1">
+                <p class="l-header__logo--img">
+                    <a href="../">
+                        <img src="../common/img/logo@2x.png" alt="DIGSMILE inc.">
+                    </a>
+                </p>
+            </div>
+            <div class="l-header__btn js-btn-trigger js-bg-trigger-2">
+                <span class="l-header__btn--line">
+                    <span></span>
+                </span>
+                <span class="l-header__btn--text">
+                    MENU
+                </span>
+            </div>
+            <nav class="l-header__nav js-btn-trigger">
+                <div class="p-nav">
+                    <div class="p-nav__inner">
+                        <figure class="p-nav__logo">
+                            <a href="../">
+                                <img src="../common/img/logo-mark@2x.png" alt="ロゴマーク">
+                            </a>
+                        </figure>
+                        <ul class="p-nav__list">
+                            <li class="p-nav__item">
+                                <a href="../about_us/">ABOUT US</a>
+                            </li>
+                            <li class="p-nav__item">
+                                <a href="#">WORKS</a>
+                            </li>
+                            <li class="p-nav__item">
+                                <a href="#">CULTURE</a>
+                            </li>
+                            <li class="p-nav__item">
+                                <a href="#">TOPICS</a>
+                            </li>
+                            <li class="p-nav__item">
+                                <a href="./">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="p-nav__mask"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- コンテンツエリア -->
+    <div class="l-main-container">
+
+        <!-- キービジュアル -->
+        <div class="c-visual p-visual__contact">
+            <div class="c-visual__bg">
+                <span class="c-visual__bg--img p-visual__contact--img"></span>
+            </div>
+            <div class="c-visual__text p-visual__contact--text">
+                <h1 class="c-visual__main">
+                    CONTACT
+                </h1>
+                <span class="c-visual__sub">
+                    お問い合わせ
+                </span>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="c-contact">
+            <p class="c-contact__top">
+                ご依頼やご相談についてのご質問やご要望がございましたら、下記フォームよりお気軽にお問い合わせください。
+                送付いただいた内容を確認の上、担当者からご連絡させていただきます。
+            </p>
+            <div class="c-contact__main">
+                <form action="#" method="POST" class="c-contact__form">
+                    <dl class="c-contact__item">
+                        <dt class="c-contact__title">
+                            お問い合わせ種別
+                        </dt>
+                        <dd class="c-contact__radio-btn">
+                            <label for="request" class="c-contact__radio-btn--item">
+                                <input type="radio" name="inquiry-type" id="request" class="c-contact__input--radio"
+                                    checked required>
+                                制作依頼
+                            </label>
+                            <label for="request" class="c-contact__radio-btn--item">
+                                <input type="radio" name="inquiry-type" id="request" class="c-contact__input--radio">
+                                採用
+                            </label>
+                            <label for="ir" class="c-contact__radio-btn--item">
+                                <input type="radio" name="inquiry-type" id="ir" class="c-contact__input--radio">
+                                IR
+                            </label>
+                            <label for="other" class="c-contact__radio-btn--item">
+                                <input type="radio" name="inquiry-type" id="other" class="c-contact__input--radio">
+                                その他
+                            </label>
+                        </dd>
+                    </dl>
+                    <dl class="c-contact__item">
+                        <label for="company-name">
+                            <dt class="c-contact__title u-content-none">
+                                会社名・団体名
+                            </dt>
+                            <dd class="c-contact__text">
+                                <input type="text" name="company-name" id="company-name" class="c-contact__input--text">
+                            </dd>
+                        </label>
+                    </dl>
+                    <dl class="c-contact__item">
+                        <label for="name">
+                            <dt class="c-contact__title">
+                                お名前
+                            </dt>
+                            <dd class="c-contact__text">
+                                <input type="text" name="name" id="name" class="c-contact__input--text" required>
+                            </dd>
+                        </label>
+                    </dl>
+                    <dl class="c-contact__item">
+                        <label for="email">
+                            <dt class="c-contact__title">
+                                メールアドレス
+                            </dt>
+                            <dd class="c-contact__text">
+                                <input type="email" name="email" id="email" class="c-contact__input--text" required>
+                            </dd>
+                        </label>
+                    </dl>
+                    <dl class="c-contact__item">
+                        <label for="tel">
+                            <dt class="c-contact__title u-content-none">
+                                電話番号
+                            </dt>
+                            <dd class="c-contact__text">
+                                <input type="tel" name="tel" class="c-contact__input--text" id="tel">
+                            </dd>
+                        </label>
+                    </dl>
+                    <dl class="c-contact__item">
+                        <label for="qa">
+                            <dt class="c-contact__title">
+                                お問い合わせ内容
+                            </dt>
+                            <dd class="c-contact__text">
+                                <textarea name="qa" id="qa" rows="6" class="c-contact__input--text" required></textarea>
+                            </dd>
+                        </label>
+                    </dl>
+                    <div class="c-contact__policy">
+                        <p class="c-contact__policy--title">
+                            PRIVACY POLICY
+                        </p>
+                        <div class="c-contact__policy--wrap">
+                            <p class="c-contact__policy--text">
+                                個人情報保護方針<br>
+                                株式会社DIGSMILE（以下、当社）では、個人情報の重要性を認識し、以下の基準に従って、適切な管理、保護に努めます。<br>
+                                <br>
+                                1.個人情報の収集、利用<br>
+                                当社では、お客様との取引、サービスの提供のために個人情報を適法に収集し、収集した目的の範囲内で、個人情報を利用いたします。<br>
+                                <br>
+                                2.個人情報の第三者への開示と提供<br>
+                                収集したお客様の個人情報は、法的な要請等によらない限り、お客様の承諾を得ない第三者に対して提供・開示はいたしません。<br>
+                                業務の都合上、業務委託先に個人情報を提供する場合は、機密保持契約等によって業務委託先に個人情報保護を義務付けるとともに、業務委託先が適切に個人情報を取り扱うように管理いたします。<br>
+                                <br>
+                                3.個人情報の保護<br>
+                                当社では、個人情報の紛失、破壊、改ざん、不正アクセス、および漏えい等を防止するため、適切な対策を行います。<br>
+                                <br>
+                                4.法令および関連規範の遵守<br>
+                                当社は、個人情報の取り扱いに関して、個人情報保護法をはじめとする個人情報に関する法令および関連する規範を遵守します。<br>
+                                <br>
+                                5.個人情報の開示・訂正・削除<br>
+                                当社では、個人情報の開示・訂正・削除等の依頼があった場合、情報提供者本人であることを確認の上、すみやかに対応いたします。<br>
+                                <br>
+                                法令や当社方針により、プライバシー・ポリシーを予告なく改訂することがあります。<br>
+                                <br>
+                                お問い合わせ窓口<br>
+                                当社の個人情報の取扱いに関するお問い合わせは下記までご連絡お願いいたします。<br>
+                                株式会社ファイアープレイス<br>
+                                044-589-4333
+                            </p>
+                        </div>
+                        <div class="c-contact__policy--check">
+                            <p class="c-contact__policy--check-inner">
+                                <label for="check">
+                                    <input type="checkbox" name="check" id="check" class="c-contact__input--check"
+                                        required>
+                                    個人情報の取り扱いについて同意のうえ<span class="u-inline-block">送信します。</span>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="c-btn c-contact__btn">
+                        <a href="#">
+                            送信
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- フッター -->
+    <footer class="l-footer">
+        <p class="l-footer__text">&copy2018 DIGSMILE INC.</p>
+    </footer>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../common/js/main.js"></script>
+</body>
+
+</html>
