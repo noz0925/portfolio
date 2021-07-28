@@ -496,6 +496,9 @@ body a {
   border-radius: 50px;
   margin-top: 30px;
   text-align: center;
+  border: 1px solid #333333;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .c-btn a {
   color: #ffffff;
@@ -511,6 +514,15 @@ body a {
   position: absolute;
   top: 0;
   right: 30px;
+}
+.c-btn:hover {
+  background-color: transparent;
+}
+.c-btn:hover a {
+  color: #333333;
+}
+.c-btn:hover a::after {
+  color: #333333;
 }
 
 .c-to-top {
@@ -787,6 +799,14 @@ body a {
 .p-work-visual__main {
   opacity: 1;
 }
+.p-work-visual__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
 .p-work-visual__title {
   font-family: "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
@@ -795,9 +815,34 @@ body a {
 }
 .p-work-visual__btn {
   background-color: #9dddda;
+  border: 1px solid #9dddda;
 }
 .p-work-visual__btn a::after {
   content: "";
+}
+.p-work-visual__btn:hover a {
+  color: #9dddda;
+}
+.p-work-visual__btn:hover a::after {
+  color: #9dddda;
+}
+.p-work-visual__btn--github span {
+  font-size: 1.4rem;
+  display: block;
+  line-height: 1;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  .p-work-visual__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .p-work-contents {
@@ -933,16 +978,21 @@ body a {
   text-align: center;
 }
 .p-form__btn {
-  border: none;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
 }
+.p-form__btn:hover {
+  color: #333333;
+}
 .p-form__btn--return {
   width: 135px;
-  border: none;
+  border: 1px solid #ffffff;
   background-color: #ffffff;
   color: #333333;
   font-weight: bold;
+}
+.p-form__btn--return:hover {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

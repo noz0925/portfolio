@@ -43,17 +43,24 @@
     }
 
     &__btn{
-        border: none;
         color: import.$c-p-form-text;
         font-weight: bold;
         text-align: center;
+
+        &:hover{
+            color: import.$c-p-form-bg;
+        }
     }
 
     &__btn--return{
         width: 135px;
-        border: none;
+        border: 1px solid import.$c-p-form-text;
         background-color: import.$c-p-form-text;
         color: import.$c-p-form-bg;
         font-weight: bold;
+
+        &:hover{
+            color: import.$c-p-form-text;
+        }
     }
 }

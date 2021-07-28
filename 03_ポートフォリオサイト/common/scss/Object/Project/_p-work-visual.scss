@@ -11,6 +11,11 @@
         opacity: 1;
     }
 
+    &__bottom{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     &__title{
         font-family: import.$f-p-work-visual-title;
 
@@ -21,11 +26,40 @@
 
     &__btn{
         background-color: import.$c-p-work-visual-bg;
+        border: 1px solid import.$c-p-work-visual-bg;
 
         a{
             &::after{
                 content: '\e89e';
             }
+        }
+
+        &:hover{
+            a{
+                color: import.$c-p-work-visual-bg;
+
+                &::after{
+                    color: import.$c-p-work-visual-bg;
+                }
+            }
+        }
+    }
+
+    &__btn--github{
+        span{
+            font-size: 1.4rem;
+            display: block;
+            line-height: 1;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    @include import.mq(max,768px){
+        &__bottom{
+            flex-direction: column;
         }
     }
 }

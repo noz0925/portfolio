@@ -16,10 +16,16 @@
                         ?>
                     </figure>
                 </div>
-                <div class="c-contents__bottom">
+                <div class="c-contents__bottom p-work-visual__bottom">
                     <p class="c-btn p-work-visual__btn">
                         <a href="<?php $work_link = scf::get('link'); echo $work_link ?>" target="_blank">
-                            view site 
+                            サイトを見る
+                        </a>
+                    </p>
+                    <p class="c-btn p-work-visual__btn p-work-visual__btn--github">
+                        <a href="<?php $work_link = scf::get('github_link'); echo $work_link ?>" target="_blank">
+                            コードを見る
+                            <span>(GitHub)</span>
                         </a>
                     </p>
                 </div>

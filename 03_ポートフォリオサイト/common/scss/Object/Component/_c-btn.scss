@@ -9,6 +9,8 @@
     border-radius: 50px;
     margin-top: 30px;
     text-align: center;
+    border: 1px solid import.$c-btn-bg;
+    transition: .3s;
 
     a{
         color: import.$c-btn-text;
@@ -24,6 +26,18 @@
             position: absolute;
             top: 0;
             right: 30px;
+        }
+    }
+
+    &:hover{
+        background-color: transparent;
+
+        a{
+            color: import.$c-btn-bg;
+
+            &::after{
+                color: import.$c-btn-bg;
+            }
         }
     }
 }
