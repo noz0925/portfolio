@@ -1,0 +1,59 @@
+@use "../../setting/import" as import;
+
+.p-form{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__item{
+        margin-bottom: 30px;
+    }
+
+    &__name{
+        font-family: import.$f-c-form-name;
+        font-weight: bold;
+
+        &::after{
+            content: '必須';
+            color: import.$c-p-form-text;
+            background-color: import.$c-p-form-bg;
+            font-size: 1.2rem;
+            font-weight: normal;
+            padding: 2px 5px;
+            margin-left: 5px;
+        }
+    }
+
+    input,
+    textarea{
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        line-height: 2;
+    }
+
+    &__input--wrap{
+        text-align: center;
+    }
+
+    &__check--wrap{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    &__btn{
+        border: none;
+        color: import.$c-p-form-text;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__btn--return{
+        width: 135px;
+        border: none;
+        background-color: import.$c-p-form-text;
+        color: import.$c-p-form-bg;
+        font-weight: bold;
+    }
+}

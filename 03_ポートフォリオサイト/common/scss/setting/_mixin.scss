@@ -1,0 +1,85 @@
+//アニメーション設定 -----------------------------
+@mixin keyframes($animation_name) {
+    @-webkit-keyframes #{$animation_name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation_name} {
+      @content;
+    } 
+    @keyframes #{$animation_name} {
+      @content;
+    }
+  }
+
+  @mixin animation($animation_name) {
+    -webkit-animation: $animation_name;
+    -moz-animation: $animation_name;
+    animation: $animation_name;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  //フェードインアニメーション　----------------------
+  @include keyframes(fadeUp){
+    0%{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @include keyframes(fadeDown){
+    0%{
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @include keyframes(fadeIn){
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+
+  //scroll アニメーション ------------------------
+  @include keyframes(scroll_anime){
+    0%{
+      height:0;
+      top:0;
+      opacity: 0;
+    }
+    30%{
+      height:30px;
+      opacity: 1;
+    }
+    100%{
+      height:0;
+      top:50px;
+      opacity: 0;
+    }
+  }
+
+//メディアクエリ設定 -----------------------------
+  @mixin mq($direction,$size){
+    $a : '';
+    @if $direction == 'max'{
+        $a : max-width;
+    }@else if $direction == 'min'{
+        $a : min-width;
+    }
+    @media screen and ($a:$size){
+        @content;
+    }
+  }

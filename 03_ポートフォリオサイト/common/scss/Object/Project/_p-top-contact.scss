@@ -1,0 +1,15 @@
+@use "../../setting/import" as import;
+
+.p-top-contact{
+    background-color: import.$c-p-top-contact-bg;
+
+    &__title{
+        &::after{
+            background-image: repeating-linear-gradient(-45deg, import.$c-p-top-contact-title-line, import.$c-p-top-contact-title-line 1px, transparent 2px, transparent 5px);
+        }
+    }
+
+    &__main{
+        text-align: center;
+    }
+}

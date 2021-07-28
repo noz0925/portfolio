@@ -1,0 +1,40 @@
+//フォント設定 -----------------------------
+$font-YuGoshic: '游ゴシック', 'Yu Gothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-JosefinSans: 'Josefin Sans', sans-serif;
+
+//base フォント設定 ------------------------
+$f-base-font: $font-YuGoshic;
+
+//l-header フォント設定 --------------------
+$f-l-header-nav: $font-JosefinSans;
+
+//l-footer フォント設定 --------------------
+$f-l-footer-text: $font-YuGoshic;
+
+//c-contents フォント設定 ------------------
+$f-c-contents-title: $font-JosefinSans;
+$f-c-contents-text: $font-YuGoshic;
+
+//c-btn フォント設定 -----------------------
+$f-c-btn-text: $font-YuGoshic;
+
+//c-form フォント設定 ----------------------
+$f-c-form-name: $font-YuGoshic;
+
+//p-key-visual フォント設定 ----------------
+$f-p-key-visual: $font-JosefinSans;
+
+//p-scroll フォント設定 --------------------
+$f-p-scroll: $font-JosefinSans;
+
+//p-top-skill フォント設定 -----------------
+$f-p-top-skill-subtitle: $font-YuGoshic;
+
+//p-top-works フォント設定 -----------------
+$f-p-top-works-item: $font-YuGoshic;
+
+//p-work-visual フォント設定 ---------------
+$f-p-work-visual-title: $font-YuGoshic;
+
+//p-work-contents フォント設定 -------------
+$f-p-work-contents-title: $font-YuGoshic;

@@ -1,0 +1,60 @@
+@use "../setting/import" as import;
+
+//ハンバーガーメニュー
+.js-btn-trigger{
+    &.active{
+        .l-header__line{
+            &::before{
+                transform: translateY(10px) rotate(-45deg);
+            }
+
+            span{
+                transform: rotate(-45deg);
+            }
+
+            &::after{
+                transform: translateY(-10px) rotate(45deg);
+            }
+        }
+
+        &.l-header__nav{
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+        }
+    }
+}
+
+//ロード時フェードイン
+.js-header-fade-in{
+    &.fade-in{
+        animation: fadeDown 1s forwards;
+    }
+}
+
+.js-main-fade-in{
+    &.fade-in{
+        animation: fadeIn 1s forwards;
+    }
+}
+
+//フェードイン
+.js-fade-in{
+    &.active{
+        animation: fadeUp .5s forwards;
+    }
+}
+
+//to top
+.js-to-top{
+    &.active{
+        bottom: 10px;
+    }
+}
+
+//ヘッダーが隠れる
+.js-header-hide{
+    &.hide{
+        top: -100px;
+    }
+}

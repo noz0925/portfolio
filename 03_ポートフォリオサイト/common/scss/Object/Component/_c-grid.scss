@@ -1,0 +1,14 @@
+.c-grid{
+    &__col4{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        row-gap: 30px;
+    }
+
+    &__col3{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        column-gap: 50px;
+        row-gap: 30px;
+    }
+}

@@ -1,0 +1,36 @@
+@use "../../setting/import" as import;
+
+.p-key-visual{
+    width: 100%;
+    background-image: url(../img/key.jpg);
+    background-repeat: no-repeat;
+    background-position: top 20% center;
+    background-size: cover;
+
+    &__inner{
+        width: 100%;
+        height: 70vh;
+        display: table;
+    }
+
+    &__table{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    &__text{
+        background-color: rgba(255,255,255,.5);
+        font-family: import.$f-p-key-visual;
+        font-size: 4rem;
+        font-weight: bold;
+        letter-spacing: 0.04em;
+        padding: 46px 0;
+    }
+
+    @include import.mq(max,375px){
+        &__text{
+            font-size: 3.2rem;
+        }
+    }
+}

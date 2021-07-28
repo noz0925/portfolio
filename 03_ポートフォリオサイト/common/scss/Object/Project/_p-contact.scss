@@ -1,0 +1,32 @@
+@use "../../setting/import" as import;
+
+.p-contact{
+    background-color: import.$c-p-contact-bg;
+
+    &__thanks{
+        padding-bottom: 600px;
+    }
+
+    &__top,
+    &__main{
+        opacity: 1;
+    }
+
+    &__title{
+        font-size: 3.2rem;
+        &::after{
+            background-image: repeating-linear-gradient(-45deg, import.$c-p-contact-title-line, import.$c-p-contact-title-line 1px, transparent 2px, transparent 5px);
+        }
+    }
+
+    &__text{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    @include import.mq(max,540px){
+        &__thanks{
+            padding-bottom: 300px;
+        }
+    }
+}

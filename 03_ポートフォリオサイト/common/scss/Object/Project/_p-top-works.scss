@@ -1,0 +1,76 @@
+@use "../../setting/import" as import;
+
+.p-top-works{
+
+    img{
+        transform: scale(1);
+        filter: blur(0);
+        transition: .3s ease-in-out;
+    }
+
+    &__title{
+        &::after{
+            background-image: repeating-linear-gradient(-45deg, import.$c-p-top-works-title-line, import.$c-p-top-works-title-line 1px, transparent 2px, transparent 5px);
+        }
+    }
+
+    &__mask{
+        display: block;
+        position: relative;
+        line-height: 0;
+        transition: .3s ease-in-out;
+        overflow: hidden;
+        border-radius: 50px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-101%);
+            transition: .3s ease-in-out;
+            background-color: rgba(0, 0, 0, .5);
+            z-index: import.$z-p-top-works-mask;
+        }
+    }
+
+    &__name{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        transition: .5s ease-in-out;
+        z-index: import.$z-p-top-works-name;
+        color: import.$c-p-top-works-name;
+        font-family: import.$f-p-top-works-item;
+        font-weight: bold;
+        line-height: 1.5;
+        border-radius: 50px;
+        opacity: 0;
+    }
+
+    &__item{
+        position: relative;
+        top:100px;
+        opacity: 0;
+
+        &:hover{
+            .p-top-works__mask{
+                &::before{
+                    transform: translateY(0);
+                }
+            }
+
+            img{
+                transform: scale(1.2);
+                filter: blur(2px);
+            }
+
+            .p-top-works__name{
+                opacity: 1;
+            }
+        }
+    }
+}

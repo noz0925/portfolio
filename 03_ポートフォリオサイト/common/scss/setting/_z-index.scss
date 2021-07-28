@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$z-index:(
+    header:20,
+    header-nav:30,
+    header-btn:40,
+    work-mask:1,
+    work-name:2,
+);
+
+//l-header -----------------------------
+$z-l-header: map.get($z-index,header);
+$z-l-header-nav: map.get($z-index,header-nav);
+$z-l-header-btn: map.get($z-index,header-btn);
+
+
+//p-top-works --------------------------
+$z-p-top-works-mask: map.get($z-index,work-mask);
+$z-p-top-works-name: map.get($z-index,work-name);

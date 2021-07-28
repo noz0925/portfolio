@@ -1,0 +1,38 @@
+@use "../../setting/import" as import;
+
+.p-top-profile{
+    &__title{
+        &::after{
+            background-image: repeating-linear-gradient(-45deg, import.$c-p-profile-title-line, import.$c-p-profile-title-line 1px, transparent 2px, transparent 5px);
+        }
+    }
+
+    &__contents-wrap{
+        >:first-child{
+            padding-top: 0;
+        }
+    }
+
+    &__contents{
+        padding-top: 20px;
+    }
+
+    &__text--name{
+        font-size: 2.6rem;
+        font-weight: bold;
+    }
+
+    &__text--large{
+        font-weight: bold;
+    }
+
+    &__text{
+        padding-top: 20px;
+    }
+
+    @include import.mq(max,540px){
+        &__contents-wrap{
+            padding-top: 30px;
+        }
+    }
+}

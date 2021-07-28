@@ -1,0 +1,31 @@
+@use "../../setting/import" as import;
+
+.p-work-visual{
+    padding-bottom: 0;
+
+    &__top{
+        opacity: 1;
+    }
+
+    &__main{
+        opacity: 1;
+    }
+
+    &__title{
+        font-family: import.$f-p-work-visual-title;
+
+        &::after{
+            background-image: repeating-linear-gradient(-45deg, import.$c-p-profile-title-line, import.$c-p-profile-title-line 1px, transparent 2px, transparent 5px);
+        }
+    }
+
+    &__btn{
+        background-color: import.$c-p-work-visual-bg;
+
+        a{
+            &::after{
+                content: '\e89e';
+            }
+        }
+    }
+}

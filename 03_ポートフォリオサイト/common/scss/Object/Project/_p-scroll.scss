@@ -1,0 +1,33 @@
+@use "../../setting/import" as import;
+
+.p-scroll{
+    position: relative;
+    height: 50px;
+
+    &__inner{
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        bottom: 60px;
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 1px;
+            height: 30px;
+            background-color: import.$c-p-scroll;
+            @include import.animation(scroll_anime 1.4s ease-in-out infinite);
+            animation-fill-mode: both;
+        }
+    }
+
+    &__text{
+        position: absolute;
+        top: -25px;
+        left: -17px;
+        color: import.$c-p-scroll;
+        font-family: import.$f-p-scroll;
+        font-weight: bold;
+    }
+}

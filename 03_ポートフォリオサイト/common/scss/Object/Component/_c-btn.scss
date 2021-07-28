@@ -1,0 +1,29 @@
+@use "../../setting/import" as import;
+
+.c-btn{
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 70px;
+    background-color: import.$c-btn-bg;
+    border-radius: 50px;
+    margin-top: 30px;
+    text-align: center;
+
+    a{
+        color: import.$c-btn-text;
+        font-family: import.$f-c-btn-text;
+        font-weight: bold;
+        position: relative;
+
+        &::after{
+            content: '\e315';
+            font-family: 'Material Icons';
+            color: import.$c-btn-text;
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            right: 30px;
+        }
+    }
+}

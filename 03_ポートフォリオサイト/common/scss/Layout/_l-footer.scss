@@ -1,0 +1,12 @@
+@use "../setting/import" as import;
+
+.l-footer{
+    background-color: import.$c-l-footer-bg;
+    text-align: center;
+    padding: 20px 0;
+
+    &__text{
+        color: import.$c-l-footer-text;
+        font-family: import.$f-l-footer-text;
+    }
+}

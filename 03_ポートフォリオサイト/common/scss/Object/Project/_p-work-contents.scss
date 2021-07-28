@@ -1,0 +1,40 @@
+@use "../../setting/import" as import;
+
+.p-work-contents{
+    padding-bottom: 0;
+
+    &__title{
+        text-align: start;
+        font-size: 1.6rem;
+        font-family: import.$f-p-work-contents-title;
+        font-weight: bold;
+        padding: 10px 0 10px 20px;
+        background-color: import.$c-p-work-contents-bg;
+    }
+
+    &__top{
+        opacity: 1;
+    }
+
+    &__main{
+        opacity: 1;
+        padding-top: 0;
+        
+        >:first-child{
+            padding-top: 0;
+        }
+    }
+
+    &__text{
+        padding-top: 30px;
+    }
+
+    &__table{
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    &__table--item{
+        text-align: start;
+    }
+}

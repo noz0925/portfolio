@@ -1,0 +1,39 @@
+@use "../../setting/import" as import;
+
+.p-work-list{
+    background-color: import.$c-p-work-list-bg;
+    margin-top: 80px;
+
+    img{
+        transform: scale(1);
+        filter: blur(0);
+        transition: .3s ease-in-out;
+    }
+
+    &__top{
+        opacity: 1;
+    }
+
+    &__main{
+        opacity: 1;
+    }
+
+    &__title{
+        font-size: 2.6rem;
+        padding: 0;
+
+        &::after{
+            content: none;
+        }
+    }
+
+    &__text{
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    &__item{
+        top: 0;
+        opacity: 1;
+    }
+}
