@@ -1,0 +1,161 @@
+/* ====================================
+アクセス
+==================================== */
+
+/* 感染防止対策について */
+
+.a_overview{
+    padding-top: 100px;
+}
+
+.a_overview > section > p,
+.a_overview > section > div:nth-child(3){
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.a_overview > section > div:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+}
+
+.a_overview > section > div section{
+    width: 47%;
+}
+
+.a_overview > section > div section h2{
+    text-align: center;
+}
+
+.a_overview > section > div section ul{
+    margin-top: 10px;
+}
+
+.a_overview > section > div section:first-child ul li{
+    list-style: inside;
+
+}
+
+@media screen and (max-width:585px){
+
+    .a_overview > section > div{
+        flex-direction: column;
+    }
+
+    .a_overview > section > div section{
+        width: 100%;
+    }
+
+    .a_overview > section > div section:last-child{
+        margin-top: 30px;
+    }
+
+}/* ---------------max-width:585px---------------- */
+
+
+
+/* アクセス */
+
+.a_details{
+    margin-top: 100px;
+}
+
+.a_details .cont{
+    display: flex;
+    justify-content: space-between;
+}
+
+.a_details .cont > div{
+    padding-top: 30px;
+}
+
+.a_details .cont > div:first-child{
+    width: 45%;
+}
+
+.a_details .cont > div:first-child dl{
+    line-height: 1.5;
+}
+
+.a_details .cont > div:first-child > dl:first-child,
+.a_details .cont > div:first-child > dl:nth-child(3){
+    margin-bottom: 20px;
+}
+
+.a_details .cont > div:first-child > dl:nth-child(2),
+.a_details .cont > div:first-child > dl:nth-child(3){
+    display: flex;
+}
+
+.a_details .cont > div:first-child > dl:first-child a{
+    text-decoration: underline;
+}
+
+.a_details .cont > div:first-child > dl:nth-child(2) dl{
+    margin-left: 2em;
+}
+
+.a_details .cont > div:first-child > dl:nth-child(3) dd{
+    margin-left: 1em;
+}
+
+.a_details .cont > div:last-child{
+    width: 45%;
+}
+
+.a_details .img div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.a_details .img figure{
+    width: 45%;
+    margin-top: 30px;
+}
+
+.a_details .img figure img{
+    width: 100%;
+}
+
+.a_details .img figure figcaption{
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+@media screen and (max-width:600px){
+
+    .a_details > section > div{
+        flex-direction: column;
+    }
+
+    .a_details .cont > div:first-child,
+    .a_details .cont > div:last-child,
+    .a_details .img figure{
+        width: 100%;
+    }
+
+    .a_details .img div{
+        flex-direction: column;
+    }
+
+}/* ---------------max-width:px---------------- */
+
+@media screen and (max-width:400px){
+
+    .a_details .cont > div:first-child > dl:nth-child(2),
+    .a_details .cont > div:first-child > dl:nth-child(3){
+    flex-direction: column;
+    }
+
+    .a_details .cont > div:first-child > dl:nth-child(2) dl{
+        margin-left: 1em;
+    }
+
+    .a_overview h1{
+        line-height: 1.5;
+    }
+
+}/* ---------------max-width:400px---------------- */
