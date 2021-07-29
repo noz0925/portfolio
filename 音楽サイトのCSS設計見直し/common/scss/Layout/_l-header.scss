@@ -1,0 +1,12 @@
+@use "../setting/import" as i;
+
+.l-header{
+    width: 30%;
+    height: 100vh;
+
+    @include i.mq(max,768px){
+        width: 100%;
+        height: auto;
+        background-color: i.$c-l-header-bg;
+    }
+}

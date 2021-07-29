@@ -1,0 +1,24 @@
+.js-btn-trigger{
+    &.active{
+        .p-header__btn--line{
+            &::before{
+                top: 11px;
+                transform: rotate(25deg);
+            }
+
+            span{
+                transform: translateX(30px);
+                opacity: 0;
+            }
+
+            &::after{
+                top: 11px;
+                transform: rotate(-25deg);
+            }
+        }
+
+        .c-nav{
+            
+        }
+    }
+}

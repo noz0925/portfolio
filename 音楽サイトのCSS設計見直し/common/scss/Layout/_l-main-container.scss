@@ -1,0 +1,17 @@
+@use "../setting/import" as i;
+
+.l-main-container{
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    @include i.mq(max,768px){
+        &__top{
+            display: block;
+            justify-content: flex-start;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+//メディアクエリ
+@mixin mq($type,$size){
+    $a: '';
+    @if $type == 'max'{
+        $a: max-width;
+    }@else if $type == 'min'{
+        $a: min-width;
+    }@else if $type == 'max_h'{
+        $a: max-height;
+    }@else if $type == 'min_h'{
+        $a: min-height;
+    }
+
+    @media screen and ($a:$size){
+        @content;
+    }
+}

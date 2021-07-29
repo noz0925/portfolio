@@ -1,0 +1,51 @@
+@use "../../setting/import" as i;
+
+.c-btn{
+    text-align: center;
+    line-height: 50px;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .3s;
+    // box-shadow: 0 3px 5px rgb(0 0 0 / 30%);
+
+    a{
+        color: i.$c-c-btn-text;
+        font-weight: bold;
+        background-color: transparent;
+        position: relative;
+        z-index: 1;
+        transition: .3s;
+        box-sizing: border-box;
+
+        &::before,
+        &::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &::before{
+            background-color: i.$c-c-btn-bg;
+            z-index: -1;
+            transition: .3s;
+        }
+
+        &::after{
+            border: 3px dotted i.$c-c-btn-bg;
+            box-sizing: border-box;
+        }
+
+        &:hover{
+            color: i.$c-c-btn-bg;
+
+            &::before{
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+    }
+}

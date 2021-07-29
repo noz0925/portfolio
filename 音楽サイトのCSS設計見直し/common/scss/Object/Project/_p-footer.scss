@@ -1,0 +1,5 @@
+@use "../../setting/import" as i;
+
+.p-footer{
+    background-color: i.$c-l-footer-bg;
+}

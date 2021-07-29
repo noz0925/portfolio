@@ -1,0 +1,97 @@
+@use "../../setting/import" as i;
+
+.c-nav{
+    &__list{
+        :first-child{
+            margin-top: 0;
+        }
+    }
+
+    &__item{
+        font-weight: bold;
+        margin-top: 5px;
+
+        a{
+            position: relative;
+            display: inline-block;
+
+            &::after{
+                content: '';
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                background-color: i.$c-c-nav-item-hover-line;
+                transform: scale(0,1);
+                transform-origin: left top;
+                transition: transform .3s;
+            }
+
+            &:hover{
+                &::after{
+                    transform: scale(1,1);
+                }
+            }
+        }
+    }
+
+    &__sns--item{
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    &__sns{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        :first-child{
+            margin-left: 0;
+        }
+    }
+
+    &__sns--text{
+        a{
+            font-weight: bold;
+        }
+    }
+
+    @include i.mq(max,768px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+        background-color: i.$c-c-nav-bg;
+        z-index: 50;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 79vh;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background-image: url(../img/sp_header_wave@2x.png);
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            z-index: 50;
+        }
+
+        &__list{
+            padding-top: 90px;
+            padding-left: 4%;
+            padding-right: 4%;
+            max-width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        &__item{
+            border-bottom: 1px solid i.$c-c-nav-item-hover-line;
+        }
+    }
+}

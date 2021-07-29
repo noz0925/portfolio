@@ -1,0 +1,68 @@
+@use "../../setting/import" as i;
+
+.p-top-contact{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+
+    &__inner{
+        background-image: url(../img/top_cloud.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 500px;
+        height: 250px;
+    }
+
+    &__wrap{
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    &__text{
+        font-size: 3.4rem;
+        font-weight: bold;
+        line-height: 1;
+
+        &::before{
+            content: 'お問い合わせ先▼';
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        &::after{
+            content: '受付時間：月〜土　10：00〜20：00';
+            display: block;
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    @include i.mq(max_h,660px){
+        &__inner{
+            width: 330px;
+            height: 230px;
+        }
+
+        &__text{
+            font-size: 2.4rem;
+    
+            &::before{
+                font-size: 1.4rem;
+            }
+    
+            &::after{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    @include i.mq(max,768px){
+        display: none;
+    }
+
+}

@@ -1,0 +1,9 @@
+@use "../setting/import" as i;
+
+.l-footer{
+    &__sp{
+        display: none;
+    }
+
+    background-color: i.$c-l-footer-bg;
+}

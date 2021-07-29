@@ -1,0 +1,12 @@
+@use "../setting/import" as i;
+
+.l-top-contents{
+    width: 70%;
+    height: 100%;
+    position: relative;
+
+    @include i.mq(max,768px){
+        width: 100%;
+        height: auto;
+    }
+}

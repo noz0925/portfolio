@@ -1,0 +1,54 @@
+$color-white: #ffffff;
+$color-black: #848484;
+$color-lightgreen: #94ce82;
+$color-paple: #ca82ce;
+$color-cream: #efede5;
+$color-green: #00B900;
+
+/*-----------------------------
+base
+-----------------------------*/
+$c-base-font-color: $color-black;
+$c-base-link-color: $color-black;
+$c-base-bg-color: $color-cream;
+
+/*-----------------------------
+l-header
+-----------------------------*/
+$c-l-header-bg: $color-white;
+
+/*-----------------------------
+l-footer
+-----------------------------*/
+$c-l-footer-bg: $color-white;
+
+/*-----------------------------
+c-btn
+-----------------------------*/
+$c-c-btn-bg: $color-paple;
+$c-c-btn-text: $color-white;
+
+/*-----------------------------
+c-nav
+-----------------------------*/
+$c-c-nav-item-hover-line: $color-lightgreen;
+$c-c-nav-bg: $color-white;
+
+/*-----------------------------
+c-line-blog
+-----------------------------*/
+$c-c-line-blog-font-color: $color-white;
+$c-c-line-blog-bg-color: $color-green;
+
+/*-----------------------------
+c-instagram
+-----------------------------*/
+$c-c-instagram-bg-color: $color-white;
+$c-c-instagram-text-color: $color-black;
+
+/*-----------------------------
+p-header
+-----------------------------*/
+$c-p-header-font-color: $color-black;
+$c-p-header-large-text: $color-lightgreen;
+$c-p-header-btn-line: $color-black;
