@@ -1,9 +1,16 @@
 @use "../setting/import" as i;
 
 .l-footer{
+    background-color: i.$c-l-footer-bg;
+
     &__sp{
         display: none;
     }
 
-    background-color: i.$c-l-footer-bg;
+    @include i.mq(max,768px){
+        &__sp{
+            display: block;
+        }
+
+    }
 }

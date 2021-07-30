@@ -12,6 +12,8 @@
         &__top{
             display: block;
             justify-content: flex-start;
+            height: auto;
+            overflow: visible;
         }
     }
 }
