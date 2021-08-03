@@ -1,0 +1,22 @@
+.js-header-btn{
+    &.active{
+        .p-header__btn--line{
+            &::before{
+                transform: translateY(11px) rotate(135deg);
+            }
+
+            span{
+                transform: rotate(135deg);
+            }
+
+            &::after{
+                transform: translateY(-11px) rotate(-135deg);
+            }
+        }
+
+        .p-header__nav--list{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

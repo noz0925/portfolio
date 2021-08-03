@@ -1,0 +1,40 @@
+@use "../../setting/import" as i;
+
+.p-top-info{
+    padding-top: 120px;
+
+    &__main{
+        padding-top: 55px;
+    }
+
+    &__text{
+        font-size: 18px;
+        line-height: 1.33333;
+    }
+
+    &__text--large{
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    &__text--bold{
+        font-size: 4rem;
+        padding-top: 30px;
+    }
+
+    &__text--bottom{
+        padding-top: 25px;
+    }
+
+    @include i.mq(max,768px){
+        padding-top: 61px;
+
+        &__text--large{
+            font-size: 1.6rem;
+        }
+
+        &__text{
+            font-size: 1.6rem;
+        }
+    }
+}

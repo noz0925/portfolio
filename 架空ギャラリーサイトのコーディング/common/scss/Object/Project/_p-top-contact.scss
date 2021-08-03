@@ -1,0 +1,54 @@
+@use "../../setting/import" as i;
+
+.p-top-contact{
+
+    &__main{
+        padding-top: 49px;
+    }
+
+    &__bottom{
+        padding-top: 20px;
+    }
+
+    &__btn{
+        width: 400px;
+        line-height: 81px;
+        max-width: 100%;
+        position: relative;
+
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: i.$c-p-top-contact-btn-line;
+            position: absolute;
+        }
+
+        &::before{
+            width: 120px;
+            top: 48px;
+            right: -40px;
+        }
+
+        &::after{
+            width: 15px;
+            top: 44px;
+            right: -40px;
+            transform: rotate(30deg);
+        }
+    }
+
+    @include i.mq(max,768px){
+        &__main{
+            padding-top: 45px;
+        }
+
+        &__btn{
+            &::before,
+            &::after{
+                content: none;
+            }
+        }
+    }
+}

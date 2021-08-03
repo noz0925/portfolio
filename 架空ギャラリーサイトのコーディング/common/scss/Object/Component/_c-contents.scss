@@ -1,0 +1,24 @@
+@use "../../setting/import" as i;
+
+.c-contents{
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &__title{
+        font-size: 6rem;
+        letter-spacing: 0.03em;
+        display: inline-block;
+        border-bottom: 1px solid i.$c-c-contents-title-line;
+    }
+
+    &__text--bold{
+        font-weight: bold;
+    }
+
+    @include i.mq(max,768px){
+        &__title{
+            font-size: 3.2rem;
+        }
+    }
+}

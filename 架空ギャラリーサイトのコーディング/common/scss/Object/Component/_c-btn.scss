@@ -1,0 +1,7 @@
+@use "../../setting/import" as i;
+
+.c-btn{
+    display: inline-block;
+    border: 1px solid i.$c-c-btn-border;
+    background-color: transparent;
+}
