@@ -20,7 +20,7 @@
                     <p class="c-btn p-work-visual__btn p-work-visual__btn--site">
                         <a href="<?php $work_link = scf::get('link'); echo $work_link ?>" target="_blank">
                             サイトを見る
-                            <?php if(is_single(24) or is_single(30) or is_single(50)): ?>
+                            <?php if(is_single(24) or is_single(30) or is_single(50)or is_single(66)): ?>
                             <span>
                                 【Basic認証】<br>
                                 ID：user　　PASS：user
