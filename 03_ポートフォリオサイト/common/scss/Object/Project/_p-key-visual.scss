@@ -4,7 +4,7 @@
     width: 100%;
     background-image: url(../img/key.jpg);
     background-repeat: no-repeat;
-    background-position: top 20% center;
+    background-position: center center;
     background-size: cover;
 
     &__inner{
@@ -20,7 +20,7 @@
     }
 
     &__text{
-        background-color: rgba(255,255,255,.5);
+        background-color: rgba(255,255,255,.8);
         font-family: import.$f-p-key-visual;
         font-size: 4rem;
         font-weight: bold;

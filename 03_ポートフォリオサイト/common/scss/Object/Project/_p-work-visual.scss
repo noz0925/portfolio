@@ -45,9 +45,26 @@
         }
     }
 
+    &__btn--site{
+        span{
+            color: import.$c-p-work-visual-basic;
+            font-size: 1.4rem;
+            font-weight: bold;
+            display: block;
+            line-height: 1.5;
+            position: absolute;
+            bottom: -60%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+
     &__btn--github{
         span{
             font-size: 1.4rem;
+            font-weight: bold;
             display: block;
             line-height: 1;
             position: absolute;
@@ -60,6 +77,10 @@
     @include import.mq(max,768px){
         &__bottom{
             flex-direction: column;
+        }
+
+        &__btn--site{
+            margin-bottom: 20px;
         }
     }
 }

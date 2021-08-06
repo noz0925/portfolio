@@ -1,0 +1,41 @@
+@use "../../setting/import" as i;
+
+.c-btn{
+    display: block;
+    border: 1px solid i.$c-c-btn-border;
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+
+    a{
+        transition: .5s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 51px;
+        background-color: i.$c-c-btn-border;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        opacity: 0;
+        z-index: -1;
+        transition: .5s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    &:hover{
+        a{
+            color: i.$c-c-btn-hover-text;
+        }
+
+        &::before{
+            left: 0;
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}

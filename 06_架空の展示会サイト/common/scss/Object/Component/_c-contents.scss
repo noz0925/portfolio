@@ -1,0 +1,56 @@
+@use "../../setting/import" as i;
+
+.c-contents{
+    text-align: center;
+
+    &__inner{
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &__title{
+        font-size: 6rem;
+        letter-spacing: 0.03em;
+        display: inline-block;
+
+    }
+
+    &__title--wrap,
+    &__title--text,
+    &__wrap,
+    &__wrap--text{
+        display: block;
+    }
+
+    &__title--wrap,
+    &__wrap{
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+    }
+
+    &__title--wrap{
+        border-bottom: 1px solid i.$c-c-contents-title-line;
+    }
+
+    &__title--text,
+    &__wrap--text{
+        opacity: 0;
+        visibility: hidden;
+        transform: matrix(1,0,0,1,0,100);
+        transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    &__text--bold{
+        font-weight: bold;
+    }
+
+    @include i.mq(max,768px){
+        &__title{
+            font-size: 3.2rem;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use "../setting/import" as i;
+
+.l-footer{
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    z-index: 2;
+    background-color: i.$c-l-footer-bg;
+}

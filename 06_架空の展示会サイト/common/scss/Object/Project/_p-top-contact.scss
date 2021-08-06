@@ -1,0 +1,77 @@
+@use "../../setting/import" as i;
+
+.p-top-contact{
+    padding-bottom: 200px;
+
+    &__main{
+        padding-top: 49px;
+    }
+
+    &__bottom{
+        padding-top: 20px;
+    }
+
+    &__btn{
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 81px;
+        overflow: visible;
+
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            height: 1px;
+            background-color: i.$c-p-top-contact-btn-line;
+            position: absolute;
+            left: auto;
+            transform: none;
+            opacity: 1;
+        }
+
+        &::before{
+            width: 120px;
+            top: 48px;
+            right: -40px;
+        }
+
+        &::after{
+            width: 15px;
+            top: 44px;
+            right: -40px;
+            transform: rotate(30deg);
+            transition: .5s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        &:hover{
+            a{
+                color: i.$c-p-top-contact-btn-line;
+            }
+
+            &::before{
+                left: auto;
+                right: -100px;
+                opacity: 0;
+            }
+
+            &::after{
+                right: -100px;
+                opacity: 0;
+            }
+        }
+    }
+
+    @include i.mq(max,768px){
+        &__main{
+            padding-top: 45px;
+        }
+
+        &__btn{
+            &::before,
+            &::after{
+                content: none;
+            }
+        }
+    }
+}

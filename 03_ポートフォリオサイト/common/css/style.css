@@ -572,7 +572,7 @@ body a {
   width: 100%;
   background-image: url(../img/key.jpg);
   background-repeat: no-repeat;
-  background-position: top 20% center;
+  background-position: center center;
   background-size: cover;
 }
 .p-key-visual__inner {
@@ -586,7 +586,7 @@ body a {
   text-align: center;
 }
 .p-key-visual__text {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   font-family: "Josefin Sans", sans-serif;
   font-size: 4rem;
   font-weight: bold;
@@ -826,8 +826,23 @@ body a {
 .p-work-visual__btn:hover a::after {
   color: #9dddda;
 }
+.p-work-visual__btn--site span {
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: block;
+  line-height: 1.5;
+  position: absolute;
+  bottom: -60%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
 .p-work-visual__btn--github span {
   font-size: 1.4rem;
+  font-weight: bold;
   display: block;
   line-height: 1;
   position: absolute;
@@ -842,6 +857,9 @@ body a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .p-work-visual__btn--site {
+    margin-bottom: 20px;
   }
 }
 

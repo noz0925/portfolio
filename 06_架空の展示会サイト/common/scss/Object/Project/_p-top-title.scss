@@ -1,0 +1,32 @@
+@use "../../setting/import" as i;
+
+.p-top-title{
+        font-size: 10rem;
+        text-align: center;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        padding-top: 121px;
+
+        &__wrap,
+        &__text{
+            display: block;
+        }
+
+        &__wrap{
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        &__text{
+            opacity: 0;
+            visibility: hidden;
+            transform: matrix(1,0,0,1,0,100);
+            transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        @include i.mq(max,768px){
+            font-size: 4.8rem;
+            padding-top: 60px;
+        }
+}

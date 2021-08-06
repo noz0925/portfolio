@@ -1,0 +1,7 @@
+@use "../setting/import" as i;
+
+.l-main-container{
+    position: relative;
+    z-index: 2;
+    background-color: i.$c-l-main-container-bg;
+}
