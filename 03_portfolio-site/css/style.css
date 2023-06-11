@@ -495,7 +495,7 @@ body::before {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url("../dist/img/bg-img.gif");
+  background-image: url("../img/bg-img.gif");
   background-repeat: repeat;
   background-size: 35px 35px;
 }
@@ -1270,6 +1270,7 @@ img {
 }
 .p-home-work .swiper-pagination {
   top: 60px;
+  height: 22px;
 }
 .p-home-work .swiper-pagination .swiper-pagination-bullet {
   width: 14px;
