@@ -1,0 +1,206 @@
+@-webkit-keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-moz-keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@-moz-keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-moz-keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-moz-keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.p-footer {
+  background-color: #ed5c42;
+  border-top: 1px solid #1a1a1a;
+  padding: 0 20px;
+}
+.p-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-inner {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+  }
+}
+.p-footer-logo-link-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1a1a;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-logo-link-text {
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
+  }
+}
+.p-footer-nav-list {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-list {
+    justify-content: center;
+  }
+}
+.p-footer-nav-item:not(:first-child)::before {
+  content: "//";
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item:not(:first-child)::before {
+    margin-left: 10px;
+  }
+}
+.p-footer-nav-item-link {
+  padding-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item-link {
+    padding-left: 10px;
+  }
+}
+.p-footer-nav-item-link-text {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item-link-text {
+    font-size: 1.4rem;
+  }
+}
+.p-footer-copy {
+  padding-bottom: 25px;
+  text-align: center;
+}
+.p-footer-copy-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}

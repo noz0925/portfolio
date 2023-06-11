@@ -1,0 +1,83 @@
+@use "../../setting/import" as i;
+
+.p-top-kv{
+  position: relative;
+  margin: 0 80px;
+
+  @media screen and (max-width:1024px){
+    margin: 85px 20px 0;
+  }
+
+  &__inner{
+    height: 500px;
+    border-radius: 0px 30px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+
+    @media screen and (max-width:767px){
+      height: 80vh;
+    }
+  }
+
+    &__img{
+      height: 100%;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &.pc{
+          display: block;
+      }
+
+      &.sp{
+          display: none;
+      }
+
+      @media screen and (max-width:767px){
+        &.pc{
+          display: none;
+        }
+  
+        &.sp{
+          display: block;
+        }
+      }
+    }
+
+  &__text-wrap{
+    position: absolute;
+    bottom: 46px;
+    left: 54px;
+    z-index: 1;
+    writing-mode: vertical-rl;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media screen and (max-width:767px){
+      bottom: 15px;
+      left: 15px;
+    }
+  }
+
+  &__text-item{
+    line-height: 1;
+    display: inline-block;
+    background-color: i.$color-white01;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    padding: 12px 10px;
+    border: 1px solid i.$color-black01;
+
+    @media screen and (max-width:767px){
+      font-size: 1.4rem;
+    }
+
+    &:not(:last-child){
+      margin-left: 25px;
+
+      @media screen and (max-width:767px){
+        margin-left: 10px;
+      }
+    }
+  }
+}

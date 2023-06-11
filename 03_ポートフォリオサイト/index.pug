@@ -1,0 +1,194 @@
+doctype html
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible',content='IE=edge')
+    meta(name='viewport',content='width=device-width, initial-scale=1.0')
+    title N's portfolio
+    link(rel='stylesheet',href='../css/swiper-bundle.min.css')
+    link(rel='stylesheet',href='../css/style.css')
+  body
+    .p-load.js-load
+      p.p-load-inner
+        span.p-load-text N's portfolio
+    header.l-header.p-header
+      .p-header-inner
+        .p-header-logo
+          h1.p-header-logo-text N's portfolio
+        .p-header-btn.js-header-btn
+          span.p-header-btn-line
+        nav.p-header-nav
+          ul.p-header-nav-list
+            - var items = ['skill','work','message']
+            each item in items
+              li.p-header-nav-item
+                a.p-header-nav-item-link(href= '#' + item)
+                  span.p-header-nav-item-link-text #{item}
+    main.l-main
+      .p-home-kv
+        .p-home-kv-inner
+          .p-home-kv-contents
+            .p-home-kv-main
+              p.p-home-kv-main-text
+                span.p-home-kv-main-text-item NOZOMI's
+                span.p-home-kv-main-text-item Portfolio
+            .p-home-kv-sub
+              .p-home-kv-sub-item
+                span.p-home-kv-sub-item-scroll Let's scroll!!
+              .p-home-kv-sub-item
+                p.p-home-kv-sub-item-desc This site carries Nozomi's work.We hope you will take a look at them as we have worked hard to produce them.
+      section.p-home-skill.js-anime-trigger#skill
+        h2.p-home-skill-heading.js-heading-anime
+          span.p-home-skill-heading-en SKILL
+        .p-home-skill-inner.js-contents-anime
+          .p-home-skill-contents
+            -
+              var skill_items = [
+                {
+                  'title':'HTML5,CSS3',
+                  'text':'基本的なコーディングを含めレスポンシブ対応やSassの使用ができます。'
+                },
+                {
+                  'title':'Pug',
+                  'text':'コーディングの効率化を鑑み勉強中です。'
+                },
+                {
+                  'title':'Javascript,Jquery',
+                  'text':'基本的なアニメーションやタブ、モーダルの実装などができます。'
+                },
+                {
+                  'title':'CMS(WordPress)',
+                  'text':'自作テーマの制作経験があります。カスタム投稿やカスタムタクソノミーなどを含めてPHPを使用したサイト制作ができます。'
+                },
+                {
+                  'title':'Git',
+                  'text':'GitHubを使用してコード管理をしております。'
+                },
+                {
+                  'title':'環境',
+                  'text':'Macbookpro,iPhone<br>VSCode<br>Photoshop,Illustrator,XD'
+                },
+              ]
+            each skill_item in skill_items
+              dl.p-home-skill-item
+                dt.p-home-skill-item-title #{skill_item.title}
+                dd.p-home-skill-item-text !{skill_item.text}
+      section.p-home-work.js-anime-trigger#work
+        h2.p-home-work-heading.js-heading-anime
+          span.p-home-work-heading-en WORK
+        .p-home-work-inner.js-contents-anime
+          .p-home-work-contents.js-work-swiper.swiper
+            ul.p-home-work-list.swiper-wrapper
+                -
+                  var work_items = [
+                    {
+                      'title':'ルコラ音楽教室HP',
+                      'desc':'友人の音楽教室のサイトです。<br>音楽教室周り在住の20代〜50代主婦層をターゲットに落ち着いた可愛さと見やすさを考えてデザインしています。<br>不定期に更新があるので編集しやすくするためWordpressに組み込んでいます。レスポンシブ対応済み。',
+                      'range':'デザイン、コーディング、CMS実装、運用',
+                      'period':'デザイン：1週間<br>コーディング＆CMS実装：2週間',
+                      //'github_url':'',
+                      'site_url':'https://luchola-music-school.com/',
+                    },
+                    {
+                      'title':'ジェラートアイス店HP（架空サイト）',
+                      'desc':'架空サイトです。<br>若い年代をターゲット層に想定してオシャレでスクロールと連動して動きがあるようなデザインにしています。<br>随時フレーバーの更新がある設定で、Wordpressの投稿機能とは別にカスタム投稿を使って記事だけ追加すれば簡単にフレーバー更新ができるような形にカスタマイズしています。レスポンシブ対応済み。',
+                      'range':'デザイン、コーディング、CMS実装',
+                      'period':'デザイン：9日<br>コーディング＆CMS実装：16日',
+                      'github_url':'https://www.yahoo.co.jp/',
+                      'site_url':'https://www.yahoo.co.jp/',
+                    },
+                    {
+                      'title':'歯科医院HP（架空サイト）',
+                      'desc':'架空サイトです。しまの氏が無料配布されている<a href="https://note.com/simano01/n/nf31d522ecd94" target="_blank" rel="noopener noreferrer"><span style="text-decoration: underline;color: #0000ee;">デザインカンプ</span></a>を元にコーディングしています。<br>ピクセルパーフェクトを目指すと同時に、+αでスクロールするとヘッダーが表示されるようにするなどユーザビリティを考えたコーディングを加えています。レスポンシブ対応済み。',
+                      'range':'コーディング、CMS実装',
+                      'period':'コーディング＆CMS実装：14日',
+                      'github_url':'https://www.yahoo.co.jp/',
+                      'site_url':'https://www.yahoo.co.jp/',
+                    },
+                    {
+                      'title':'ポートフォリオHP',
+                      'desc':'本サイトです。<br>見やすさに特化して1ページで全て見れるようなデザインにしています。<br>HTMLを簡単に記述したいと考えPugを導入しています。レスポンシブ対応済み。',
+                      'range':'デザイン、コーディング',
+                      'period':'デザイン：3日<br>コーディング：5日',
+                      'github_url':'https://www.yahoo.co.jp/',
+                      'site_url':'https://www.yahoo.co.jp/',
+                    },
+                  ]
+                each work_item, index in work_items
+                  - const img = 'img/work-item'+ ('00' + (index + 1)).slice(-2) + '.jpg'
+                  li.p-home-work-item.swiper-slide
+                    figure.p-home-work-item-figure
+                       img.p-home-work-item-figure-img(src=`${img}` alt='')
+                    .p-home-work-item-content(data-num=`${index + 1}`)
+                      .p-home-work-item-title
+                        span.p-home-work-item-title-num #{'0' +(index + 1)}
+                        span.p-home-work-item-title-text #{work_item.title}
+                      .p-home-work-item-text
+                        .p-home-work-item-text-desc !{work_item.desc}
+                        dl.p-home-work-item-text-range
+                          dt.p-home-work-item-text-range-title 担当箇所
+                          dd.p-home-work-item-text-range-text !{work_item.range}
+                        dl.p-home-work-item-text-period
+                          dt.p-home-work-item-text-period-title 制作期間
+                          dd.p-home-work-item-text-period-text !{work_item.period}
+                      .p-home-work-item-btn-wrap
+                        p.p-home-work-item-btn-item.-site
+                          a.p-home-work-item-btn-link(href=`${work_item.site_url}` target='_blank' rel='noopener noreferrer')
+                            span.p-home-work-item-btn-text view site
+                        if work_item.github_url
+                          p.p-home-work-item-btn-item.-github
+                            a.p-home-work-item-btn-link(href=`${work_item.github_url}` target='_blank' rel='noopener noreferrer')
+                              span.p-home-work-item-btn-text Github
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
+      section.p-home-message.js-anime-trigger#message
+        h2.p-home-message-heading.js-heading-anime
+          span.p-home-message-heading-en MESSAGE
+        .p-home-message-inner.js-contents-anime
+          .p-home-message-contents
+            h3.p-home-message-contents-title 
+              |業務のうえで
+              br.sp
+              |大事にしていること
+            ul.p-home-message-contents-list
+              li.p-home-message-contents-item
+                .p-home-message-contents-item-title.js-accordion-title
+                  |「丁寧」と「迅速」の両立
+                  span.p-home-message-contents-item-title-mark
+                .p-home-message-contents-item-text
+                  |サイト制作において、お客様が求めるものに答えるために「丁寧」と「迅速」の両立を意識しております。
+                  br
+                  |納品後の保守運用なども考えて誰が見てもわかりやすくなるようなコーディングを意識したり、
+                  br.pc-tab
+                  |お客様がサイトを運用する場合などはお客様にもわかりやすく説明文を入れるなど、丁寧な製品が出来上がるように取り組んでおります。
+                  br
+                  |そのうえでスピード感も無視しないために、効率的なやり方の模索やツールの取り入れなど常に業務のブラッシュアップに取り組むことで「丁寧」と「迅速」を両立できるように取り組んでおります。
+              li.p-home-message-contents-item
+                .p-home-message-contents-item-title.js-accordion-title
+                  |関わる人へ真摯な姿勢を持つ
+                  span.p-home-message-contents-item-title-mark
+                .p-home-message-contents-item-text
+                  |デザイナー・ディレクター・コーダーなどいろいろな方々と連携しながら案件を進める中で、関わる人に気持ちよく仕事をしてほしいと考えております。
+                  |良好な関係を持つことでより良いモノづくりに取り組むことができると考えているからです。
+                  br
+                  |当たり前のことですが、感謝や労い・時には謝罪や意見も真摯に伝えることでより良い雰囲気でより良いサイト制作に取り組めると考えております。
+                  br
+    footer.l-footer.p-footer
+      .p-footer-inner
+        .p-footer-logo
+          a.p-footer-logo-link(href= '#')
+            span.p-footer-logo-link-text N's portfolio
+        nav.p-footer-nav
+          ul.p-footer-nav-list
+            each item in items
+              li.p-footer-nav-item
+                a.p-footer-nav-item-link(href= '#' + item)
+                  span.p-footer-nav-item-link-text #{item}
+      p.p-footer-copy
+        small.p-footer-copy-text ©︎2023 nozomi hyodo
+  script(src='//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js')
+  script(src='//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js')
+  script(src='../js/jquery-3.6.4.min.js')
+  script(src='../js/swiper-bundle.min.js')
+  script(src='../js/main.js')

@@ -1,0 +1,148 @@
+@use "../../Setting/import" as i;
+
+.p-home-kv{
+  width: 100%;
+  height: 820px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include i.mq(sp){
+    margin-top: 50px;
+    height: 470px;
+  }
+
+  &-inner{
+    margin: 0 20px;
+  }
+
+  &-contents{
+    font-family: i.$font-en;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: .1em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &-main{
+    background-color: i.$color-red01;
+    border: 1px solid i.$color-black01;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 20px 20px;
+    padding: 50px 0;
+
+    @include i.mq(tab){
+      box-shadow: 10px 10px;
+    }
+
+    &-text{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-item{
+        display: inline-block;
+        font-size: 12rem;
+        line-height: 1.2;
+        letter-spacing: .1em;
+        text-shadow: 7px 7px 1px i.$color-green01;
+        position: relative;
+        z-index: 0;
+
+        @include i.mq(sp){
+          font-size: 13vw;
+          text-shadow: 3px 3px 1px i.$color-green01;
+        }
+
+        &::before{
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: i.$color-green02;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        &:first-child{
+          &::before{
+            transform: rotate(2deg);
+          }
+        }
+
+        &:last-child{
+          margin-top: 20px;
+          &::before{
+            transform: rotate(-1deg);
+          }
+        }
+      }
+    }
+  }
+
+  &-sub{
+    margin-top: 40px;
+    display: flex;
+
+    @include i.mq(sp){
+      flex-direction: column-reverse;
+      margin-top: 20px;
+    }
+
+    &-item{
+      width: 50%;
+
+      @include i.mq(sp){
+        width: 100%;
+      }
+
+      &:first-child{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include i.mq(sp){
+          margin-top: 20px;
+        }
+      }
+
+      &-scroll{
+        position: relative;
+        padding-left: 140px;
+        font-size: 3.2rem;
+        animation: kv_scroll_anime 2s infinite;
+
+        @include i.mq(sp){
+          padding-left: 70px;
+          font-size: 2rem;
+        }
+
+        &::before{
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          border: 60px solid transparent;
+          border-top: 40px solid i.$color-red01;
+
+          @include i.mq(sp){
+            border: 30px solid transparent;
+            border-top: 20px solid i.$color-red01;
+          }
+        }
+      }
+
+      &-desc{
+        font-weight: 600;
+
+        @include i.mq(sp){
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

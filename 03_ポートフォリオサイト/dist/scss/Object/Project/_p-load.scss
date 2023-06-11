@@ -1,0 +1,60 @@
+@use "../../Setting/import" as i;
+
+.p-load{
+  width: 100%;
+  height: 100%;
+  background-color: i.$color-red01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  &.is-loaded{
+    animation: loading_anime 2s 1.5s forwards;
+  }
+
+  &-inner{
+    position: relative;
+    overflow: hidden;
+    
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: i.$color-green02;
+      transform: translate(-100%, 0);
+    }
+  }
+
+  &.is-loaded{
+    .p-load-inner::before{
+      animation: mask_anime 1s cubic-bezier(0.8, 0, 0.170, 1) forwards;
+    }
+  }
+
+  &-text{
+    font-family: i.$font-en;
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 2;
+    letter-spacing: .2rem;
+    color: i.$color-black01;
+    opacity: 0;
+    transition: .5s .5s;
+  }
+
+  &.is-loaded{
+    .p-load-text{
+      opacity: 1;
+    }
+  }
+}

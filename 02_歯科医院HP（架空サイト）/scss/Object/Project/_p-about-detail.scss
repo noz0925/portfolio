@@ -1,0 +1,46 @@
+@use "../../setting/import" as i;
+
+.p-about-detail{
+  padding: 51px 20px 0;
+
+  @media screen and (max-width:767px){
+    padding: 40px 20px 0;
+  }
+
+  &__inner{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 50px 38px;
+    background: i.$color-white02;
+    border-radius: 10px;
+    
+    @media screen and (max-width:767px){
+      padding: 26px 20px 20px;
+    }
+  }
+
+  &__title{
+    font-weight: 700;
+    color: i.$color-red01;
+    line-height: 1;
+    font-size: 1.8rem;
+
+    @media screen and (max-width:767px){
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text{
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-top: 20px;
+
+    @media screen and (min-width:768px){
+      font-size: 1.8rem;
+    }
+
+    @media screen and (max-width:767px){
+      margin-top: 15px;
+    }
+  }
+}

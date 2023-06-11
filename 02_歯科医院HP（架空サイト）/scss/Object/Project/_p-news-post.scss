@@ -1,0 +1,64 @@
+@use "../../setting/import" as i;
+
+.p-news-post{
+  padding: 70px 20px 0;
+
+  @media screen and (max-width:767px){
+    padding: 30px 20px 0;
+  }
+
+  &__inner{
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__date{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: i.$color-blue01;
+
+    @media screen and (max-width:767px){
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title{
+    margin-top: 10px;
+    font-size: 3rem;
+
+    @media screen and (max-width:767px){
+      font-size: 1.6rem;
+    }
+  }
+
+  &__text,
+  &__figure{
+    margin-top: 50px;
+
+    @media screen and (max-width:767px){
+      margin-top: 20px;
+    }
+  }
+
+  &__btn{
+    overflow: hidden;
+    margin-top: 70px;
+
+    @media screen and (max-width:767px){
+      margin-top: 40px;
+    }
+  }
+
+  &__link{
+    transition: all .3s;
+
+    &:hover{
+      color: i.$color-white01;
+      background-color: i.$color-blue01;
+
+      .p-news-post__link-text::before{
+        color: i.$color-white01;
+      }
+    }
+  }
+}

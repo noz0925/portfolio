@@ -1,0 +1,83 @@
+//アニメーション
+@mixin keyframes($animation-name: animaton) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+//ローディングアニメ
+@include keyframes(loading_anime) {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+//KV>スクロール文言のふわふわアニメ
+@include keyframes(kv_scroll_anime){
+  0%,100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+//各コンテンツのタイトルアニメ
+@include keyframes(mask_anime) {
+  0% {
+    transform: translateX(-101%)
+  }
+  40%, 60% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(100%)
+  }
+}
+
+//各コンテンツのコンテンツアニメ
+@include keyframes(contents_anime) {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//メディアクエリ設定
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  tab: 'screen and (max-width: 1024px)',
+  pc: 'screen and (min-width: 1025px)',
+  pc-tab: 'screen and (min-width: 768px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}

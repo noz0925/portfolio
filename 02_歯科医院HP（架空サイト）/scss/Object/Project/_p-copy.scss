@@ -1,0 +1,14 @@
+@use "../../setting/import" as i;
+
+.p-copy{
+  background-color: i.$color-blue01;
+  color: i.$color-white01;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+
+  @media screen and (max-width:767px){
+    display: block;
+    text-align: center;
+  }
+}

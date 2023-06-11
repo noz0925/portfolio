@@ -1,0 +1,97 @@
+@use "../../setting/import" as i;
+
+.p-top-treatment{
+  width: 100%;
+  margin-top: 80px;
+  padding: 80px 0;
+  background-color: i.$color-white02;
+
+  @media screen and (max-width:767px){
+    margin-top: 66px;
+    padding: 40px 0;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    @media screen and (max-width:767px){
+      display: block;
+      padding: 0 40px;
+      max-width: 400px;
+      margin: 40px auto 0;
+    }
+
+    @media screen and (max-width:374px){
+      padding: 0 30px;
+    }
+  }
+
+  @media screen and (max-width:767px){
+    &__item{
+      width: 130px;
+    }
+  }
+
+  &__item:not(:first-child){
+    margin-left: 80px;
+  }
+
+  @media screen and (max-width:767px){
+    &__item:not(:first-child){
+        margin-left: 0;
+    }
+
+    &__item:nth-child(2){
+      margin-left: auto;
+      margin-top: -50px;
+    }
+
+    &__item:nth-child(3){
+      margin-top: -50px;
+    }
+  }
+
+  &__link{
+    display: block;
+  }
+
+  &__img{
+    transition: all .3s;
+    filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.16));
+  }
+
+  @media screen and (max-width:767px){
+    &__figure{
+      width: 130px;
+    }
+  }
+
+  &__figcaption{
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+
+    @media screen and (max-width:767px){
+      font-size: 1.6rem;
+    }
+  }
+
+  &__icon{
+    color: i.$color-blue01;
+    margin-left: 10px;
+    transition: all .3s;
+    display: inline-block;
+  }
+
+  &__link:hover{
+    .p-top-treatment__icon{
+      transform: translateX(10px);
+    }
+
+    .p-top-treatment__img{
+      filter: drop-shadow(0px 9px 12px rgba(0,0,0,0.16));
+    }
+  }
+}

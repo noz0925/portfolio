@@ -1,0 +1,169 @@
+@use "../../Setting/import" as i;
+
+.p-home-message{
+  margin: 160px 20px;
+  text-align: center;
+
+  @include i.mq(sp){
+    margin: 80px 20px;
+  }
+
+  &-heading{
+    display: inline-block;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include i.mq(sp){
+      margin-bottom: -25px;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: i.$color-green02;
+      transform: translate(-100%, 0);
+    }
+
+    &.is-active{
+      &::before{
+        animation: mask_anime 1s cubic-bezier(0.8, 0, 0.170, 1) forwards;
+      }
+    }
+
+    &-en{
+      font-family: i.$font-en;
+      font-size: 10rem;
+      font-weight: 900;
+      font-style: italic;
+      line-height: 1;
+      opacity: 0;
+      transition: .5s .5s;
+
+      @include i.mq(sp){
+        font-size: 4rem;
+      }
+    }
+
+    &.is-active{
+      .p-home-message-heading-en{
+        opacity: 1;
+      }
+    }
+  }
+
+  &-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: i.$color-white01;
+    border: 1px solid i.$color-black01;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 20px 20px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+
+    &.is-active{
+      animation: contents_anime 1s forwards;
+    }
+
+    @include i.mq(tab){
+      box-shadow: 10px 10px;
+    }
+  }
+
+  &-contents{
+    margin: 80px 20px 40px;
+
+    @include i.mq(sp){
+      margin: 40px 20px 20px;
+    }
+
+    &-title{
+      font-size: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+
+      @include i.mq(sp){
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+    }
+
+    &-item{
+      &-title{
+        position: relative;
+        padding: 20px 0;
+        text-align: center;
+        font-weight: 700;
+        border-bottom: 1px solid i.$color-red01;
+
+        @include i.mq(sp){
+          padding: 10px 0;
+        }
+  
+        &-mark{
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 20px;
+          height: 20px;
+          transform: translateY(-50%);
+          margin-right: 20px;
+          transition: .5s;
+
+          @include i.mq(sp){
+            width: 15px;
+            height: 15px;
+            margin-right: 0;
+          }
+  
+          &::before,
+          &::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: i.$color-red01;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .5s;
+          }
+
+          &::before{
+            transform: translate(-50%, -50%) rotate(90deg);
+          }
+        }
+      }
+
+      &.is-active{
+        .p-home-message-contents-item-title-mark{
+          transform: translateY(-50%) rotate(360deg);
+        }
+        .p-home-message-contents-item-title-mark::before{
+          content: none;
+        }
+      }
+
+      &-text{
+        padding-top: 20px;
+        display: none;
+
+        @include i.mq(sp){
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}

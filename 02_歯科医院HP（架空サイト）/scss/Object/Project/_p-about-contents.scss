@@ -1,0 +1,96 @@
+@use "../../setting/import" as i;
+
+.p-about-contents{
+  padding: 62px 20px 0;
+
+  &:not(:first-of-type){
+    padding: 51px 20px 0;
+  }
+
+  @media screen and (max-width:767px){
+    padding: 30px 20px 0;
+
+    &:not(:first-of-type){
+      padding: 40px 20px 0;
+    }
+  }
+
+  &__inner{
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &:nth-of-type(even){
+    .p-about-contents__inner{
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media screen and (max-width:767px){
+    &__inner,
+    &:nth-of-type(even) .p-about-contents__inner{
+      flex-direction: column;
+    }
+  }
+
+  &__text-wrap{
+    width: 100%;
+
+    @media screen and (max-width:767px){
+      display: contents;
+    }
+  }
+
+  &__title{
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 9px 0 9px 28px;
+    border-bottom: 1px solid i.$color-blue01;
+    border-left: 10px solid i.$color-blue01;
+
+    @media screen and (max-width:767px){
+      font-size: 1.6rem;
+      padding: 10px 0 10px 10px;
+    }
+  }
+
+  &__text{
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-top: 30px;
+
+    @media screen and (max-width:767px){
+      order: 1;
+      margin-top: 20px;
+    }
+  }
+
+  &__img{
+    max-width: 330px;
+    
+    img{
+      width: 100%;
+    }
+
+    @media screen and (max-width:767px){
+      margin-top: 20px;
+      max-width: none;
+    }
+  }
+
+  @media screen and (min-width:768px){
+    &:nth-of-type(even){
+      .p-about-contents__img{
+        margin-right: 30px;
+      }
+    }
+  
+    &:nth-of-type(odd){
+      .p-about-contents__img{
+        margin-left: 30px;
+      }
+    }
+  }
+}

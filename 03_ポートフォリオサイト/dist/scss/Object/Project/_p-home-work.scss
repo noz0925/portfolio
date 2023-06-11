@@ -1,0 +1,276 @@
+@use "../../Setting/import" as i;
+
+.p-home-work{
+  margin: 160px 0;
+  text-align: center;
+
+  @include i.mq(sp){
+    margin: 80px 0;
+  }
+
+  &-heading{
+    display: inline-block;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    @include i.mq(sp){
+      margin-bottom: -25px;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: i.$color-green02;
+      transform: translate(-100%, 0);
+    }
+
+    &.is-active{
+      &::before{
+        animation: mask_anime 1s cubic-bezier(0.8, 0, 0.170, 1) forwards;
+      }
+    }
+
+    &-en{
+      font-family: i.$font-en;
+      font-size: 10rem;
+      font-weight: 900;
+      font-style: italic;
+      line-height: 1;
+      opacity: 0;
+      transition: .5s .5s;
+
+      @include i.mq(sp){
+        font-size: 4rem;
+      }
+    }
+
+    &.is-active{
+      .p-home-work-heading-en{
+        opacity: 1;
+      }
+    }
+  }
+
+  &-inner{
+    opacity: 0;
+    visibility: hidden;
+
+    &.is-active{
+      animation: contents_anime 1s forwards;
+    }
+  }
+
+  &-contents{
+    position: relative;
+    background-color: i.$color-red01;
+  }
+
+  &-list{
+    padding: 120px 0 40px;
+    align-items: flex-start;
+  }
+
+  &-item{
+    display: flex;
+    align-items: flex-start;
+
+    @include i.mq(tab){
+      display: block;
+    }
+
+    &-figure{
+      width: 70%;
+
+      @include i.mq(tab){
+        width: 100%;
+      }
+    }
+
+    &-content{
+      width: 40%;
+      text-align: left;
+      background-color: i.$color-white01;
+      border: 1px solid i.$color-black01;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 40px;
+      box-shadow: 20px 20px;
+      padding: 40px 20px;
+      position: relative;
+      margin: 40px 0 0 -100px;
+
+      @include i.mq(tab){
+        box-shadow: 10px 10px;
+        //max-width: 90%;
+        width: 90%;
+        margin: -8% auto 0;
+      }
+    }
+
+    &-title{
+      &-num{
+        font-family: i.$font-en;
+        font-size: 7rem;
+        font-weight: 900;
+        line-height: 1;
+        position: absolute;
+        top: -36px;
+        right: 36px;
+
+        @include i.mq(sp){
+          font-size: 4rem;
+          top: -20px;
+          right: 20px;
+        }
+
+        &::before{
+          content: "No.";
+          font-size: 3rem;
+          font-weight: 900;
+          line-height: 1;
+          position: absolute;
+          top: 20px;
+          left: -36px;
+          transform: rotate(-90deg);
+
+          @include i.mq(sp){
+            font-size: 1.8rem;
+            top: 10px;
+            left: -24px;
+          }
+        }
+      }
+
+      &-text{
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+      }
+    }
+
+    &-text{
+      text-align: left;
+      margin: 20px 0 0;
+
+      &-range{
+        margin: 20px 0 0;
+
+        &-title{
+          background-color: i.$color-black01;
+          color: i.$color-white01;
+          padding: 2px 10px;
+          display: inline-block;
+          letter-spacing: .2rem;
+        }
+      }
+
+      &-period{
+        margin: 10px 0 0;
+
+        &-title{
+          background-color: i.$color-black01;
+          color: i.$color-white01;
+          padding: 2px 10px;
+          display: inline-block;
+          letter-spacing: .2rem;
+        }
+      }
+    }
+
+    &-btn{
+      &-wrap{
+        margin: 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &-item{
+        width: 48%;
+
+        &:only-child{
+          margin: 0 auto;
+        }
+      }
+
+      &-link{
+        display: block;
+        background-color: i.$color-red01;
+        text-align: center;
+        width: 100%;
+        padding: 5px 0;
+      }
+
+      &-text{
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: i.$color-white01;
+        letter-spacing: .1rem;
+      }
+    }
+  }
+
+  .swiper-pagination{
+    top: 60px;
+
+    .swiper-pagination-bullet{
+      width: 14px;
+      height: 14px;
+      background-color: i.$color-green02;
+      opacity: .3;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      background-color: i.$color-green02;
+      opacity: 1;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    top: 72px;
+    bottom: auto;
+    border-radius: 50%;
+    background-color: i.$color-green02;
+  }
+
+  .swiper-button-prev{
+    left: 40%;
+
+    @include i.mq(tab){
+      left: 35%;
+    }
+
+    @include i.mq(sp){
+      left: 20%;
+    }
+  }
+
+  .swiper-button-next{
+    right: 40%;
+
+    @include i.mq(tab){
+      right: 35%;
+    }
+
+    @include i.mq(sp){
+      right: 20%;
+    }
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after{
+    font-size: 2rem;
+    color: i.$color-white01;
+  }
+
+}

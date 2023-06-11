@@ -1,0 +1,1563 @@
+@charset "UTF-8";
+/*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+@-webkit-keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/*-----------------------
+Foundation
+-----------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #1a1a1a;
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-break: strict;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+body::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("../dist/img/bg-img.gif");
+  background-repeat: repeat;
+  background-size: 35px 35px;
+}
+@media screen and (max-width: 767px) {
+  body::before {
+    background-size: 14px 14px;
+  }
+}
+
+figure {
+  margin: 0 !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+@-webkit-keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loading_anime {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes kv_scroll_anime {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@-webkit-keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes mask_anime {
+  0% {
+    transform: translateX(-101%);
+  }
+  40%, 60% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes contents_anime {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+}
+@media screen and (max-width: 767px) {
+  .l-header {
+    height: 50px;
+  }
+}
+
+.p-load {
+  width: 100%;
+  height: 100%;
+  background-color: #ed5c42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.p-load.is-loaded {
+  -webkit-animation: loading_anime 2s 1.5s forwards;
+          animation: loading_anime 2s 1.5s forwards;
+}
+.p-load-inner {
+  position: relative;
+  overflow: hidden;
+}
+.p-load-inner::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #3c977e;
+  transform: translate(-100%, 0);
+}
+.p-load.is-loaded .p-load-inner::before {
+  -webkit-animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+          animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+}
+.p-load-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 2;
+  letter-spacing: 0.2rem;
+  color: #1a1a1a;
+  opacity: 0;
+  transition: 0.5s 0.5s;
+}
+.p-load.is-loaded .p-load-text {
+  opacity: 1;
+}
+
+.p-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.p-header-logo {
+  padding: 0 20px;
+}
+.p-header-logo-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #ed5c42;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .p-header-logo-text {
+    font-size: 2.4rem;
+  }
+}
+.p-header-btn {
+  width: 100px;
+  height: 100px;
+  background-color: #ed5c42;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+}
+@media screen and (max-width: 767px) {
+  .p-header-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+.p-header-btn::before, .p-header-btn-line {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  top: 45px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .p-header-btn::before, .p-header-btn-line {
+    width: 30px;
+  }
+}
+.p-header-btn::before {
+  top: 45px;
+}
+@media screen and (max-width: 767px) {
+  .p-header-btn::before {
+    top: 20px;
+  }
+}
+.p-header-btn-line {
+  top: 54px;
+}
+@media screen and (max-width: 767px) {
+  .p-header-btn-line {
+    top: 29px;
+  }
+}
+.p-header-btn.is-active::before {
+  transform: rotate(20deg) translateY(6px);
+}
+.p-header-btn.is-active .p-header-btn-line {
+  transform: rotate(-20deg) translateY(-3px);
+}
+.p-header-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #ed5c42;
+  border-left: 1px solid #000;
+  z-index: 98;
+  transition: 0.5s ease-in-out;
+  transform: translateX(400px);
+}
+@media screen and (max-width: 767px) {
+  .p-header-nav {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+.p-header-nav.is-active {
+  transform: translateX(0);
+}
+.p-header-nav-list {
+  padding-top: 150px;
+}
+.p-header-nav-item {
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.p-header-nav-item-link {
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+.p-header-nav-item-link::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #3c977e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: -1;
+  transition: 0.3s;
+}
+.p-header-nav-item-link:hover::before {
+  transform: translateX(0);
+}
+.p-header-nav-item-link-text {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 5rem;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .p-header-nav-item-link-text {
+    font-size: 3rem;
+  }
+}
+.p-header-nav-item-link:hover .p-header-nav-item-link-text {
+  text-shadow: 3px 3px 0px #cee0d8;
+}
+
+.p-home-kv {
+  width: 100%;
+  height: 820px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv {
+    margin-top: 50px;
+    height: 470px;
+  }
+}
+.p-home-kv-inner {
+  margin: 0 20px;
+}
+.p-home-kv-contents {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.p-home-kv-main {
+  background-color: #ed5c42;
+  border: 1px solid #1a1a1a;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 20px 20px;
+  padding: 50px 0;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-kv-main {
+    box-shadow: 10px 10px;
+  }
+}
+.p-home-kv-main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-home-kv-main-text-item {
+  display: inline-block;
+  font-size: 12rem;
+  line-height: 1.2;
+  letter-spacing: 0.1em;
+  text-shadow: 7px 7px 1px #cee0d8;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-main-text-item {
+    font-size: 13vw;
+    text-shadow: 3px 3px 1px #cee0d8;
+  }
+}
+.p-home-kv-main-text-item::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #3c977e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.p-home-kv-main-text-item:first-child::before {
+  transform: rotate(2deg);
+}
+.p-home-kv-main-text-item:last-child {
+  margin-top: 20px;
+}
+.p-home-kv-main-text-item:last-child::before {
+  transform: rotate(-1deg);
+}
+.p-home-kv-sub {
+  margin-top: 40px;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub {
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+}
+.p-home-kv-sub-item {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub-item {
+    width: 100%;
+  }
+}
+.p-home-kv-sub-item:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub-item:first-child {
+    margin-top: 20px;
+  }
+}
+.p-home-kv-sub-item-scroll {
+  position: relative;
+  padding-left: 140px;
+  font-size: 3.2rem;
+  -webkit-animation: kv_scroll_anime 2s infinite;
+          animation: kv_scroll_anime 2s infinite;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub-item-scroll {
+    padding-left: 70px;
+    font-size: 2rem;
+  }
+}
+.p-home-kv-sub-item-scroll::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  border: 60px solid transparent;
+  border-top: 40px solid #ed5c42;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub-item-scroll::before {
+    border: 30px solid transparent;
+    border-top: 20px solid #ed5c42;
+  }
+}
+.p-home-kv-sub-item-desc {
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  .p-home-kv-sub-item-desc {
+    font-size: 1.2rem;
+  }
+}
+
+.p-home-skill {
+  margin: 80px 20px 160px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill {
+    margin: 40px 20px 80px;
+  }
+}
+.p-home-skill-heading {
+  display: inline-block;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill-heading {
+    margin-bottom: -25px;
+  }
+}
+.p-home-skill-heading::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #3c977e;
+  transform: translate(-100%, 0);
+}
+.p-home-skill-heading.is-active::before {
+  -webkit-animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+          animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+}
+.p-home-skill-heading-en {
+  font-family: "Poppins", sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  opacity: 0;
+  transition: 0.5s 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill-heading-en {
+    font-size: 4rem;
+  }
+}
+.p-home-skill-heading.is-active .p-home-skill-heading-en {
+  opacity: 1;
+}
+.p-home-skill-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #1a1a1a;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 20px 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.p-home-skill-inner.is-active {
+  -webkit-animation: contents_anime 1s forwards;
+          animation: contents_anime 1s forwards;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-skill-inner {
+    box-shadow: 10px 10px;
+  }
+}
+.p-home-skill-contents {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 80px 20px 40px;
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill-contents {
+    display: block;
+    margin: 40px 20px 20px;
+  }
+}
+.p-home-skill-item {
+  width: 45%;
+  text-align: justify;
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill-item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-home-skill-item:nth-child(2n) {
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .p-home-skill-item:nth-child(n+3) {
+    margin-top: 2%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-home-skill-item:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+.p-home-skill-item-title {
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.p-home-work {
+  margin: 160px 0;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-work {
+    margin: 80px 0;
+  }
+}
+.p-home-work-heading {
+  display: inline-block;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-home-work-heading {
+    margin-bottom: -25px;
+  }
+}
+.p-home-work-heading::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #3c977e;
+  transform: translate(-100%, 0);
+}
+.p-home-work-heading.is-active::before {
+  -webkit-animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+          animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+}
+.p-home-work-heading-en {
+  font-family: "Poppins", sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  opacity: 0;
+  transition: 0.5s 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .p-home-work-heading-en {
+    font-size: 4rem;
+  }
+}
+.p-home-work-heading.is-active .p-home-work-heading-en {
+  opacity: 1;
+}
+.p-home-work-inner {
+  opacity: 0;
+  visibility: hidden;
+}
+.p-home-work-inner.is-active {
+  -webkit-animation: contents_anime 1s forwards;
+          animation: contents_anime 1s forwards;
+}
+.p-home-work-contents {
+  position: relative;
+  background-color: #ed5c42;
+}
+.p-home-work-list {
+  padding: 120px 0 40px;
+  align-items: flex-start;
+}
+.p-home-work-item {
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-work-item {
+    display: block;
+  }
+}
+.p-home-work-item-figure {
+  width: 70%;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-work-item-figure {
+    width: 100%;
+  }
+}
+.p-home-work-item-content {
+  width: 40%;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #1a1a1a;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 20px 20px;
+  padding: 40px 20px;
+  position: relative;
+  margin: 40px 0 0 -100px;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-work-item-content {
+    box-shadow: 10px 10px;
+    width: 90%;
+    margin: -8% auto 0;
+  }
+}
+.p-home-work-item-title-num {
+  font-family: "Poppins", sans-serif;
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  top: -36px;
+  right: 36px;
+}
+@media screen and (max-width: 767px) {
+  .p-home-work-item-title-num {
+    font-size: 4rem;
+    top: -20px;
+    right: 20px;
+  }
+}
+.p-home-work-item-title-num::before {
+  content: "No.";
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  position: absolute;
+  top: 20px;
+  left: -36px;
+  transform: rotate(-90deg);
+}
+@media screen and (max-width: 767px) {
+  .p-home-work-item-title-num::before {
+    font-size: 1.8rem;
+    top: 10px;
+    left: -24px;
+  }
+}
+.p-home-work-item-title-text {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.p-home-work-item-text {
+  text-align: left;
+  margin: 20px 0 0;
+}
+.p-home-work-item-text-range {
+  margin: 20px 0 0;
+}
+.p-home-work-item-text-range-title {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 2px 10px;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+}
+.p-home-work-item-text-period {
+  margin: 10px 0 0;
+}
+.p-home-work-item-text-period-title {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 2px 10px;
+  display: inline-block;
+  letter-spacing: 0.2rem;
+}
+.p-home-work-item-btn-wrap {
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.p-home-work-item-btn-item {
+  width: 48%;
+}
+.p-home-work-item-btn-item:only-child {
+  margin: 0 auto;
+}
+.p-home-work-item-btn-link {
+  display: block;
+  background-color: #ed5c42;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0;
+}
+.p-home-work-item-btn-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+.p-home-work .swiper-pagination {
+  top: 60px;
+}
+.p-home-work .swiper-pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: #3c977e;
+  opacity: 0.3;
+}
+.p-home-work .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #3c977e;
+  opacity: 1;
+}
+.p-home-work .swiper-button-prev,
+.p-home-work .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  top: 72px;
+  bottom: auto;
+  border-radius: 50%;
+  background-color: #3c977e;
+}
+.p-home-work .swiper-button-prev {
+  left: 40%;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-work .swiper-button-prev {
+    left: 35%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-home-work .swiper-button-prev {
+    left: 20%;
+  }
+}
+.p-home-work .swiper-button-next {
+  right: 40%;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-work .swiper-button-next {
+    right: 35%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-home-work .swiper-button-next {
+    right: 20%;
+  }
+}
+.p-home-work .swiper-button-prev::after,
+.p-home-work .swiper-button-next::after {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.p-home-message {
+  margin: 160px 20px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message {
+    margin: 80px 20px;
+  }
+}
+.p-home-message-heading {
+  display: inline-block;
+  margin-bottom: -50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-heading {
+    margin-bottom: -25px;
+  }
+}
+.p-home-message-heading::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #3c977e;
+  transform: translate(-100%, 0);
+}
+.p-home-message-heading.is-active::before {
+  -webkit-animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+          animation: mask_anime 1s cubic-bezier(0.8, 0, 0.17, 1) forwards;
+}
+.p-home-message-heading-en {
+  font-family: "Poppins", sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  opacity: 0;
+  transition: 0.5s 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-heading-en {
+    font-size: 4rem;
+  }
+}
+.p-home-message-heading.is-active .p-home-message-heading-en {
+  opacity: 1;
+}
+.p-home-message-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #1a1a1a;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: 20px 20px;
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+}
+.p-home-message-inner.is-active {
+  -webkit-animation: contents_anime 1s forwards;
+          animation: contents_anime 1s forwards;
+}
+@media screen and (max-width: 1024px) {
+  .p-home-message-inner {
+    box-shadow: 10px 10px;
+  }
+}
+.p-home-message-contents {
+  margin: 80px 20px 40px;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-contents {
+    margin: 40px 20px 20px;
+  }
+}
+.p-home-message-contents-title {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-contents-title {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
+.p-home-message-contents-item-title {
+  position: relative;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 1px solid #ed5c42;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-contents-item-title {
+    padding: 10px 0;
+  }
+}
+.p-home-message-contents-item-title-mark {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  margin-right: 20px;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-contents-item-title-mark {
+    width: 15px;
+    height: 15px;
+    margin-right: 0;
+  }
+}
+.p-home-message-contents-item-title-mark::before, .p-home-message-contents-item-title-mark::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ed5c42;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.p-home-message-contents-item-title-mark::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.p-home-message-contents-item.is-active .p-home-message-contents-item-title-mark {
+  transform: translateY(-50%) rotate(360deg);
+}
+.p-home-message-contents-item.is-active .p-home-message-contents-item-title-mark::before {
+  content: none;
+}
+.p-home-message-contents-item-text {
+  padding-top: 20px;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .p-home-message-contents-item-text {
+    padding-top: 10px;
+  }
+}
+
+.p-footer {
+  background-color: #ed5c42;
+  border-top: 1px solid #1a1a1a;
+  padding: 0 20px;
+}
+.p-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-inner {
+    display: block;
+    text-align: center;
+    margin: 30px auto;
+  }
+}
+.p-footer-logo-link-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1a1a;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-logo-link-text {
+    font-size: 2.8rem;
+    letter-spacing: 0.2rem;
+  }
+}
+.p-footer-nav-list {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-list {
+    justify-content: center;
+  }
+}
+.p-footer-nav-item:not(:first-child)::before {
+  content: "//";
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  margin-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item:not(:first-child)::before {
+    margin-left: 10px;
+  }
+}
+.p-footer-nav-item-link {
+  padding-left: 20px;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item-link {
+    padding-left: 10px;
+  }
+}
+.p-footer-nav-item-link-text {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 767px) {
+  .p-footer-nav-item-link-text {
+    font-size: 1.4rem;
+  }
+}
+.p-footer-copy {
+  padding-bottom: 25px;
+  text-align: center;
+}
+.p-footer-copy-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+/*# sourceMappingURL=style.css.map */

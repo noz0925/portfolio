@@ -1,0 +1,70 @@
+@use "../../setting/import" as i;
+
+.p-reserve-btn{
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  z-index: 4;
+  transition: all 1s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(130%);
+
+  &.is-active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  @media screen and (max-width:767px){
+  bottom: 9px;
+  right: 6px;
+  }
+
+  &__link{
+    display: block;
+    position: relative;
+    filter: drop-shadow(0px 3px 6px rgba(0,0,0,0.16));
+  }
+
+  &__text{
+    position: absolute;
+    top: 55%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text-item{
+    color: i.$color-white01;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    @media screen and (max-width:767px){
+      font-size: 1.4rem;
+    }
+
+    &:last-child{
+      margin-left: 10px;
+      transition: all .3s;
+
+      @media screen and (max-width:767px){
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__link:hover{
+    .p-reserve-btn__text-item:last-child{
+      transform: translateX(10px);
+
+      @media screen and (max-width:767px){
+        transform: translateX(3px);
+      }
+    }
+  }
+}

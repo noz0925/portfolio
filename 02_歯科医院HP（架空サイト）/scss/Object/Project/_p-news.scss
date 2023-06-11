@@ -1,0 +1,53 @@
+@use "../../setting/import" as i;
+
+.p-news{
+  padding: 100px 20px 0;
+
+  @media screen and (max-width:767px){
+    padding: 50px 20px 0;
+  }
+
+  &__list{
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  &__item{
+    position: relative;
+    padding: 17px 0;
+    border-bottom: 1px solid i.$color-gray01;
+
+    &:first-child{
+      border-top: 1px solid i.$color-gray01;
+    }
+
+    &::after{
+      content: "\f105";
+      position: absolute;
+      top: 50%;
+      right: 17px;
+      transform: translateY(-50%);
+      color: i.$color-blue01;
+      font-weight: 900;
+      font-family: 'Font Awesome 5 Free';
+
+      @media screen and (max-width:767px){
+        right: 0;
+      }
+    }
+  }
+
+  &__link{
+    display: flex;
+  }
+
+  &__date{
+    padding: 0 20px;
+    text-align: center;
+    color: i.$color-blue01;
+
+    @media screen and (max-width:767px){
+      padding: 0 20px 0 0;
+    }
+  }
+}

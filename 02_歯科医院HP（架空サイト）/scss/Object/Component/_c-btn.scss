@@ -1,0 +1,37 @@
+@use "../../setting/import" as i;
+
+.c-btn{
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid i.$color-blue01;
+  border-radius: 30px;
+  line-height: 1;
+  position: relative;
+  text-align: center;
+
+  &__link{
+    display: block;
+    padding: 14px 0 13px;
+    color: i.$color-blue01;
+    font-weight: bold;
+  }
+
+  &__text::before{
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2.4rem;
+    color: i.$color-blue01;
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+    transition: all .3s;
+  }
+
+  &__link:hover{
+    .c-btn__text::before{
+      right: 11px;
+    }
+  }
+}

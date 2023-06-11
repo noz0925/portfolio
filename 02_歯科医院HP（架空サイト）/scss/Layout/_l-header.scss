@@ -1,0 +1,36 @@
+@use "../setting/import" as i;
+.l-header{
+  z-index: 100;
+  position: relative;
+
+  &#header-origin{
+    @media screen and (max-width:1024px){
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  &#header-clone{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: all .3s;
+    width: 100%;
+    background-color: i.$color-white01;
+  
+    @media screen and (max-width:1024px){
+      display: none;
+    }
+
+    &.is-active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0%);
+    }
+  }
+}

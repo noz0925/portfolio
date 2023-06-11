@@ -1,0 +1,61 @@
+@use "../../setting/import" as i;
+
+.p-under-kv{
+  height: 300px;
+  position: relative;
+
+  @media screen and (min-width:1025px){
+    box-shadow: 0px 3px 6px 0px rgb(0 0 0 / 16%);
+  }
+
+  @media screen and (max-width:1024px){
+    margin-top: 70px;
+    height: 132px;
+  }
+
+  &__text{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: i.$color-blue01;
+    color: i.$color-white01;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    @media screen and (min-width:1025px){
+      max-height: 165px;
+      max-width: 370px;
+      font-size: 4.4rem;
+    }
+  }
+
+  &__text-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__text-ja{
+    font-size: 2rem;
+
+    @media screen and (min-width:1025px){
+      font-size: 2.4rem;
+    }
+  }
+
+  &__bg{
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width:1024px){
+      display: none;
+    }
+  }
+}

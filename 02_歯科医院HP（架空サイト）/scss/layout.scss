@@ -1,0 +1,33 @@
+//Foundation
+@use "Foundation/reset";
+@use "Foundation/base";
+// @use "Foundation/js";
+
+//Layout
+@use "Layout/l-main";
+@use "Layout/l-home";
+@use "Layout/l-header";
+
+//Component
+@use "Object/Component/c-title";
+@use "Object/Component/c-news";
+@use "Object/Component/c-btn";
+@use "Object/Component/c-pagenation";
+
+//Project
+@use "Object/Project/p-header";
+@use "Object/Project/p-top-kv";
+@use "Object/Project/p-top-contents";
+@use "Object/Project/p-top-treatment";
+@use "Object/Project/p-top-news";
+@use "Object/Project/p-footer";
+@use "Object/Project/p-copy";
+@use "Object/Project/p-reserve-btn";
+@use "Object/Project/p-under-kv";
+@use "Object/Project/p-about-contents";
+@use "Object/Project/p-about-detail";
+@use "Object/Project/p-treatment-link";
+@use "Object/Project/p-treatment-post";
+@use "Object/Project/p-news";
+@use "Object/Project/p-news-post";
+@use "Object/Project/p-recruit";

@@ -1,0 +1,162 @@
+@use "../../Setting/import" as i;
+
+.p-header{
+  &-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo{
+    padding: 0 20px;
+    
+    &-text{
+      font-family: i.$font-en;
+      font-size: 4rem;
+      font-weight: 700;
+      font-style: italic;
+      color: i.$color-red01;
+      letter-spacing: .1em;
+
+      @include i.mq(sp){
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &-btn{
+    width: 100px;
+    height: 100px;
+    background-color: i.$color-red01;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+
+    @include i.mq(sp){
+      width: 50px;
+      height: 50px;
+    }
+
+    &::before,
+    &-line{
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      position: absolute;
+      top: 45px;
+      background-color: i.$color-white01;
+      transition: .3s;
+
+      @include i.mq(sp){
+        width: 30px;
+      }
+    }
+
+    &::before{
+      top: 45px;
+
+      @include i.mq(sp){
+        top: 20px;
+      }
+    }
+
+    &-line{
+      top: 54px;
+
+      @include i.mq(sp){
+        top: 29px;
+      }
+    }
+
+    &.is-active{
+      &::before{
+        transform: rotate(20deg)translateY(6px);
+      }
+
+      .p-header-btn-line{
+        transform: rotate(-20deg)translateY(-3px);
+      }
+    }
+
+  }
+
+  &-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: i.$color-red01;
+    border-left: 1px solid #000;
+    z-index: 98;
+    transition: 0.5s ease-in-out;
+    transform: translateX(400px);
+
+    @include i.mq(sp){
+      width: 100%;
+      transform: translateX(100%);
+    }
+
+    &.is-active{
+      transform: translateX(0);
+    }
+
+    &-list{
+      padding-top: 150px;
+    }
+
+    &-item{
+      text-align: center;
+      max-width: 250px;
+      margin: 0 auto;
+
+      &-link{
+        display: block;
+        padding: 10px 0;
+        position: relative;
+        overflow: hidden;
+
+        &::before{
+          content:"";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: i.$color-green02;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translateX(-100%);
+          z-index: -1;
+          transition: .3s;
+        }
+
+        &:hover{
+          &::before{
+            transform: translateX(0);
+          }
+        }
+
+        &-text{
+          font-family: i.$font-en;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 5rem;
+          transition: .3s;
+
+          @include i.mq(sp){
+            font-size: 3rem;
+          }
+        }
+
+        &:hover{
+          .p-header-nav-item-link-text{
+            text-shadow: 3px 3px 0px i.$color-green01;
+          }
+        }
+      }
+    }
+  }
+}

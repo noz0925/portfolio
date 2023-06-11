@@ -1,0 +1,22 @@
+@use "../../setting/import" as i;
+.c-pagenation{
+  text-align: center;
+  margin-top: 50px;
+
+  .prev,
+  .next{
+    color: i.$color-blue01;
+  }
+
+  .prev{
+    margin-right: 15px;
+  }
+
+  .next{
+    margin-left: 15px;
+  }
+
+  .page-numbers{
+    margin: 0 10px;
+  }
+}

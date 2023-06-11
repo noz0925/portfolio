@@ -1,0 +1,232 @@
+@use "../../setting/import" as i;
+
+.p-footer{
+  margin-top: 100px;
+  display: flex;
+
+  @media screen and (max-width:767px){
+    margin-top: 50px;
+    flex-direction: column-reverse;
+  }
+
+  &__info,
+  &__map{
+    width: 50%;
+
+    @media screen and (max-width:767px){
+      width: 100%;
+    }
+  }
+
+  &__info{
+    background-color: i.$color-white02;
+    padding: 40px 2.7343% 40px 6.25%;
+    padding-left: 80px;
+  }
+
+  &__logo{
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-text{
+      line-height: 1;
+      text-align: center;
+      margin-left: 10px;
+  }
+
+  &__logo-text-ja,
+  &__logo-text-en{
+    display: block;
+  }
+
+  &__logo-text-ja{
+    font-size: 2.4rem;
+  }
+
+  &__logo-text-en{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: i.$color-blue01;
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width:767px){
+    &__logo-img{
+      img{
+        width: 53px;
+      }
+    }
+  }
+
+  &__address{
+    margin-top: 26px;
+    line-height: 1.5;
+  }
+
+  &__address-disc{
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:767px){
+      display: block;
+    }
+  }
+
+  &__info-tel-num{
+    position: relative;
+
+    @media screen and (max-width:767px){
+      display: block;
+    }
+
+    &::before{
+      content: "\f095";
+      font-size: 2.4rem;
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: i.$color-blue01;
+      position: absolute;
+      top: 18px;
+      left: -30px;
+      transform: translateY(-50%);
+  
+      @media screen and (max-width:767px){
+        position: static;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__info-tel-link{
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: i.$color-blue01;
+  }
+
+  &__info-tel-text{
+    margin-left: 10px;
+
+    @media screen and (max-width:767px){
+      display: block;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width:767px){
+    &__info{
+      padding: 40px 20px 54px;
+    }
+  }
+
+  &__table{
+    margin-top: 25px;
+
+    @media screen and (max-width:767px){
+      margin-top: 18px;
+    }
+  }
+
+  &__table-inner{
+    width: 100%;
+    border-top: 1px solid i.$color-gray01;
+    border-left: 1px solid i.$color-gray01;
+    line-height: 1;
+
+    @media screen and (max-width:767px){
+      min-width: 600px;
+    }
+  }
+
+  &__table-tr{
+    border-bottom: 1px solid i.$color-gray01;
+
+    &:first-child{
+      background-color: i.$color-blue03;
+      color: i.$color-white01;
+      font-weight: bold;
+    }
+
+    &:not(:first-child){
+      background-color: i.$color-white01;
+
+      .p-footer__table-td{
+        color: i.$color-blue03;
+      }
+    }
+  }
+
+  &__table-th{
+    width: 25%;
+    text-align: center;
+    border-right: 1px solid i.$color-gray01;
+    padding: 16px 0;
+  }
+
+  &__table-td{
+    text-align: center;
+    border-right: 1px solid i.$color-gray01;
+    padding: 16px 0;
+  }
+
+  &__table-text{
+    display: none;
+
+    @media screen and (max-width:767px){
+      display: block;
+    }
+  }
+
+  @media screen and (max-width:767px){
+    &__table-scroll{
+      overflow-x: scroll;
+    }
+  }
+
+  &__reserve{
+    margin-top: 30px;
+
+    @media screen and (max-width:767px){
+      margin-top: 20px;
+    }
+  }
+
+  &__reserve-btn{
+    border: 1px solid i.$color-yellow01;
+    background-color: i.$color-yellow01;
+    width: 100%;
+  }
+
+  &__reserve-btn-link{
+    color: i.$color-black01;
+  }
+
+  &__reserve-btn-text::before{
+    color: i.$color-black01;
+  }
+
+  &__reserve-disc{
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  &__map{
+    overflow: hidden;
+    padding-bottom: 500px;
+    position: relative;
+    
+    iframe{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+  
+    @media screen and (max-width:767px){
+      padding-bottom: 300px;
+    }
+  }
+}

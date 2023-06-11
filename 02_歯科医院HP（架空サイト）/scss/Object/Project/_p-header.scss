@@ -1,0 +1,345 @@
+@use "../../setting/import" as i;
+
+.p-header{
+  @media screen and (max-width:1024px){
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #fff;
+  }
+
+  @media screen and (min-width:1025px){
+    &__logo{
+      padding-top: 30px;
+    }
+  }
+
+  &__logo-inner{
+    text-align: center;
+
+    @media screen and (max-width:1024px){
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width:1025px){
+    &__logo-text{
+      margin-top: 15px;
+    }
+  }
+
+  &__logo-ja,
+  &__logo-en{
+    display: block;
+    line-height: 1;
+  }
+
+  &__logo-ja{
+    font-size: 3rem;
+
+    @media screen and (max-width:1024px){
+      font-size: 1.8rem;
+    }
+  }
+
+  &__logo-img.pc{
+    display: inline-block;
+
+    @media screen and (max-width:1024px){
+      max-height: 45px;
+    }
+
+    @media screen and (max-width:767px){
+      display: none;
+    }
+  }
+
+  &__logo-en{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: i.$color-blue01;
+    margin-top: 10px;
+  }
+
+  &__btn{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: none;
+    z-index: 10;
+
+    @media screen and (max-width:1024px){
+      display: block;
+    }
+  }
+
+  &__btn-border{
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    background-color: i.$color-blue01;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+
+    &:first-child{
+      top: 0;
+    }
+
+    &:nth-child(2){
+      top: 10px;
+    }
+
+    &:nth-child(3){
+      top:20px;
+    }
+  }
+
+  &__btn-text{
+    position: absolute;
+    top: 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: i.$color-blue01;
+    transition: all .3s;
+  }
+
+  &__btn.is-active{
+    .p-header__btn-border{
+      background-color: i.$color-white01;
+    }
+
+    .p-header__btn-border:first-child{
+      transform: translateY(10px) translateX(-13px) rotate(-35deg);
+    }
+
+    .p-header__btn-border:nth-child(2){
+      opacity: 0;
+    }
+
+    .p-header__btn-border:nth-child(3){
+      transform: translateY(-10px) translateX(-13px) rotate(35deg);
+    }
+
+    .p-header__btn-text{
+      color: i.$color-white01;
+    }
+  }
+
+  &__nav{
+    text-align: center;
+    margin: 30px 0;
+
+    @media screen and (max-width:1024px){
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: i.$color-blue01;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .3s;
+      z-index: 3;
+
+      &.is-active{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__nav-list{
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width:1024px){
+      display: block;
+      margin: 72px 0 0;
+      text-align: left;
+    }
+  }
+
+  &__nav-item{
+    margin: 0 17px;  
+
+    &.is-parent{
+      position: relative;
+    }
+
+    &.is-parent:hover{
+      transition: .2s ease;
+    }
+
+    &.is-active{
+      .p-header__nav-link::after{
+        transform: scale(1, 1);
+      }
+    }
+
+    @media screen and (max-width:1024px){
+      margin: 0;
+      border-bottom: 1px solid i.$color-white01;
+
+      &.is-reserve{
+        display: none;
+      }
+    }
+  }
+
+  &__reserve-btn{
+    width: auto;
+    border: 1px solid i.$color-yellow01;
+    display: none;
+    margin: 36px auto 0;
+    border-radius: 0;
+
+    @media screen and (max-width:1024px){
+      display: block;
+    }
+  }
+    
+  &__reserve-link{
+    color: i.$color-black01;
+    background-color: i.$color-yellow01;
+    padding: 18px 0;
+  }
+    
+  &__reserve-text::before{
+    content: none;
+  }
+
+  &__nav-link{
+    position: relative;
+    display: block;
+    font-weight: bold;
+    padding:  0 13px 5px;
+
+    @media screen and (max-width:1024px){
+      color: i.$color-white01;
+      padding:  20px;
+      line-height: 1;
+    }
+
+    &::after{
+      content: "";
+      height: 3px;
+      background-color: i.$color-blue01;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      transition: all .3s;
+      transform: scale(0, 1);
+      transform-origin: center top;
+    }
+  }
+    
+  &__nav-item:hover{
+    .p-header__nav-link::after{
+      transform: scale(1, 1);
+    }
+  }
+
+  &__subnav-list{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    transition: .2s ease;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 1px 0px i.$color-black02;
+  }
+    
+  &__nav-item.is-parent:hover{
+    .p-header__subnav-list{
+      top: 37px;
+      visibility: visible;
+      opacity: 1;
+      background-color: i.$color-white02;
+    }
+  }
+    
+  &__subnav-item:not(:last-child){
+    background-image: linear-gradient(to right, i.$color-blue01, i.$color-blue01 4px, transparent 4px, transparent 4px);
+    background-size: 8px 1px;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+  }
+    
+  &__subnav-link{
+    line-height: 1;
+    display: block;
+    color: i.$color-blue01;
+    font-weight: bold;
+    padding: 17px 0;
+    transition: all .3s;
+    
+    &:hover{
+        color: i.$color-white01;
+        background-color: i.$color-blue01;
+    }
+  }
+}
+
+#header-clone{
+  .p-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 30px;
+    height: 70px;
+
+    &__logo{
+      padding: 0;
+    }
+
+    &__logo-link{
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo-text{
+      line-height: 1;
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    &__logo-ja,
+    &__logo-en{
+      display: block;
+    }
+
+    &__logo-ja{
+      font-size: 1.8rem;
+    }
+
+    &__logo-en{
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: i.$color-blue01;
+      margin-top: 8px;
+    }
+
+    &__nav{
+      margin: 0;
+    }
+
+    &__nav-link{
+      padding: 0;
+    }
+
+    &__nav-item.is-parent:hover{
+      .p-header__subnav-list{
+        top: 33px;
+      }
+    }
+  }
+}

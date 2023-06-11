@@ -1,0 +1,95 @@
+@use "../../Setting/import" as i;
+
+.p-footer{
+  background-color: i.$color-red01;
+  border-top: 1px solid i.$color-black01;
+  padding: 0 20px;
+
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 50px auto;
+
+    @include i.mq(sp){
+      display: block;
+      text-align: center;
+      margin: 30px auto;
+    }
+  }
+
+  &-logo{
+    &-link{
+      &-text{
+        font-family: i.$font-en;
+        font-size: 4rem;
+        font-weight: 700;
+        font-style: italic;
+        color: i.$color-black01;
+        letter-spacing: .1em;
+
+        @include i.mq(sp){
+          font-size: 2.8rem;
+          letter-spacing: .2rem;
+        }
+      }
+    }
+  }
+
+  &-nav{
+    &-list{
+      display: flex;
+
+      @include i.mq(sp){
+        justify-content: center;
+      }
+    }
+
+    &-item{
+      &:not(:first-child)::before{
+        content: '//';
+        font-family: i.$font-en;
+        font-style: italic;
+        font-weight: 900;
+        margin-left: 20px;
+
+        @include i.mq(sp){
+          margin-left: 10px;
+        }
+      }
+
+      &-link{
+        padding-left: 20px;
+
+        @include i.mq(sp){
+          padding-left: 10px;
+        }
+
+        &-text{
+          font-family: i.$font-en;
+          font-style: italic;
+          font-weight: 900;
+          font-size: 2rem;
+          letter-spacing: .1rem;
+
+          @include i.mq(sp){
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  &-copy{
+    padding-bottom: 25px;
+    text-align: center;
+
+    &-text{
+      font-family: i.$font-en;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: .1rem;
+    }
+  }
+}
