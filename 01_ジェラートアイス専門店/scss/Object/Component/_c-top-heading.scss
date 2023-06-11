@@ -1,0 +1,55 @@
+@use "../../Setting/import" as i;
+
+.c-top-heading{
+  display: flex;
+  align-items: baseline;
+
+  @include i.mq(sp){
+    justify-content: center;
+  }
+
+  &-en{
+    font-family: i.$font-en;
+    font-size: 10rem;
+    font-weight: 700;
+    letter-spacing: .4rem;
+    position: relative;
+    white-space: nowrap;
+
+    @include i.mq(sp){
+      font-size: 4rem;
+      letter-spacing: .2rem;
+    }
+  }
+
+  &-ja{
+    font-family: i.$font-ja;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+    margin: 0 0 0 54px;
+    position: relative;
+
+    @include i.mq(sp){
+      font-size: 1.6rem;
+      margin: 0 0 0 30px;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      width: 70px;
+      height: 1px;
+      background: i.$color-black01;
+      transform: rotate(-40deg);
+      position: absolute;
+      top: 12px;
+      left: -55px;
+
+      @include i.mq(sp){
+        width: 40px;
+        top: 9px;
+        left: -36px;
+      }
+    }
+  }
+}

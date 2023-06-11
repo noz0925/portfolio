@@ -1,0 +1,56 @@
+@use "../setting/import" as i;
+
+/*-----------------------
+Foundation
+-----------------------*/
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: i.$color-black01;
+  font-family: i.$font;
+  line-break: strict;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  position: relative;
+
+  @include i.mq(sp){
+    font-size: 1.4rem;
+  }
+
+  &.active{
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+figure{
+  margin: 0 !important;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.pc{
+  display: block;
+}
+
+.sp{
+  display: none;
+}
+
+@include i.mq(sp){
+  .pc{
+    display: none;
+  }
+  
+  .sp{
+    display: block;
+  }
+}

@@ -1,0 +1,89 @@
+//アニメーション
+@mixin keyframes($animation-name: animaton) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+
+  @mixin animation($animation-name) {
+    -webkit-animation: $animation-name;
+    -moz-animation: $animation-name;
+    animation: $animation-name;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+//ローディング流体シェイプ
+@include keyframes(fluidrotate) {  
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+}
+
+//ハンバーガー　文字アニメーション
+@include keyframes(header_open_anime){
+  from {
+    opacity: 0;
+    transform: translate3d(0,20%,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+@include keyframes(header_close_anime){
+  from {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0,20%,0);
+  }
+}
+
+//当店について　概要　円形文字アニメーション
+@include keyframes(rotateAnim){
+  0% { transform: rotate(0deg); }
+  50%{ transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+//メディアクエリ設定
+$breakpoint: (
+  sp: 'screen and (max-width: 767px)',
+  tab: 'screen and (max-width: 1024px)',
+  pc: 'screen and (min-width: 1025px)',
+  pc-tab: 'screen and (min-width: 768px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+   @content;
+  }
+}

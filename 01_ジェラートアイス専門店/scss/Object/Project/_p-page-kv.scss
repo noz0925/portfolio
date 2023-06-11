@@ -1,0 +1,103 @@
+@use "../../Setting/import" as i;
+
+.p-page-kv{
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+  @include i.mq(sp){
+    height: 250px;
+  }
+
+  &-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: calc(100% - 100px);
+    height: 400px;
+
+    @include i.mq(sp){
+      width: 100%;
+      height: 250px;
+    }
+
+    &-img{
+      height: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &::before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: i.$color-black01;
+      opacity: .3;
+    }
+  }
+
+  &-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    @include i.mq(sp){
+      margin-top: -80px;
+    }
+
+    &-text{
+      display: flex;
+      color: i.$color-white01;
+
+      &-en{
+        position: relative;
+        display: block;
+        font-family: i.$font-en;
+        font-weight: 700;
+        font-size: 5rem;
+        letter-spacing: 0.2em;
+
+        @include i.mq(sp){
+          font-size: 3rem;
+        }
+
+        &::before{
+          content: "";
+          display: block;
+          width: 150px;
+          height: 1px;
+          background: i.$color-white01;
+          transform: rotate(-30deg);
+          position: absolute;
+          bottom: 45px;
+          right: -80px;
+
+          @include i.mq(sp){
+            width: 80px;
+            bottom: 25px;
+            right: -46px;
+          }
+        }
+      }
+
+      &-ja{
+        display: block;
+        font-family: i.$font-ja;
+        font-size: 3rem;
+        letter-spacing: 0.1rem;
+        margin: 80px 0 0 35px;
+
+        @include i.mq(sp){
+          font-size: 2rem;
+          margin: 40px 0 0 25px;
+        }
+      }
+    }
+  }
+}

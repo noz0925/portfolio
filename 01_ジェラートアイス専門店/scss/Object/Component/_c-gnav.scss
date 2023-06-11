@@ -1,0 +1,7 @@
+@use "../../Setting/import" as i;
+
+.c-gnav{
+  &-link{
+    font-family: i.$font-en;
+  }
+}

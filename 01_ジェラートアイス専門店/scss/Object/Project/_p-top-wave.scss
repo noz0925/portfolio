@@ -1,0 +1,11 @@
+@use "../../Setting/import" as i;
+
+.p-top-wave{
+  position: relative;
+  margin-top: -150px;
+  z-index: 1;
+
+  svg {
+    width: 100%;
+  }
+}

@@ -1,0 +1,141 @@
+@use "../../Setting/import" as i;
+
+.p-about-message{
+  padding: 200px 0 0;
+
+  @include i.mq(tab){
+    padding: 80px 0 0;
+  }
+
+  &-inner{
+    position: relative;
+  }
+
+  &-top{
+    &-heading{
+      &-en{
+        @media screen and (max-width: 1340px){
+          font-size: 7rem;
+        }
+
+        @media screen and (max-width: 910px){
+          font-size: 4rem;
+        }
+      }
+
+      &-ja{
+        @media screen and (max-width: 1340px){
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 910px){
+          font-size: 1.6rem;
+        }
+
+        &::before{
+          @media screen and (max-width: 1340px){
+            width: 50px;
+          }
+          
+          @media screen and (max-width: 910px){
+            width: 40px;
+          }
+        }
+      }
+    }
+
+    &-profile{
+      margin: 0 5% 0 45%;
+
+      @include i.mq(tab){
+        margin: 0 2% 0 42%;
+      }
+
+      @media screen and (max-width: 540px){
+        margin: 0 20px;
+      }
+  
+      &-content{
+        margin-top: 20px;
+      }
+  
+      &-position{
+        font-family: i.$font-ja;
+        font-weight: 700;
+        font-size: 3rem;
+        letter-spacing: .1rem;
+
+        @media screen and (max-width: 910px){
+          font-size: 2rem;
+        }
+      }
+  
+      &-name{
+        font-family: i.$font-en;
+        font-weight: 700;
+        font-size: 4rem;
+        letter-spacing: .1rem;
+
+        @media screen and (max-width: 910px){
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    &-figure{
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 600px;
+      width: 40%;
+
+      @media screen and (max-width: 540px){
+        position: relative;
+        margin: 20px 20px 0 0;
+        width: auto;
+      }
+  
+      &::before{
+        content: "";
+        display: block;
+        padding-bottom: 133.4%;
+      }
+  
+      &-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+
+        @include i.mq(tab){
+          border-top-right-radius: 30px;
+          border-bottom-right-radius: 30px;
+        }
+      }
+    }
+  }
+
+  &-bottom{
+    position: relative;
+
+    &-text{
+      background: #f9f9f9;
+      border-top-left-radius: 60px;
+      border-bottom-left-radius: 60px;
+      margin: 5% 0 0 25%;
+      padding: 5%;
+
+      @include i.mq(tab){
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin: 2% 0 0 20px;
+        padding: 20px;
+      }
+
+      @media screen and (max-width: 540px){
+        margin: -25% 0 0 20px;
+      }
+    }
+  }
+}

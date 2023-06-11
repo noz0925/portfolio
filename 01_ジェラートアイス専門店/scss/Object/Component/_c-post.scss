@@ -1,0 +1,62 @@
+@use "../../Setting/import" as i;
+
+.c-post{
+  width: calc(33.33333% - 20px);
+  height: auto;
+  background: i.$color-white01;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 10px;
+
+  @include i.mq(sp){
+    margin: 0;
+  }
+
+  &-figure{
+    margin: 0;
+  }
+
+  &-desc{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 36px 30px;
+
+    @include i.mq(sp){
+      padding: 20px;
+    }
+
+    &-category{
+      font-family: i.$font-ja;
+      font-size: 14px;
+      font-size: 1.4rem;
+      background-color: i.$color-black01;
+      color: i.$color-white01;
+      padding: 2px 20px;
+      margin-bottom: 10px;
+      border-radius: 15px;
+    }
+
+    &-date{
+      font-family: i.$font-ja;
+      font-size: 14px;
+      font-size: 1.4rem;
+      font-weight: 700;
+
+      @include i.mq(sp){
+        font-size: 1.2rem;
+      }
+    }
+
+    &-title{
+      font-family: i.$font-ja;
+      font-size: 18px;
+      font-size: 1.8rem;
+      font-weight: 700;
+    
+      @include i.mq(sp){
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

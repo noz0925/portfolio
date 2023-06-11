@@ -1,0 +1,29 @@
+@use "../../Setting/import" as i;
+
+.p-loader{
+  width: 100vw;
+  height: 100vh;
+  background-color: i.$color-white01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+
+  &-inner{
+    width: 200px;
+    height: 200px;
+    background-color: i.$color-purple01;
+    font-family: i.$font-en;
+    font-weight: 700;
+    letter-spacing: .2em;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fluidrotate 20s ease 0s infinite;
+  }
+}
+

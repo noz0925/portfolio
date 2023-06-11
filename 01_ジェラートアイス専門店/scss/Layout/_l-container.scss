@@ -1,0 +1,13 @@
+@use "../Setting/import" as i;
+
+/*-----------------------
+Layout
+-----------------------*/
+.l-container{
+
+  &-left{
+    @include i.mq(pc-tab){
+      padding-right: 100px;
+    }
+  }
+}

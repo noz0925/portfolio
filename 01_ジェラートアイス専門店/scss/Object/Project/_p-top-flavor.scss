@@ -1,0 +1,119 @@
+@use "../../Setting/import" as i;
+
+.p-top-flavor{
+  padding: 120px 0 0;
+  background: i.$color-green01;
+
+  @include i.mq(tab){
+    padding: 0;
+  }
+
+  &-inner{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &-content{
+    display: flex;
+    align-items: center;
+
+    @include i.mq(tab){
+      display: block;
+    }
+  }
+
+  &-heading{
+    width: 50%;
+
+    @include i.mq(tab){
+      width: 100%;
+    }
+  }
+
+  &-desc{
+    width: 50%;
+
+    @include i.mq(tab){
+      width: 100%;
+    }
+
+    @include i.mq(sp){
+      margin-top: 20px;
+    }
+  }
+
+  &-list{
+    margin-top: 90px;
+
+    @include i.mq(tab){
+      margin-top: 45px;
+    }
+
+    @include i.mq(sp){
+      margin-top: 20px;
+    }
+
+    &-inner{
+      transition-timing-function: linear;
+    }
+
+    &-item{
+      // max-width: 20%;
+
+      &-link{
+        position: relative;
+        display: block;
+
+        &::before{
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, .2);
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          transition: all .2s;
+          opacity: 0;
+        }
+
+        &-text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: i.$font-en;
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: .2rem;
+          color: i.$color-white01;
+          transition: all .2s;
+          opacity: 0;
+        }
+
+        &:hover{
+          &::before{
+            // opacity: 1;
+          }
+
+          .p-top-flavor-list-item-link-text{
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-btn{
+      margin-top: 50px;
+
+      @include i.mq(tab){
+        margin-top: 45px;
+      }
+
+      @include i.mq(sp){
+        margin-top: 20px;
+      }
+    }
+  }
+}

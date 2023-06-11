@@ -1,0 +1,174 @@
+@use "../../Setting/import" as i;
+
+.p-blog{
+  padding: 100px 20px 0;
+
+  @include i.mq(sp){
+    padding: 50px 10px 0;
+  }
+
+  &-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include i.mq(sp){
+      display: block;
+    }
+  }
+
+  &-list{
+    width: 70%;
+
+    @include i.mq(sp){
+      width: 100%;
+    }
+
+    &-inner{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-item{
+    width: calc(50% - 20px);
+    margin: 0 10px 20px;
+
+    @include i.mq(sp){
+      width: calc(100% - 20px);
+    }
+
+    &-desc{
+      &.is-shop_list_post{
+        align-items: center;
+      }
+    }
+  }
+
+  &-post{
+    width: 70%;
+
+    @include i.mq(sp){
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    &-heading{
+      border-bottom: 1px solid i.$color-black01;;
+      margin-bottom: 40px;
+      font-family: i.$font-ja;
+
+      &-date{
+        font-size: 14px;
+        font-size: 1.4rem;
+        letter-spacing: .2rem;
+      }
+
+      &-title{
+        font-size: 30px;
+        font-size: 3rem;
+        letter-spacing: .2rem;
+        padding: 10px 0;
+      }
+    }
+
+    &-text{
+      margin-top: 40px;
+
+      iframe{
+        width: 100%;
+        margin-top: 40px;
+
+        @include i.mq(sp){
+          height: 300px;
+        }
+      }
+    }
+
+    &-btn{
+      margin: 40px auto 0;
+    }
+  }
+
+  &-sidebar{
+    width: calc(30% - 40px);
+    margin-left: 40px;
+
+    @include i.mq(sp){
+      width: 100%;
+      margin-left: 0;
+      padding: 20px 10px 0;
+    }
+
+    &-wrap{
+      + .p-blog-sidebar-wrap{
+        margin-top: 50px;
+
+        @include i.mq(sp){
+          margin-top: 20px;
+        }
+      }
+
+      &.is-article{
+        .p-blog-sidebar-item{
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid i.$color-black01;
+
+          &::before{
+            content: none;
+          }
+        }
+
+        .p-blog-sidebar-item-link{
+          display: flex;
+          flex-direction: column;
+        }
+
+        .p-blog-sidebar-item-date{
+          font-size: 14px;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-title{
+      font-family: i.$font-en;
+      letter-spacing: .2rem;
+      font-size: 30px;
+      font-size: 3rem;
+      border-bottom: 1px solid i.$color-black01;
+      margin-bottom: 20px;
+    }
+
+    &-item{
+      font-family: i.$font-ja;
+
+      &:not(:first-of-type){
+        margin-top: 5px;
+      }
+
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        background-color: i.$color-black01;
+        transition: .3s;
+      }
+
+      &:hover{
+        &::before{
+          background-color: i.$color-purple01;
+        }
+      }
+
+      &-title{
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

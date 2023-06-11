@@ -1,0 +1,164 @@
+@use "../../Setting/import" as i;
+
+.p-top-access{
+  padding: 200px 0 0;
+  background: i.$color-green01;
+  overflow: hidden;
+
+  @include i.mq(tab){
+    padding: 100px 0 0;
+  }
+
+  @include i.mq(sp){
+    padding: 80px 0 0;
+  }
+
+  &-content{
+    @include i.mq(pc){
+      display: flex;
+    }
+
+  }
+
+  &-heading{
+    justify-content: center;
+
+    @include i.mq(pc){
+      width: 30%;
+      margin-left: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-ja{
+      @include i.mq(pc){
+        margin: 20px auto;
+      }
+
+      &::before{
+        @include i.mq(pc){
+          top: -55px;
+          left: 50%;
+          transform: rotate(-40deg) translateX(-68%);
+        }
+
+      }
+    }
+  }
+
+  &-desc{
+    width: 70%;
+    background: i.$color-white01;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    padding: 90px;
+    margin-left: 20px;
+
+    @include i.mq(tab){
+      width: calc(100% - 20px);
+      padding: 50px;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width:480px){
+      padding: 40px;
+    }
+
+    &-inner{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width:480px){
+        display: block;
+      }
+    }
+
+    &-logo{
+      width: 50%;
+      margin: 0;
+
+      @media screen and (max-width:480px){
+        width: 100%;
+      }
+
+      &-img{
+        max-width: 263px;
+        width: 100%;
+      }
+    }
+
+    &-list{
+      width: 50%;
+      margin-left: 20px;
+
+      @media screen and (max-width:480px){
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    &-item{
+      font-family: i.$font-ja;
+
+      &:not(:first-child){
+        margin-top: 20px;
+      }
+    }
+
+    &-sns{
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item{
+        &::before{
+          content: "|";
+        }
+
+        &:last-child{
+          &::after{
+            content: "|";
+          }
+        }
+      }
+
+      &-link{
+        margin: 0 8px;
+      }
+    }
+  }
+
+  &-list{
+    margin: 20px 20px 0;
+
+    &-inner{
+      display: flex;
+      justify-content: center;
+      max-width: 1300px;
+      margin: 0 auto;
+
+      @include i.mq(sp){
+        display: block;
+      }
+    }
+  }
+
+  &-item{
+    width: calc(50% - 20px);
+
+    @include i.mq(sp){
+      width: 100%;
+    }
+
+    &:not(:first-child){
+      @include i.mq(sp){
+        margin-top: 20px;
+      }
+    }
+
+    &-desc{
+      align-items: center;
+    }
+  }
+}

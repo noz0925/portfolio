@@ -1,0 +1,6 @@
+@use "../../Setting/import" as i;
+
+.p-page-content{
+  background-color: i.$color-green01;
+  overflow: hidden;
+}

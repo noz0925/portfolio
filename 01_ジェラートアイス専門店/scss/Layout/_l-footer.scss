@@ -1,0 +1,14 @@
+@use "../Setting/import" as i;
+
+.l-footer{
+  padding: 200px 0 0;
+  background: i.$color-green01;
+
+  @include i.mq(tab){
+    padding: 100px 0 0;
+  }
+
+  @include i.mq(sp){
+    padding: 80px 0 0;
+  }
+}

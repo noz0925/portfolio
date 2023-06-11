@@ -1,0 +1,23 @@
+@use "../../Setting/import" as i;
+
+.c-btn{
+  max-width: 280px;
+  margin: 0 auto;
+
+  &-link{
+    color: i.$color-white01;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: i.$font-en;
+    letter-spacing: .2rem;
+    font-size: 2rem;
+    background: i.$color-black01;
+    border-radius: 40px;
+
+    @include i.mq(sp){
+      font-size: 1.6rem;
+    }
+  }
+}

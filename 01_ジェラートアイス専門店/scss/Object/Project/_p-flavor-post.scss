@@ -1,0 +1,133 @@
+@use "../../Setting/import" as i;
+
+.p-flavor-post{
+  padding: 100px 0 0;
+
+  @include i.mq(sp){
+    padding: 50px 0 0;
+  }
+
+  &-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include i.mq(sp){
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-figure{
+    width: 40%;
+    margin: 0;
+
+    @include i.mq(sp){
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media screen and (max-width:560px){
+      top: 132px;
+    }
+
+    &-img{
+      display: block;
+      max-width: 250px;
+      margin: 0 auto;
+      transform: rotate(15deg);
+
+      @include i.mq(sp){
+        transform: rotate(22deg);
+      }
+    }
+  }
+
+  &-contents{
+    width: calc(60% - 20px);
+    margin-left: 20px;
+
+    @include i.mq(sp){
+      width: calc(100% - 20px);
+    }
+  }
+
+  &-heading{
+    @include i.mq(sp){
+      width: 40%;
+      margin: 80px 0 0 55%;
+    }
+
+    @media screen and (max-width:560px){
+      width: 100%;
+      margin: 0;
+    }
+
+    &-category{
+      &-item{
+        max-width: 100px;
+        width: 100%;
+        display: inline-block;
+        border-radius: 20px;
+        text-align: center;
+
+        &-text{
+          font-family: i.$font-ja;
+          font-size: 14px;
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    &-name{
+      @media screen and (min-width: 561px){
+        margin-top: 20px;
+      }
+
+      &-en{
+        font-family: i.$font-en;
+        font-size: 40px;
+        font-size: 4rem;
+        letter-spacing: .2rem;
+      }
+
+      &-ja{
+        font-family: i.$font-ja;
+        font-size: 20px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  &-desc{
+    margin-top: 20px;
+    background-color:  i.$color-white01;
+    padding: 40px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    @include i.mq(sp){
+      margin-top: 80px;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media screen and (max-width:560px){
+      margin-top: 280px;
+    }
+
+    &-allergy{
+      margin-top: 20px;
+    }
+  }
+
+  &-btn{
+    margin: 80px auto 0;
+
+    @include i.mq(sp){
+      margin: 40px auto 0;
+    }
+  }
+}
