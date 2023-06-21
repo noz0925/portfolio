@@ -5,8 +5,8 @@ html(lang='ja')
     meta(http-equiv='X-UA-Compatible',content='IE=edge')
     meta(name='viewport',content='width=device-width, initial-scale=1.0')
     title N's portfolio
-    link(rel='stylesheet',href='css/swiper-bundle.min.css')
-    link(rel='stylesheet',href='css/style.css')
+    link(rel='stylesheet',href='../css/swiper-bundle.min.css')
+    link(rel='stylesheet',href='../css/style.css')
   body
     .p-load.js-load
       p.p-load-inner
@@ -135,6 +135,16 @@ html(lang='ja')
                         p.p-home-work-item-btn-item.-site
                           a.p-home-work-item-btn-link(href=`${work_item.site_url}` target='_blank' rel='noopener noreferrer')
                             span.p-home-work-item-btn-text view site
+                          if index == 1
+                            span.p-home-work-item-btn-desc
+                              |ID：user
+                              br
+                              |pass：user
+                          else if index == 2
+                            span.p-home-work-item-btn-desc
+                              |ID：user2
+                              br
+                              |pass：user2
                         if work_item.github_url
                           p.p-home-work-item-btn-item.-github
                             a.p-home-work-item-btn-link(href=`${work_item.github_url}` target='_blank' rel='noopener noreferrer')
@@ -189,6 +199,6 @@ html(lang='ja')
         small.p-footer-copy-text ©︎2023 nozomi hyodo
   script(src='//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/gsap.min.js')
   script(src='//cdn.jsdelivr.net/npm/gsap@3.7.0/dist/ScrollTrigger.min.js')
-  script(src='js/jquery-3.6.4.min.js')
-  script(src='js/swiper-bundle.min.js')
-  script(src='js/main.js')
+  script(src='../js/jquery-3.6.4.min.js')
+  script(src='../js/swiper-bundle.min.js')
+  script(src='../js/main.js')
