@@ -8,12 +8,16 @@
   <ul class="p-header__nav-list">
     <li class="p-header__nav-item"><a href="<?= esc_url(home_url('/')); ?>" class="p-header__nav-link">TOP</a></li>
     <li class="p-header__nav-item"><a href="<?= esc_url(home_url('/about/')); ?>" class="p-header__nav-link">当院について</a></li>
-    <li class="p-header__nav-item is-parent"><a href="<?= esc_url(home_url('/treatment/')); ?>" class="p-header__nav-link">治療のご案内</a>
-      <ul class="p-header__subnav-list">
-        <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_1')); ?>" class="p-header__subnav-link">一般歯科</a></li>
-        <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_2')); ?>" class="p-header__subnav-link">予防歯科</a></li>
-        <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_3')); ?>" class="p-header__subnav-link">矯正歯科</a></li>
-      </ul>
+    <li class="p-header__nav-item is-parent">
+      <span class="p-header__item-wrap">
+        <a href="<?= esc_url(home_url('/treatment/')); ?>" class="p-header__nav-link">治療のご案内</a>
+        <ul class="p-header__subnav-list">
+          <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_1')); ?>" class="p-header__subnav-link">一般歯科</a></li>
+          <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_2')); ?>" class="p-header__subnav-link">予防歯科</a></li>
+          <li class="p-header__subnav-item"><a href="<?= esc_url(home_url('/treatment/#sec_3')); ?>" class="p-header__subnav-link">矯正歯科</a></li>
+        </ul>
+        <button class="p-header__subnav-btn"></button>
+      </span>
     </li>
     <li class="p-header__nav-item"><a href="<?= esc_url(home_url('/news/')); ?>" class="p-header__nav-link">お知らせ</a></li>
     <li class="p-header__nav-item"><a href="<?= esc_url(home_url('/recruit/')); ?>" class="p-header__nav-link">スタッフ募集</a></li>

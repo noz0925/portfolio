@@ -53,6 +53,10 @@ $('.js-header__btn').on('click',function(){
   $(this).toggleClass('is-active');
   $('.p-header__nav').toggleClass('is-active');
 });
+$('.p-header__subnav-link').on('click', function(){
+  $('.p-header__btn').removeClass('is-active');
+  $('.p-header__nav').removeClass('is-active');
+});
 //1秒後に予約ボタンが右からフェードイン
 $(window).on('load resize',function(){
   $('.p-reserve-btn').delay(1000).queue(function(){
@@ -79,6 +83,18 @@ $(window).on('scroll',function(){
     $('#p-reserve-btn').addClass('is-active');
   }
 });
+//SP時ハンバーガー内アコーディオン処理
+$(function(){
+  $('.p-header__subnav-btn').on('click', function(){
+    $(this).toggleClass('is-accordion');
+    $('.p-header__subnav-list').slideToggle();
+  });
+  $(window).on('resize',function(){
+    if($('.p-header__subnav-btn').css('pointer-events') == 'none'){
+      $('.p-header__subnav-list').attr('style','');
+    }
+  });
+});
 
 /*==================
 ヘッダー分アンカーリンクの位置を調整
@@ -91,11 +107,12 @@ if(url_hash !== '') {
     setTimeout(function(){
     let target = $(url_hash);
     let position = target.offset().top - header_height;
-    $('body,html').stop().animate({scrollTop:position}, 400);
-    }, 100);
+    $('body,html').stop().animate({scrollTop:position}, 10);
+    }, 10);
 }
 //ページ内リンク
-$('a[href*="#"]').click(function(){    //#が含まれるhrefをクリックしたら
+//#が含まれるhrefをクリックしたら
+$('a[href*="#"]').on('click', function(){
   let location_href = location.href;
   let href= $(this).attr("href");
   let href_arr = href.split('/');
@@ -103,9 +120,9 @@ $('a[href*="#"]').click(function(){    //#が含まれるhrefをクリックし�
   if(location_href.indexOf('treatment') !== -1){    //
     let target = (href.indexOf('http') !== -1) ? href_last : href;
     let position = $(target).offset().top - header_height;
-    $('body,html').stop().animate({scrollTop:position}, 400);
+    $('body,html').stop().animate({scrollTop:position}, 10);
     return false;
-  }
+  };
 });
 
 /*==================

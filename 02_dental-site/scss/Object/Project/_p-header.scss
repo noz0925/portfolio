@@ -167,15 +167,7 @@
   }
 
   &__nav-item{
-    margin: 0 17px;  
-
-    &.is-parent{
-      position: relative;
-    }
-
-    &.is-parent:hover{
-      transition: .2s ease;
-    }
+    margin: 0 17px; 
 
     &.is-active{
       .p-header__nav-link::after{
@@ -186,8 +178,15 @@
     @media screen and (max-width:1024px){
       margin: 0;
       border-bottom: 1px solid i.$color-white01;
+    }
 
-      &.is-reserve{
+    &.is-parent{
+      position: relative;
+      transition: .2s ease;
+    }
+
+    &.is-reserve{
+      @media screen and (max-width:1024px){
         display: none;
       }
     }
@@ -241,10 +240,18 @@
       transform-origin: center top;
     }
   }
-    
+
   &__nav-item:hover{
     .p-header__nav-link::after{
       transform: scale(1, 1);
+    }
+  }
+
+  @media screen and (max-width:1024px){
+    &__nav-item.is-parent{
+      .p-header__nav-link{
+        width: calc(100% - 60px);
+      }
     }
   }
 
@@ -257,23 +264,46 @@
     opacity: 0;
     box-shadow: 0px 0px 1px 0px i.$color-black02;
   }
-    
-  &__nav-item.is-parent:hover{
-    .p-header__subnav-list{
-      top: 37px;
-      visibility: visible;
-      opacity: 1;
-      background-color: i.$color-white02;
+  
+  @media screen and (min-width:1025px){
+    &__nav-item.is-parent .p-header__item-wrap:hover{
+      .p-header__subnav-list{
+        top: 37px;
+        visibility: visible;
+        opacity: 1;
+        background-color: i.$color-white02;
+      }
     }
   }
-    
-  &__subnav-item:not(:last-child){
-    background-image: linear-gradient(to right, i.$color-blue01, i.$color-blue01 4px, transparent 4px, transparent 4px);
-    background-size: 8px 1px;
-    background-position: left bottom;
-    background-repeat: repeat-x;
+
+  @media screen and (max-width:1024px){
+    &__nav-item.is-parent{
+      .p-header__subnav-list{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: i.$color-white01;
+        width: auto;
+        margin: 0 20px 20px;
+        transition: unset;
+        display: none;
+      }
+
+      .p-header__subnav-btn.is-accordion{
+        transform: rotate(135deg);
+      }
+    }
   }
-    
+  
+  @media screen and (min-width:1025px){
+    &__subnav-item:not(:last-child){
+      background-image: linear-gradient(to right, i.$color-blue01, i.$color-blue01 4px, transparent 4px, transparent 4px);
+      background-size: 8px 1px;
+      background-position: left bottom;
+      background-repeat: repeat-x;
+    }
+  }
+
   &__subnav-link{
     line-height: 1;
     display: block;
@@ -282,9 +312,57 @@
     padding: 17px 0;
     transition: all .3s;
     
-    &:hover{
+    @media screen and (min-width:1025px){
+      &:hover{
         color: i.$color-white01;
         background-color: i.$color-blue01;
+      }
+    }
+
+    @media screen and (max-width:1024px){
+      padding: 17px 16px;
+
+      &::before{
+        content:"\f04b";
+        font-size: 1.4rem;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: i.$color-blue01;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__subnav-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 55px;
+    transition: all .3s;
+    pointer-events: none;
+    display: none;
+
+    @media screen and (max-width:1024px){
+      display: block;
+      pointer-events: all;
+    }
+
+    &::before,
+    &::after{
+      content: "";
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: i.$color-white01;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::after{
+      transform: translate(-50%, -50%) rotate(90deg);
     }
   }
 }
